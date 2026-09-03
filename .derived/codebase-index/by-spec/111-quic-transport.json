@@ -1,0 +1,119 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '111-quic-transport' file unit 'crates/hqgit-sync/src/transport.rs' does not exist",
+        "path": "crates/hqgit-sync/src/transport.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '111-quic-transport' file unit 'crates/hqgit-sync/src/session.rs' does not exist",
+        "path": "crates/hqgit-sync/src/session.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '111-quic-transport' file unit 'crates/hqgit-sync/src/object_source.rs' does not exist",
+        "path": "crates/hqgit-sync/src/object_source.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '111-quic-transport' file unit 'crates/hqgit-sync/tests/transport.rs' does not exist",
+        "path": "crates/hqgit-sync/tests/transport.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '111-quic-transport' file unit 'crates/hqgit-sync/src/lib.rs' does not exist",
+        "path": "crates/hqgit-sync/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '111-quic-transport' file unit 'crates/hqgit-sync/Cargo.toml' does not exist",
+        "path": "crates/hqgit-sync/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '111-quic-transport' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "110-set-reconciliation",
+      "060-identity-and-key-rotation"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-sync/src/object_source.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-sync/src/session.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-sync/src/transport.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-sync/tests/transport.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-sync/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-sync/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "111-quic-transport",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "44e962293e439339656fd62de2b0314c6132a93012c48823a2e016407fcbf338"
+}

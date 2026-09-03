@@ -1,0 +1,101 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "014-content-defined-chunking"
+    ],
+    "domain": "l0-objects",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-object/src/bao.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-object/src/fetch.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-object/tests/bao.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "013-object-store",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "013-object-store",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/store.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "013-object-store",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/local.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "013-object-store",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/memory.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "013-object-store",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "015-verified-streaming",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "high",
+    "sectionHeadings": [
+      "015: Verified streaming",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/015-verified-streaming/spec.md",
+    "status": "approved",
+    "summary": "The reason BLAKE3 was chosen over SHA-256: the BAO tree gives chunk-level verification and range proofs, so partial and lazy fetch are verifiable by construction rather than trusted. This spec stores a BAO outboard encoding beside every Raw object, adds a range read to the store whose result type cannot exist without a verified proof, defines the ObjectSource seam a remote (016, 111) implements to serve slices with proofs, and a lazy fetch API that verifies with bounded memory and never lets a partial object into the store as if it were whole. Tampered slices are rejected at the byte where the proof fails.\n",
+    "title": "Verified streaming: BAO outboard trees, range proofs, and lazy fetch that never trusts a byte"
+  },
+  "shardHash": "b42dc7e5310ce6189ef2464f73cec3475a6cf341bb560ca276c5c83c8a606a16",
+  "specVersion": "1.1.0"
+}

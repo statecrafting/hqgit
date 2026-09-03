@@ -1,0 +1,203 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '112-federation' file unit 'crates/hqgit-server/src/federation.rs' does not exist",
+        "path": "crates/hqgit-server/src/federation.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '112-federation' file unit 'crates/hqgit-server/src/peers.rs' does not exist",
+        "path": "crates/hqgit-server/src/peers.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '112-federation' file unit 'crates/hqgit-cli/src/cmd_sync.rs' does not exist",
+        "path": "crates/hqgit-cli/src/cmd_sync.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '112-federation' file unit 'crates/hqgit-server/tests/federation.rs' does not exist",
+        "path": "crates/hqgit-server/tests/federation.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '112-federation' file unit 'crates/hqgit-cli/tests/sync.rs' does not exist",
+        "path": "crates/hqgit-cli/tests/sync.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '112-federation' file unit 'crates/hqgit-server/src/lib.rs' does not exist",
+        "path": "crates/hqgit-server/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '112-federation' file unit 'crates/hqgit-server/src/app.rs' does not exist",
+        "path": "crates/hqgit-server/src/app.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '112-federation' file unit 'crates/hqgit-server/src/config.rs' does not exist",
+        "path": "crates/hqgit-server/src/config.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '112-federation' file unit 'crates/hqgit-server/Cargo.toml' does not exist",
+        "path": "crates/hqgit-server/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '112-federation' file unit 'crates/hqgit-cli/src/main.rs' does not exist",
+        "path": "crates/hqgit-cli/src/main.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '112-federation' file unit 'crates/hqgit-cli/src/cli.rs' does not exist",
+        "path": "crates/hqgit-cli/src/cli.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '112-federation' file unit 'crates/hqgit-cli/Cargo.toml' does not exist",
+        "path": "crates/hqgit-cli/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '112-federation' file unit 'crates/hqgit-domain/src/facts.rs' does not exist",
+        "path": "crates/hqgit-domain/src/facts.rs"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "111-quic-transport",
+      "094-quarantine-and-promotion",
+      "032-cli-skeleton"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cmd_sync.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/tests/sync.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/federation.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/peers.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/tests/federation.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cli.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/main.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/app.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/config.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/lib.rs"
+        }
+      }
+    ],
+    "specId": "112-federation",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "31fa0edfb04b5351886e83184664b166a59079d444bbc11df36c01197142e85c"
+}

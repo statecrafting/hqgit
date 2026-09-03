@@ -1,0 +1,77 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "011-canonical-encoding"
+    ],
+    "domain": "l0-objects",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-object/Cargo.toml"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-object/src/lib.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-object/src/object.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-object/src/store.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-object/src/memory.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-object/src/local.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-object/tests/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "013-object-store",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "critical",
+    "sectionHeadings": [
+      "013: Object store",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/013-object-store/spec.md",
+    "status": "approved",
+    "summary": "L0 of the layer model: the content-addressed store every other layer reads and writes through. This spec founds hqgit-object with the object kinds (Blob, Tree, RepoGenesis) as canonical envelopes, the ObjectStore trait whose reads verify the hash before returning a byte, an in-memory backend for tests and a redb-backed local backend under the repository's .hq directory. Objects are immutable by construction, so every cache layer above them is trivially correct; deletion exists in the trait only as the erasure path spec 020 completes with a capability token. Chunking (014), verified streaming (015), and the remote backend (016) extend this crate without changing what a stored object is.\n",
+    "title": "Object store: content-addressed blob and tree objects, the ObjectStore trait, memory and local backends"
+  },
+  "shardHash": "55a8be283e0331280d1659481c690804fd43063698650269368ff773badf9477",
+  "specVersion": "1.1.0"
+}

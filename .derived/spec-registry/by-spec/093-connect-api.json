@@ -1,0 +1,190 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "090-server-skeleton",
+      "026-review-threads",
+      "027-attestation-primitive",
+      "067-policy-evaluation-attestation",
+      "032-cli-skeleton",
+      "081-change-and-review-views"
+    ],
+    "domain": "l7-edge",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "proto/hqgit/v1/common.proto"
+      },
+      {
+        "kind": "file",
+        "path": "proto/hqgit/v1/changes.proto"
+      },
+      {
+        "kind": "file",
+        "path": "proto/hqgit/v1/reviews.proto"
+      },
+      {
+        "kind": "file",
+        "path": "proto/hqgit/v1/attestations.proto"
+      },
+      {
+        "kind": "file",
+        "path": "proto/hqgit/v1/policy.proto"
+      },
+      {
+        "kind": "file",
+        "path": "proto/hqgit/v1/repos.proto"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/build.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/api/mod.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/api/connect.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/api/read_model.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/api/changes.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/api/reviews.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/api/attestations.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/api/policy.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/api/repos.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/tests/api.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/build.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/src/client.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/src/cmd_remote.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/tests/remote.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "090-server-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "090-server-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/app.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "090-server-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/main.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cli.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/config.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 6
+    },
+    "id": "093-connect-api",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "high",
+    "sectionHeadings": [
+      "093: The Connect API",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/093-connect-api/spec.md",
+    "status": "approved",
+    "summary": "The one typed API of the edge (thesis §2, L7): five services defined in protobuf, served as gRPC and as Connect-compatible JSON over plain HTTP on the same listener so browsers and CLIs use one contract. Every write is a fact append through the spec 021 path and the control plane (091), never a table update; approvals and attestations arrive already signed by their issuer and are verified before append; server-mediated writes record who they were made for. Reads come from the spec 081 projections when present and from a domain fold otherwise, through one ReadModel seam, and every response says which ledger entry it is projected as of. Pagination is by total-order cursor. The CLI gains a generated client and hq remote so every existing verb can target a hosted repository.\n",
+    "title": "The typed API: gRPC and Connect JSON services for changes, reviews, attestations, policy, repos; the CLI remote client"
+  },
+  "shardHash": "c155e17de0a9c4ab5280992ab171a837041f778595e2306dc5d49a8a494d249f",
+  "specVersion": "1.1.0"
+}

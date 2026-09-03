@@ -1,0 +1,146 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '067-policy-evaluation-attestation' file unit 'crates/hqgit-policy/src/evaluate.rs' does not exist",
+        "path": "crates/hqgit-policy/src/evaluate.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '067-policy-evaluation-attestation' file unit 'crates/hqgit-policy/src/replay.rs' does not exist",
+        "path": "crates/hqgit-policy/src/replay.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '067-policy-evaluation-attestation' file unit 'crates/hqgit-cli/src/cmd_policy.rs' does not exist",
+        "path": "crates/hqgit-cli/src/cmd_policy.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '067-policy-evaluation-attestation' file unit 'crates/hqgit-cli/tests/policy.rs' does not exist",
+        "path": "crates/hqgit-cli/tests/policy.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '067-policy-evaluation-attestation' file unit 'crates/hqgit-policy/src/lib.rs' does not exist",
+        "path": "crates/hqgit-policy/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '067-policy-evaluation-attestation' file unit 'crates/hqgit-domain/src/predicate.rs' does not exist",
+        "path": "crates/hqgit-domain/src/predicate.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '067-policy-evaluation-attestation' file unit 'crates/hqgit-cli/src/main.rs' does not exist",
+        "path": "crates/hqgit-cli/src/main.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '067-policy-evaluation-attestation' file unit 'crates/hqgit-cli/src/cli.rs' does not exist",
+        "path": "crates/hqgit-cli/src/cli.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '067-policy-evaluation-attestation' file unit 'crates/hqgit-cli/Cargo.toml' does not exist",
+        "path": "crates/hqgit-cli/Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "065-policy-engine",
+      "034-cli-attest-and-verify"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cmd_policy.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/tests/policy.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy/src/evaluate.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy/src/replay.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cli.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/main.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/predicate.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy/src/lib.rs"
+        }
+      }
+    ],
+    "specId": "067-policy-evaluation-attestation",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "c722f4905298238bc3a85c927c7f601db9da0976b220d9e4a252352b628daf7f"
+}

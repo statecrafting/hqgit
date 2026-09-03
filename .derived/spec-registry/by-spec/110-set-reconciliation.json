@@ -1,0 +1,76 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "021-local-repository"
+    ],
+    "domain": "l1-ledger",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-sync/Cargo.toml"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-sync/src/lib.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-sync/src/reconcile.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-sync/src/fingerprint.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-sync/src/protocol.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-sync/tests/"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-sync/testdata/protocol/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "021-local-repository",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/repo.rs"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 8
+    },
+    "id": "110-set-reconciliation",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "high",
+    "sectionHeadings": [
+      "110: Set reconciliation",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/110-set-reconciliation/spec.md",
+    "status": "approved",
+    "summary": "Thesis §4.2: replication is range-based set reconciliation, with the Willow protocol as the prior art. Two replicas of one repository hold sets of entry hashes ordered by (hlc, hash); each side fingerprints a range, and where fingerprints differ the range is split until the difference is small enough to exchange item lists. Because an entry's hlc is strictly greater than its parents' (017), that same order is a topological order, so missing entries append in order with no extra sort. This spec founds hqgit-sync with the fingerprint, the pure reconciler state machine, the canonical message vocabulary, a transport-agnostic Channel seam, and the ingest path that verifies every foreign entry before it touches the ledger. Payload objects are fetched lazily and verified through spec 015. The transport is spec 111.\n",
+    "title": "Range-based set reconciliation over entry hashes: fingerprints, the split protocol, and ingest"
+  },
+  "shardHash": "b4fcf1cad67ce2d526ed300931870c25fc856e6074c512ee4dee0641d6540aed",
+  "specVersion": "1.1.0"
+}

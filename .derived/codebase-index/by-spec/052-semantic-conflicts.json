@@ -1,0 +1,104 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '052-semantic-conflicts' file unit 'crates/hqgit-domain/src/conflict.rs' does not exist",
+        "path": "crates/hqgit-domain/src/conflict.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '052-semantic-conflicts' file unit 'crates/hqgit-domain/tests/conflict.rs' does not exist",
+        "path": "crates/hqgit-domain/tests/conflict.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '052-semantic-conflicts' file unit 'crates/hqgit-domain/testdata/conflicts/' does not exist",
+        "path": "crates/hqgit-domain/testdata/conflicts/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '052-semantic-conflicts' file unit 'crates/hqgit-domain/src/lib.rs' does not exist",
+        "path": "crates/hqgit-domain/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '052-semantic-conflicts' file unit 'crates/hqgit-domain/Cargo.toml' does not exist",
+        "path": "crates/hqgit-domain/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '052-semantic-conflicts' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "051-semantic-deltas"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/conflict.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/testdata/conflicts/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/tests/conflict.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "052-semantic-conflicts",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "60df6b2a01657fb55bc3e7e43106c4be4fb2632dd94b3c4147d7c122d90c871e"
+}

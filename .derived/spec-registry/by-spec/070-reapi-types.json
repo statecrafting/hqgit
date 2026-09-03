@@ -1,0 +1,93 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "013-object-store"
+    ],
+    "domain": "l3-evaluation",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/Cargo.toml"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/build.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/proto/build/bazel/remote/execution/v2/remote_execution.proto"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/proto/build/bazel/semver/semver.proto"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/proto/google/"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/src/lib.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/src/digest.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/src/action.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/src/cas_adapter.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/tests/"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/testdata/reapi/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 5
+    },
+    "id": "070-reapi-types",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "high",
+    "sectionHeadings": [
+      "070: Remote Execution API types",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/070-reapi-types/spec.md",
+    "status": "approved",
+    "summary": "The evaluation plane speaks the Bazel Remote Execution API rather than a protocol of its own (thesis D9), so existing executors, clients, and caches interoperate on day one. This spec founds hqgit-eval with the vendored REAPI v2 protos compiled at build time, a BLAKE3 digest function that coincides with the hqgit object hash for raw blobs and carries an explicit mapping where the two encodings differ (Directory versus Tree), the pure construction of an Action from (repository state, target, toolchain) whose digest is the key the cache and the merge queue share, and the CAS adapter that presents the spec 013 object store as REAPI content-addressable storage. No service listens yet (072) and nothing executes (073): this is the typed vocabulary the rest of wave 5 shares.\n",
+    "title": "Remote Execution API types: vendored protos, BLAKE3 digests, actions, the CAS adapter"
+  },
+  "shardHash": "7505e2b8b40bab96efb49564f5c9cced6974e355d47b7ce21edb83f6b6022b14",
+  "specVersion": "1.1.0"
+}

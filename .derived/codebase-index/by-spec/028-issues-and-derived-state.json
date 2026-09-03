@@ -1,0 +1,75 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '028-issues-and-derived-state' file unit 'crates/hqgit-domain/src/issue.rs' does not exist",
+        "path": "crates/hqgit-domain/src/issue.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '028-issues-and-derived-state' file unit 'crates/hqgit-domain/tests/issue.rs' does not exist",
+        "path": "crates/hqgit-domain/tests/issue.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '028-issues-and-derived-state' file unit 'crates/hqgit-domain/src/lib.rs' does not exist",
+        "path": "crates/hqgit-domain/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '028-issues-and-derived-state' file unit 'crates/hqgit-domain/src/facts.rs' does not exist",
+        "path": "crates/hqgit-domain/src/facts.rs"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "023-domain-fact-vocabulary"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/issue.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/tests/issue.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/lib.rs"
+        }
+      }
+    ],
+    "specId": "028-issues-and-derived-state",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "b130bf150fbf8d40b3e62e93a212fa247c6d75eef4f792650f6a5e51f8330d7e"
+}

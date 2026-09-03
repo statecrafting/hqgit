@@ -1,0 +1,133 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '084-ecosystem-graph' file unit 'crates/hqgit-projection/src/ecosystem/mod.rs' does not exist",
+        "path": "crates/hqgit-projection/src/ecosystem/mod.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '084-ecosystem-graph' file unit 'crates/hqgit-projection/src/ecosystem/deps.rs' does not exist",
+        "path": "crates/hqgit-projection/src/ecosystem/deps.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '084-ecosystem-graph' file unit 'crates/hqgit-projection/src/ecosystem/impact.rs' does not exist",
+        "path": "crates/hqgit-projection/src/ecosystem/impact.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '084-ecosystem-graph' file unit 'crates/hqgit-projection/tests/ecosystem.rs' does not exist",
+        "path": "crates/hqgit-projection/tests/ecosystem.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '084-ecosystem-graph' file unit 'crates/hqgit-projection/testdata/ecosystem/' does not exist",
+        "path": "crates/hqgit-projection/testdata/ecosystem/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '084-ecosystem-graph' file unit 'crates/hqgit-projection/src/lib.rs' does not exist",
+        "path": "crates/hqgit-projection/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '084-ecosystem-graph' file unit 'crates/hqgit-projection/src/registry.rs' does not exist",
+        "path": "crates/hqgit-projection/src/registry.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '084-ecosystem-graph' file unit 'crates/hqgit-projection/Cargo.toml' does not exist",
+        "path": "crates/hqgit-projection/Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "083-code-graph",
+      "075-build-graph",
+      "051-semantic-deltas"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/ecosystem/deps.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/ecosystem/impact.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/ecosystem/mod.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/testdata/ecosystem/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/tests/ecosystem.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/registry.rs"
+        }
+      }
+    ],
+    "specId": "084-ecosystem-graph",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "340981a3ca7b7c719bca8c0c81ed5a883fa664c0648f5533127e001876a31fb7"
+}

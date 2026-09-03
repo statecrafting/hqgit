@@ -1,0 +1,83 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "032-cli-skeleton",
+      "031-git-object-bridge",
+      "026-review-threads",
+      "027-attestation-primitive"
+    ],
+    "domain": "l7-edge",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/src/cmd_change.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/src/cmd_review.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/tests/review.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/testdata/review/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/main.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cli.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/Cargo.toml"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "033-cli-offline-review",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "high",
+    "sectionHeadings": [
+      "033: Offline review from the CLI",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/033-cli-offline-review/spec.md",
+    "status": "approved",
+    "summary": "The wave 1 milestone (thesis §6, step 1): prove offline review against a plain git repository. hq change new opens a Change with a stable id; hq change submit snapshots the working tree through the git bridge into a Revision whose base is the imported HEAD tree; hq review comment anchors a thread to a semantic location that survives rebase; hq review approve issues an approval Attestation signed by the local identity; hq review show re-anchors every thread against the latest revision and marks what moved or was lost. No network, no server, no git ref moves. The evidence this produces is what spec 034 verifies, and the transcript it leaves is the fixture every later client must reproduce.\n",
+    "title": "Offline review from the CLI: changes, revisions, anchored threads, approvals"
+  },
+  "shardHash": "69d8e8e9590cf4cdcae7d49432e721904f5f09bd3a0b0e91ed13930caeca0265",
+  "specVersion": "1.1.0"
+}

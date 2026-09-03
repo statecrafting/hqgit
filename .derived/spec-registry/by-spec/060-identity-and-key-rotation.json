@@ -1,0 +1,66 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "019-facts-and-derived-state"
+    ],
+    "domain": "l4-trust",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/Cargo.toml"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/src/lib.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/src/identity.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/src/rotation.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/src/resolver.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/tests/"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/testdata/identity/"
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 4
+    },
+    "id": "060-identity-and-key-rotation",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "critical",
+    "sectionHeadings": [
+      "060: Identity and key rotation",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/060-identity-and-key-rotation/spec.md",
+    "status": "approved",
+    "summary": "Authentication and identity are different problems (thesis §4.5). Login is OIDC (061); durable identity is a keypair whose rotation history is a sequence of signed facts in the ledger, so a signature made under a key that was later rotated or revoked still verifies at the time it was made. This spec founds hqgit-trust and fixes the three identity facts (identity.created, identity.key_rotated, identity.key_revoked), the IdentityId that every Principal id in 010 resolves to, the IdentityView fold that answers key_valid_at, and the RotationAwareResolver that plugs into the ledger's IssuerResolver seam (017) so chain verification stops trusting a static key table. Constitution XI: trust is checkable, not decorative.\n",
+    "title": "Identity as a keypair with a rotation chain recorded in the ledger"
+  },
+  "shardHash": "fb8d13d4bfb741c0acf887ddfed767ab87f2b472e5be017d46c021a83e0b2635",
+  "specVersion": "1.1.0"
+}

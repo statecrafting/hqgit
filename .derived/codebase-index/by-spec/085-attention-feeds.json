@@ -1,0 +1,103 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '085-attention-feeds' file unit 'crates/hqgit-projection/src/feeds.rs' does not exist",
+        "path": "crates/hqgit-projection/src/feeds.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '085-attention-feeds' file unit 'crates/hqgit-projection/tests/feeds.rs' does not exist",
+        "path": "crates/hqgit-projection/tests/feeds.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '085-attention-feeds' file unit 'crates/hqgit-projection/testdata/feeds/' does not exist",
+        "path": "crates/hqgit-projection/testdata/feeds/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '085-attention-feeds' file unit 'crates/hqgit-projection/src/lib.rs' does not exist",
+        "path": "crates/hqgit-projection/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '085-attention-feeds' file unit 'crates/hqgit-projection/src/registry.rs' does not exist",
+        "path": "crates/hqgit-projection/src/registry.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '085-attention-feeds' file unit 'crates/hqgit-domain/src/facts.rs' does not exist",
+        "path": "crates/hqgit-domain/src/facts.rs"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "081-change-and-review-views"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/feeds.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/testdata/feeds/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/tests/feeds.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/registry.rs"
+        }
+      }
+    ],
+    "specId": "085-attention-feeds",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "c28a6348ba2750bdecd8973ca208a8577aec85f4ad85f77e5e89f8e59a9892ec"
+}

@@ -1,0 +1,110 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "021-local-repository",
+      "032-cli-skeleton"
+    ],
+    "domain": "l5-projection",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/Cargo.toml"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/src/lib.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/src/projection.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/src/runner.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/src/sqlite.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/src/checkpoint.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/src/registry.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/tests/"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/src/cmd_projection.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/main.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cli.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 6
+    },
+    "id": "080-projection-framework",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "high",
+    "sectionHeadings": [
+      "080: Projection framework",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/080-projection-framework/spec.md",
+    "status": "approved",
+    "summary": "Constitution VI in code: every index, timeline, queue, and dashboard is a projection that can be rebuilt from zero, and no projection is ever read as authority. This spec founds hqgit-projection: the Projection trait, a runner that folds the ledger in the deterministic total order (018) from a crash-consistent checkpoint, SQLite-backed storage under .hq/projections where the apply and the checkpoint commit in one transaction, a registry that later specs (081 to 085) plug their read models into, the rule that every read answers \"as of entry N\", the rule that erased payloads render as erased, and the `hq projection` verbs to inspect and rebuild. It owns no concrete view.\n",
+    "title": "Projection framework: disposable read models folded from the total order"
+  },
+  "shardHash": "85416420ae0c10630f07f516fe44ebc796567407dfada719577063f1f44e3863",
+  "specVersion": "1.1.0"
+}

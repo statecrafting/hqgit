@@ -1,0 +1,68 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "033-cli-offline-review"
+    ],
+    "domain": "l7-edge",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/src/cmd_attest.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/src/cmd_verify.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/tests/verify.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/main.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cli.rs"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "034-cli-attest-and-verify",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "high",
+    "sectionHeadings": [
+      "034: hq attest and hq verify",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/034-cli-attest-and-verify/spec.md",
+    "status": "approved",
+    "summary": "Wave 1 ends when evidence produced offline verifies offline. hq attest issues an Attestation over any subject hash with any predicate, validating the claim against the registry when the predicate is known and carrying it verbatim when it is not; hq attest list enumerates the evidence on a subject. hq verify runs spec 017's chain verification against the repository with a resolver seeded from the keys the ledger itself records, reports every failure rather than the first, and exits 1 on any; hq verify attestation checks one attestation's signature and claim shape. Both verbs are pure reads apart from the fact hq attest appends, and both emit machine-readable reports so the orchestrator and CI can consume them.\n",
+    "title": "hq attest and hq verify: issue any attestation, verify the chain and its evidence offline"
+  },
+  "shardHash": "871570a07f95a2ef10011a8b1a131ae36d3723e001e5303bfe367961985128b8",
+  "specVersion": "1.1.0"
+}

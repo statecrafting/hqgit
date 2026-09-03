@@ -1,0 +1,112 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "072-execution-service"
+    ],
+    "domain": "l3-evaluation",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "executor/go.mod"
+      },
+      {
+        "kind": "file",
+        "path": "executor/go.sum"
+      },
+      {
+        "kind": "file",
+        "path": "executor/Makefile"
+      },
+      {
+        "kind": "file",
+        "path": "executor/cmd/hq-executor/main.go"
+      },
+      {
+        "kind": "file",
+        "path": "executor/internal/reapi/worker.go"
+      },
+      {
+        "kind": "file",
+        "path": "executor/internal/reapi/cas.go"
+      },
+      {
+        "kind": "file",
+        "path": "executor/internal/sandbox/tier.go"
+      },
+      {
+        "kind": "file",
+        "path": "executor/internal/sandbox/report.go"
+      },
+      {
+        "kind": "file",
+        "path": "executor/internal/sandbox/namespaces_linux.go"
+      },
+      {
+        "kind": "file",
+        "path": "executor/internal/sandbox/seccomp_linux.go"
+      },
+      {
+        "kind": "file",
+        "path": "executor/internal/sandbox/microvm.go"
+      },
+      {
+        "kind": "file",
+        "path": "executor/internal/sandbox/sandbox_test.go"
+      },
+      {
+        "kind": "file",
+        "path": "executor/proto/"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/src/sandbox.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "070-reapi-types",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "001-agentic-harness",
+        "unit": {
+          "kind": "file",
+          "path": ".github/workflows/govern.yml"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 5
+    },
+    "id": "073-sandbox-executor",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "critical",
+    "sectionHeadings": [
+      "073: Sandbox executor",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/073-sandbox-executor/spec.md",
+    "status": "approved",
+    "summary": "The one language boundary in the platform (thesis D14): a Go worker that leases actions from the execution service (072), stages their inputs from CAS, runs them in one of two sandbox tiers, uploads the outputs, and reports exactly which isolation it applied. The Trusted tier is Linux namespaces plus a seccomp allowlist, no network, read-only inputs, an unprivileged uid. The Untrusted tier is a microVM (Firecracker or Cloud Hypervisor behind one driver interface) booted from a rootfs whose hash is pinned, with no network device unless the action declared one. Fork contributions and agent principals always get the Untrusted tier; the Rust side owns that rule and the tier vocabulary, so the domain model never crosses into Go. The executor's sandbox report is what spec 074 attests, which is why a missing report fails the action.\n",
+    "title": "Sandbox executor: the Go worker with namespace and microVM tiers"
+  },
+  "shardHash": "106954994b077ae924588342dbf23661dcb6ea60bd5b055b554c9af79e065a6a",
+  "specVersion": "1.1.0"
+}

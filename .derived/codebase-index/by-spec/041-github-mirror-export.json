@@ -1,0 +1,89 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '041-github-mirror-export' file unit 'crates/hqgit-mirror/src/github/export.rs' does not exist",
+        "path": "crates/hqgit-mirror/src/github/export.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '041-github-mirror-export' file unit 'crates/hqgit-mirror/src/reconcile.rs' does not exist",
+        "path": "crates/hqgit-mirror/src/reconcile.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '041-github-mirror-export' file unit 'crates/hqgit-mirror/tests/export.rs' does not exist",
+        "path": "crates/hqgit-mirror/tests/export.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '041-github-mirror-export' file unit 'crates/hqgit-mirror/src/lib.rs' does not exist",
+        "path": "crates/hqgit-mirror/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '041-github-mirror-export' file unit 'crates/hqgit-mirror/src/github/client.rs' does not exist",
+        "path": "crates/hqgit-mirror/src/github/client.rs"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "040-github-mirror-import"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-mirror/src/github/export.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-mirror/src/reconcile.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-mirror/tests/export.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-mirror/src/github/client.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-mirror/src/lib.rs"
+        }
+      }
+    ],
+    "specId": "041-github-mirror-export",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "b59838bdac10ffca3c1c9f13f1d791769cefda68975ac0d8a9795af13f2c0832"
+}

@@ -1,0 +1,118 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '042-mirror-sync-command' file unit 'crates/hqgit-mirror/src/sync.rs' does not exist",
+        "path": "crates/hqgit-mirror/src/sync.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '042-mirror-sync-command' file unit 'crates/hqgit-cli/src/cmd_mirror.rs' does not exist",
+        "path": "crates/hqgit-cli/src/cmd_mirror.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '042-mirror-sync-command' file unit 'crates/hqgit-cli/tests/mirror.rs' does not exist",
+        "path": "crates/hqgit-cli/tests/mirror.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '042-mirror-sync-command' file unit 'crates/hqgit-mirror/src/lib.rs' does not exist",
+        "path": "crates/hqgit-mirror/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '042-mirror-sync-command' file unit 'crates/hqgit-cli/src/main.rs' does not exist",
+        "path": "crates/hqgit-cli/src/main.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '042-mirror-sync-command' file unit 'crates/hqgit-cli/src/cli.rs' does not exist",
+        "path": "crates/hqgit-cli/src/cli.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '042-mirror-sync-command' file unit 'crates/hqgit-cli/Cargo.toml' does not exist",
+        "path": "crates/hqgit-cli/Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "041-github-mirror-export",
+      "032-cli-skeleton"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cmd_mirror.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/tests/mirror.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-mirror/src/sync.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cli.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/main.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-mirror/src/lib.rs"
+        }
+      }
+    ],
+    "specId": "042-mirror-sync-command",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "8ff990436711404e64738ba3dde5d251c052451193a9f9fae8759c830d5918a2"
+}

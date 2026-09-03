@@ -1,0 +1,162 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '051-semantic-deltas' file unit 'crates/hqgit-domain/src/delta/mod.rs' does not exist",
+        "path": "crates/hqgit-domain/src/delta/mod.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '051-semantic-deltas' file unit 'crates/hqgit-domain/src/delta/api_surface.rs' does not exist",
+        "path": "crates/hqgit-domain/src/delta/api_surface.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '051-semantic-deltas' file unit 'crates/hqgit-domain/src/delta/dependencies.rs' does not exist",
+        "path": "crates/hqgit-domain/src/delta/dependencies.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '051-semantic-deltas' file unit 'crates/hqgit-domain/src/delta/capabilities.rs' does not exist",
+        "path": "crates/hqgit-domain/src/delta/capabilities.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '051-semantic-deltas' file unit 'crates/hqgit-domain/tests/delta.rs' does not exist",
+        "path": "crates/hqgit-domain/tests/delta.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '051-semantic-deltas' file unit 'crates/hqgit-domain/testdata/deltas/' does not exist",
+        "path": "crates/hqgit-domain/testdata/deltas/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '051-semantic-deltas' file unit 'crates/hqgit-domain/src/lib.rs' does not exist",
+        "path": "crates/hqgit-domain/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '051-semantic-deltas' file unit 'crates/hqgit-domain/src/predicate.rs' does not exist",
+        "path": "crates/hqgit-domain/src/predicate.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '051-semantic-deltas' file unit 'crates/hqgit-domain/Cargo.toml' does not exist",
+        "path": "crates/hqgit-domain/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '051-semantic-deltas' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "027-attestation-primitive",
+      "050-stacked-changes",
+      "025-semantic-anchors"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/delta/api_surface.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/delta/capabilities.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/delta/dependencies.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/delta/mod.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/testdata/deltas/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/tests/delta.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/predicate.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "051-semantic-deltas",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "31c984f9d0a464bdf956c52b4ea775c53dd18bb5fc51427e7dd29d7918b1329c"
+}

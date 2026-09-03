@@ -1,0 +1,148 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '092-git-endpoint' file unit 'crates/hqgit-server/src/git/mod.rs' does not exist",
+        "path": "crates/hqgit-server/src/git/mod.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '092-git-endpoint' file unit 'crates/hqgit-server/src/git/refs.rs' does not exist",
+        "path": "crates/hqgit-server/src/git/refs.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '092-git-endpoint' file unit 'crates/hqgit-server/src/git/upload_pack.rs' does not exist",
+        "path": "crates/hqgit-server/src/git/upload_pack.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '092-git-endpoint' file unit 'crates/hqgit-server/src/git/receive_pack.rs' does not exist",
+        "path": "crates/hqgit-server/src/git/receive_pack.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '092-git-endpoint' file unit 'crates/hqgit-server/src/git/gate.rs' does not exist",
+        "path": "crates/hqgit-server/src/git/gate.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '092-git-endpoint' file unit 'crates/hqgit-server/tests/git_endpoint.rs' does not exist",
+        "path": "crates/hqgit-server/tests/git_endpoint.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '092-git-endpoint' file unit 'crates/hqgit-server/src/lib.rs' does not exist",
+        "path": "crates/hqgit-server/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '092-git-endpoint' file unit 'crates/hqgit-server/src/app.rs' does not exist",
+        "path": "crates/hqgit-server/src/app.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '092-git-endpoint' file unit 'crates/hqgit-server/Cargo.toml' does not exist",
+        "path": "crates/hqgit-server/Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "090-server-skeleton",
+      "031-git-object-bridge",
+      "024-change-and-revision",
+      "068-policy-in-repo"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/git/gate.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/git/mod.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/git/receive_pack.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/git/refs.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/git/upload_pack.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/tests/git_endpoint.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/app.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/lib.rs"
+        }
+      }
+    ],
+    "specId": "092-git-endpoint",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "b88036062580cbd15738d69e3ef8c301c7ec05c670e1ed31752443f1bc608bd3"
+}

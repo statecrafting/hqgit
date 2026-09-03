@@ -1,0 +1,160 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '032-cli-skeleton' file unit 'crates/hqgit-cli/Cargo.toml' does not exist",
+        "path": "crates/hqgit-cli/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '032-cli-skeleton' file unit 'crates/hqgit-cli/src/main.rs' does not exist",
+        "path": "crates/hqgit-cli/src/main.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '032-cli-skeleton' file unit 'crates/hqgit-cli/src/cli.rs' does not exist",
+        "path": "crates/hqgit-cli/src/cli.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '032-cli-skeleton' file unit 'crates/hqgit-cli/src/cmd_init.rs' does not exist",
+        "path": "crates/hqgit-cli/src/cmd_init.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '032-cli-skeleton' file unit 'crates/hqgit-cli/src/cmd_status.rs' does not exist",
+        "path": "crates/hqgit-cli/src/cmd_status.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '032-cli-skeleton' file unit 'crates/hqgit-cli/src/cmd_log.rs' does not exist",
+        "path": "crates/hqgit-cli/src/cmd_log.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '032-cli-skeleton' file unit 'crates/hqgit-cli/src/config.rs' does not exist",
+        "path": "crates/hqgit-cli/src/config.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '032-cli-skeleton' file unit 'crates/hqgit-cli/src/output.rs' does not exist",
+        "path": "crates/hqgit-cli/src/output.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '032-cli-skeleton' file unit 'crates/hqgit-cli/tests/' does not exist",
+        "path": "crates/hqgit-cli/tests/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '032-cli-skeleton' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "021-local-repository"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cli.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cmd_init.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cmd_log.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cmd_status.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/config.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/main.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/output.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/tests/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "032-cli-skeleton",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "57ad0491598c43095af3e8e016ab22e145d548a72de4eb7bf826613c38db8029"
+}

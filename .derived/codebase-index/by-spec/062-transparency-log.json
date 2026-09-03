@@ -1,0 +1,117 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '062-transparency-log' file unit 'crates/hqgit-trust/src/tlog/mod.rs' does not exist",
+        "path": "crates/hqgit-trust/src/tlog/mod.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '062-transparency-log' file unit 'crates/hqgit-trust/src/tlog/merkle.rs' does not exist",
+        "path": "crates/hqgit-trust/src/tlog/merkle.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '062-transparency-log' file unit 'crates/hqgit-trust/src/tlog/proofs.rs' does not exist",
+        "path": "crates/hqgit-trust/src/tlog/proofs.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '062-transparency-log' file unit 'crates/hqgit-trust/src/tlog/client.rs' does not exist",
+        "path": "crates/hqgit-trust/src/tlog/client.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '062-transparency-log' file unit 'crates/hqgit-trust/tests/tlog.rs' does not exist",
+        "path": "crates/hqgit-trust/tests/tlog.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '062-transparency-log' file unit 'crates/hqgit-trust/testdata/tlog/' does not exist",
+        "path": "crates/hqgit-trust/testdata/tlog/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '062-transparency-log' file unit 'crates/hqgit-trust/src/lib.rs' does not exist",
+        "path": "crates/hqgit-trust/src/lib.rs"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "060-identity-and-key-rotation"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/src/tlog/client.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/src/tlog/merkle.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/src/tlog/mod.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/src/tlog/proofs.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/testdata/tlog/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/tests/tlog.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/src/lib.rs"
+        }
+      }
+    ],
+    "specId": "062-transparency-log",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "6c34470894ad901dd102c3a60e05cd87ce481a8b2d60f736a0592c0326cf2a8b"
+}

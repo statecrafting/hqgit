@@ -1,0 +1,89 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '024-change-and-revision' file unit 'crates/hqgit-domain/src/change.rs' does not exist",
+        "path": "crates/hqgit-domain/src/change.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '024-change-and-revision' file unit 'crates/hqgit-domain/src/revision.rs' does not exist",
+        "path": "crates/hqgit-domain/src/revision.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '024-change-and-revision' file unit 'crates/hqgit-domain/tests/change.rs' does not exist",
+        "path": "crates/hqgit-domain/tests/change.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '024-change-and-revision' file unit 'crates/hqgit-domain/src/lib.rs' does not exist",
+        "path": "crates/hqgit-domain/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '024-change-and-revision' file unit 'crates/hqgit-domain/src/facts.rs' does not exist",
+        "path": "crates/hqgit-domain/src/facts.rs"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "023-domain-fact-vocabulary"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/change.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/revision.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/tests/change.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/lib.rs"
+        }
+      }
+    ],
+    "specId": "024-change-and-revision",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "8ed69c695f3beb74d758c50810d7d9e450cc884c8ebaa4868a967452c3134728"
+}

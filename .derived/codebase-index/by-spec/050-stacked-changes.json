@@ -1,0 +1,103 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '050-stacked-changes' file unit 'crates/hqgit-domain/src/stack.rs' does not exist",
+        "path": "crates/hqgit-domain/src/stack.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '050-stacked-changes' file unit 'crates/hqgit-domain/src/interdiff.rs' does not exist",
+        "path": "crates/hqgit-domain/src/interdiff.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '050-stacked-changes' file unit 'crates/hqgit-domain/tests/stack.rs' does not exist",
+        "path": "crates/hqgit-domain/tests/stack.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '050-stacked-changes' file unit 'crates/hqgit-domain/src/lib.rs' does not exist",
+        "path": "crates/hqgit-domain/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '050-stacked-changes' file unit 'crates/hqgit-domain/src/facts.rs' does not exist",
+        "path": "crates/hqgit-domain/src/facts.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '050-stacked-changes' file unit 'crates/hqgit-types/testdata/vectors/' does not exist",
+        "path": "crates/hqgit-types/testdata/vectors/"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "024-change-and-revision"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/interdiff.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/stack.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/tests/stack.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/testdata/vectors/"
+        }
+      }
+    ],
+    "specId": "050-stacked-changes",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "0e1f55103172f7f61438cdb9351911c4f7bea29b4dd860d27a98abbae6c51bcf"
+}

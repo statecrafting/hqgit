@@ -1,0 +1,175 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "constrains": [
+      {
+        "kind": "sequencing-plan",
+        "note": "Wave 1: ledger, object store, domain model, CLI. Local only, no server. Ends when offline review against a plain git repo works end to end (033) and its evidence verifies (034). Hash stability of 011 and 017 is the one unrecoverable decision in the whole plan, which is why they sit first and why 012 gates them before anything is built on top.\n",
+        "target_specs": [
+          "010-workspace-and-core-types",
+          "011-canonical-encoding",
+          "012-hash-stability-gate",
+          "013-object-store",
+          "014-content-defined-chunking",
+          "015-verified-streaming",
+          "016-remote-object-backend",
+          "017-ledger-entry-dag",
+          "018-deterministic-total-order",
+          "019-facts-and-derived-state",
+          "020-commitments-and-tombstones",
+          "021-local-repository",
+          "023-domain-fact-vocabulary",
+          "024-change-and-revision",
+          "025-semantic-anchors",
+          "026-review-threads",
+          "027-attestation-primitive",
+          "028-issues-and-derived-state",
+          "031-git-object-bridge",
+          "032-cli-skeleton",
+          "033-cli-offline-review",
+          "034-cli-attest-and-verify"
+        ]
+      },
+      {
+        "kind": "sequencing-plan",
+        "note": "Wave 2: the git bridge (031) and the bidirectional GitHub mirror. Value for users who migrate nothing: their issues, pull requests, reviews, and check results become facts they can clone.\n",
+        "target_specs": [
+          "040-github-mirror-import",
+          "041-github-mirror-export",
+          "042-mirror-sync-command"
+        ]
+      },
+      {
+        "kind": "sequencing-plan",
+        "note": "Wave 3: stacked changes and semantic review. The first felt value beyond parity: force-push stops destroying review context, stacks are native, and the high-value views of a change (API surface, types, dependencies, capabilities) arrive as attestations.\n",
+        "target_specs": [
+          "050-stacked-changes",
+          "051-semantic-deltas",
+          "052-semantic-conflicts"
+        ]
+      },
+      {
+        "kind": "sequencing-plan",
+        "note": "Wave 4: the trust plane and the policy engine. Merge gates become checkable predicates over verified evidence; every verdict is itself an attestation replayable against the exact policy hash that produced it.\n",
+        "target_specs": [
+          "060-identity-and-key-rotation",
+          "061-oidc-login",
+          "062-transparency-log",
+          "063-keyless-signing",
+          "064-attestation-verification",
+          "065-policy-engine",
+          "066-policy-sdk",
+          "067-policy-evaluation-attestation",
+          "068-policy-in-repo"
+        ]
+      },
+      {
+        "kind": "sequencing-plan",
+        "note": "Wave 5: the evaluation plane. Highest capex, deliberately fifth because it depends on stable input hashing. CI results are not a separate system; they are evidence, and the cache is a trust boundary.\n",
+        "target_specs": [
+          "070-reapi-types",
+          "071-action-cache",
+          "072-execution-service",
+          "073-sandbox-executor",
+          "074-execution-provenance",
+          "075-build-graph",
+          "076-merge-queue"
+        ]
+      },
+      {
+        "kind": "sequencing-plan",
+        "note": "Wave 6: projections, the cross-repo code and ecosystem graph, and the hosted edge (server, git endpoint, API, review UI). Everything in this wave is disposable by construction (constitution VI); the ecosystem graph is the one legitimately centralized component and stays non-authoritative.\n",
+        "target_specs": [
+          "080-projection-framework",
+          "081-change-and-review-views",
+          "082-search-index",
+          "083-code-graph",
+          "084-ecosystem-graph",
+          "085-attention-feeds",
+          "090-server-skeleton",
+          "091-per-repo-control-plane",
+          "092-git-endpoint",
+          "093-connect-api",
+          "094-quarantine-and-promotion",
+          "095-web-review-ui"
+        ]
+      },
+      {
+        "kind": "sequencing-plan",
+        "note": "Wave 7: agents as a distinct principal class, designed into the types in wave 1 (010) and shipped here: Biscuit credentials carrying the delegation chain, declared sandboxes, mandatory provenance, and changes that arrive with machine-checkable evidence so a human reviews the argument rather than the diff. Ownership with delegation and expiry rides along because it is the other half of the accountability chain.\n",
+        "target_specs": [
+          "100-agent-principals",
+          "101-delegation-chain",
+          "102-agent-sandbox-and-provenance",
+          "103-evidence-carrying-changes",
+          "104-ownership-and-sla"
+        ]
+      },
+      {
+        "kind": "sequencing-plan",
+        "note": "Wave 8: multi-host federation. Last because discovery cost is the structural reason centralization keeps winning; the central index exists by wave 6 without lock-in as its business model, and federation replicates the same signed history between hosts.\n",
+        "target_specs": [
+          "110-set-reconciliation",
+          "111-quic-transport",
+          "112-federation"
+        ]
+      }
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "000-hqgit-bootstrap"
+    ],
+    "domain": "governance",
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "002-platform-thesis",
+    "implementation": "n-a",
+    "kind": "thesis",
+    "references": [
+      {
+        "role": "context",
+        "unit": {
+          "kind": "file",
+          "path": "docs/design/00-architecture.md"
+        }
+      },
+      {
+        "role": "context",
+        "unit": {
+          "kind": "file",
+          "path": "docs/design/01-build-order.md"
+        }
+      }
+    ],
+    "risk": "critical",
+    "sectionHeadings": [
+      "002: Platform thesis",
+      "1. Purpose",
+      "2. Layer model",
+      "3. The governing decision: canonical versus derived",
+      "4. The layers, decided",
+      "4.1 L0: object store (specs 013 to 016, 031)",
+      "4.2 L1: ledger (specs 011, 012, 017 to 021, 110, 111)",
+      "4.3 L2: domain model (specs 023 to 028, 050 to 052, 104)",
+      "4.4 L3: evaluation plane (specs 070 to 076)",
+      "4.5 L4: trust plane (specs 060 to 064, 100 to 102)",
+      "4.6 L6: policy (specs 065 to 068, 103)",
+      "4.7 L5 and L7 (specs 080 to 095, 112)",
+      "5. Language and crate topology",
+      "6. Build order",
+      "7. Amendment and invalidation",
+      "8. Standing risks",
+      "9. Out of scope",
+      "10. Resolved decisions"
+    ],
+    "specPath": "specs/002-platform-thesis/spec.md",
+    "status": "approved",
+    "summary": "hqgit is a verifiable evidence ledger for software change. Canonical state is a set of signed, content-addressed objects forming a per-repository DAG that covers code, collaboration, and evidence; every index, timeline, queue, and dashboard is a projection rebuildable from zero. The forge is one client of that ledger, the CI system is another, and the agent runtime is a third. This spec fixes the layer model (L0 objects through L7 edge), the governing invariant (canonical versus derived), the nouns (Change, Revision, Anchor, Attestation, Principal, Policy), the language split (Rust core, Go only at the executor seam), the crate topology, the eight-wave build order that every later spec's number reflects, and the standing risks. It owns no code.\n",
+    "title": "Platform thesis: a verifiable evidence ledger for software change"
+  },
+  "shardHash": "391b3b6b734874a82bb07348ad27f6c3789a724b9f1baa4d6a09c93321fef991",
+  "specVersion": "1.1.0"
+}

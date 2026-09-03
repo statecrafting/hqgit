@@ -1,0 +1,247 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '073-sandbox-executor' file unit 'executor/go.mod' does not exist",
+        "path": "executor/go.mod"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '073-sandbox-executor' file unit 'executor/go.sum' does not exist",
+        "path": "executor/go.sum"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '073-sandbox-executor' file unit 'executor/Makefile' does not exist",
+        "path": "executor/Makefile"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '073-sandbox-executor' file unit 'executor/cmd/hq-executor/main.go' does not exist",
+        "path": "executor/cmd/hq-executor/main.go"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '073-sandbox-executor' file unit 'executor/internal/reapi/worker.go' does not exist",
+        "path": "executor/internal/reapi/worker.go"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '073-sandbox-executor' file unit 'executor/internal/reapi/cas.go' does not exist",
+        "path": "executor/internal/reapi/cas.go"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '073-sandbox-executor' file unit 'executor/internal/sandbox/tier.go' does not exist",
+        "path": "executor/internal/sandbox/tier.go"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '073-sandbox-executor' file unit 'executor/internal/sandbox/report.go' does not exist",
+        "path": "executor/internal/sandbox/report.go"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '073-sandbox-executor' file unit 'executor/internal/sandbox/namespaces_linux.go' does not exist",
+        "path": "executor/internal/sandbox/namespaces_linux.go"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '073-sandbox-executor' file unit 'executor/internal/sandbox/seccomp_linux.go' does not exist",
+        "path": "executor/internal/sandbox/seccomp_linux.go"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '073-sandbox-executor' file unit 'executor/internal/sandbox/microvm.go' does not exist",
+        "path": "executor/internal/sandbox/microvm.go"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '073-sandbox-executor' file unit 'executor/internal/sandbox/sandbox_test.go' does not exist",
+        "path": "executor/internal/sandbox/sandbox_test.go"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '073-sandbox-executor' file unit 'executor/proto/' does not exist",
+        "path": "executor/proto/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '073-sandbox-executor' file unit 'crates/hqgit-eval/src/sandbox.rs' does not exist",
+        "path": "crates/hqgit-eval/src/sandbox.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '073-sandbox-executor' file unit 'crates/hqgit-eval/src/lib.rs' does not exist",
+        "path": "crates/hqgit-eval/src/lib.rs"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "072-execution-service"
+    ],
+    "implementingPaths": [
+      {
+        "path": ".github/workflows/govern.yml",
+        "source": "spec-edge"
+      }
+    ],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/sandbox.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "executor/Makefile"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "executor/cmd/hq-executor/main.go"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "executor/go.mod"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "executor/go.sum"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "executor/internal/reapi/cas.go"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "executor/internal/reapi/worker.go"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "executor/internal/sandbox/microvm.go"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "executor/internal/sandbox/namespaces_linux.go"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "executor/internal/sandbox/report.go"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "executor/internal/sandbox/sandbox_test.go"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "executor/internal/sandbox/seccomp_linux.go"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "executor/internal/sandbox/tier.go"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "executor/proto/"
+        }
+      },
+      {
+        "locations": [
+          {
+            "file": ".github/workflows/govern.yml"
+          }
+        ],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": ".github/workflows/govern.yml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/lib.rs"
+        }
+      }
+    ],
+    "specId": "073-sandbox-executor",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "67066918a415027b6e671c2d84df47b01bbf7d236d9ad4f2e0aeb9b33316465b"
+}

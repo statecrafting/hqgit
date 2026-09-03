@@ -1,0 +1,191 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '040-github-mirror-import' file unit 'crates/hqgit-mirror/Cargo.toml' does not exist",
+        "path": "crates/hqgit-mirror/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '040-github-mirror-import' file unit 'crates/hqgit-mirror/src/lib.rs' does not exist",
+        "path": "crates/hqgit-mirror/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '040-github-mirror-import' file unit 'crates/hqgit-mirror/src/github/mod.rs' does not exist",
+        "path": "crates/hqgit-mirror/src/github/mod.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '040-github-mirror-import' file unit 'crates/hqgit-mirror/src/github/client.rs' does not exist",
+        "path": "crates/hqgit-mirror/src/github/client.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '040-github-mirror-import' file unit 'crates/hqgit-mirror/src/github/import.rs' does not exist",
+        "path": "crates/hqgit-mirror/src/github/import.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '040-github-mirror-import' file unit 'crates/hqgit-mirror/src/github/model.rs' does not exist",
+        "path": "crates/hqgit-mirror/src/github/model.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '040-github-mirror-import' file unit 'crates/hqgit-mirror/src/quarantine.rs' does not exist",
+        "path": "crates/hqgit-mirror/src/quarantine.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '040-github-mirror-import' file unit 'crates/hqgit-mirror/src/idmap.rs' does not exist",
+        "path": "crates/hqgit-mirror/src/idmap.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '040-github-mirror-import' file unit 'crates/hqgit-mirror/tests/' does not exist",
+        "path": "crates/hqgit-mirror/tests/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '040-github-mirror-import' file unit 'crates/hqgit-mirror/testdata/github/' does not exist",
+        "path": "crates/hqgit-mirror/testdata/github/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '040-github-mirror-import' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '040-github-mirror-import' file unit 'crates/hqgit-domain/src/facts.rs' does not exist",
+        "path": "crates/hqgit-domain/src/facts.rs"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "028-issues-and-derived-state",
+      "026-review-threads",
+      "027-attestation-primitive",
+      "031-git-object-bridge"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-mirror/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-mirror/src/github/client.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-mirror/src/github/import.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-mirror/src/github/mod.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-mirror/src/github/model.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-mirror/src/idmap.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-mirror/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-mirror/src/quarantine.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-mirror/testdata/github/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-mirror/tests/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "040-github-mirror-import",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "68c3fa4c2b0751b27fbee50d467ee5b1627a70d7cc3972696fe3f24e632b8d11"
+}

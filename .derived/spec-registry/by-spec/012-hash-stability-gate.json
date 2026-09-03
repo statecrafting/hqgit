@@ -1,0 +1,66 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "011-canonical-encoding"
+    ],
+    "domain": "l1-ledger",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "fuzz/Cargo.toml"
+      },
+      {
+        "kind": "file",
+        "path": "fuzz/fuzz_targets/codec_roundtrip.rs"
+      },
+      {
+        "kind": "file",
+        "path": "fuzz/fuzz_targets/canonical_idempotent.rs"
+      },
+      {
+        "kind": "file",
+        "path": "fuzz/fuzz_targets/value_ordering.rs"
+      },
+      {
+        "kind": "file",
+        "path": "fuzz/corpus-seeds/"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-types/tests/golden.rs"
+      },
+      {
+        "kind": "file",
+        "path": ".github/workflows/hash-stability.yml"
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "012-hash-stability-gate",
+    "implementation": "pending",
+    "kind": "tooling",
+    "risk": "critical",
+    "sectionHeadings": [
+      "012: Hash stability gate",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/012-hash-stability-gate/spec.md",
+    "status": "approved",
+    "summary": "The gate that makes constitution VIII enforceable rather than aspirational. A standalone cargo-fuzz workspace with three targets over the canonical codec (decode-encode round trip, encode idempotence, key ordering) and a committed seed corpus; a golden test that walks every vector under the vector corpus and asserts byte and hash identity; and a CI workflow that runs the golden walk on Linux, macOS, and Windows, folds every vector file into one tree digest, asserts the digests agree across the matrix, and runs each fuzz target nightly with crash artifacts uploaded. A vector change fails the gate unless the PR carries a Schema-Major line and the amendment to the encoding spec: a human decision, never a regenerate.\n",
+    "title": "Hash stability gate: fuzz targets, the golden-vector walk, and the cross-platform CI matrix"
+  },
+  "shardHash": "763e22eb7475f5b76e8ac96def85a121051e4ec77c9dc6ef2b92355ac892794d",
+  "specVersion": "1.1.0"
+}

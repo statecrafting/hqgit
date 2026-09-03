@@ -1,0 +1,147 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '065-policy-engine' file unit 'crates/hqgit-policy/Cargo.toml' does not exist",
+        "path": "crates/hqgit-policy/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '065-policy-engine' file unit 'crates/hqgit-policy/src/lib.rs' does not exist",
+        "path": "crates/hqgit-policy/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '065-policy-engine' file unit 'crates/hqgit-policy/src/engine.rs' does not exist",
+        "path": "crates/hqgit-policy/src/engine.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '065-policy-engine' file unit 'crates/hqgit-policy/src/abi.rs' does not exist",
+        "path": "crates/hqgit-policy/src/abi.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '065-policy-engine' file unit 'crates/hqgit-policy/src/module.rs' does not exist",
+        "path": "crates/hqgit-policy/src/module.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '065-policy-engine' file unit 'crates/hqgit-policy/src/input.rs' does not exist",
+        "path": "crates/hqgit-policy/src/input.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '065-policy-engine' file unit 'crates/hqgit-policy/tests/' does not exist",
+        "path": "crates/hqgit-policy/tests/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '065-policy-engine' file unit 'crates/hqgit-policy/testdata/policies/' does not exist",
+        "path": "crates/hqgit-policy/testdata/policies/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '065-policy-engine' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "027-attestation-primitive",
+      "024-change-and-revision"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy/src/abi.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy/src/engine.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy/src/input.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy/src/module.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy/testdata/policies/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy/tests/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "065-policy-engine",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "3957279f6458aece60fb5620891eca47b07fbb4bbdb3888fe7dfb2bfee0aa69e"
+}

@@ -1,0 +1,104 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '071-action-cache' file unit 'crates/hqgit-eval/src/cache.rs' does not exist",
+        "path": "crates/hqgit-eval/src/cache.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '071-action-cache' file unit 'crates/hqgit-eval/src/executor_identity.rs' does not exist",
+        "path": "crates/hqgit-eval/src/executor_identity.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '071-action-cache' file unit 'crates/hqgit-eval/tests/cache.rs' does not exist",
+        "path": "crates/hqgit-eval/tests/cache.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '071-action-cache' file unit 'crates/hqgit-eval/src/lib.rs' does not exist",
+        "path": "crates/hqgit-eval/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '071-action-cache' file unit 'crates/hqgit-eval/Cargo.toml' does not exist",
+        "path": "crates/hqgit-eval/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '071-action-cache' file unit 'crates/hqgit-domain/src/facts.rs' does not exist",
+        "path": "crates/hqgit-domain/src/facts.rs"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "070-reapi-types",
+      "064-attestation-verification"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/cache.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/executor_identity.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/tests/cache.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/lib.rs"
+        }
+      }
+    ],
+    "specId": "071-action-cache",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "1780e22306bd682680eaf9fdca0ceba627e076b723cb0e791b594f9c8df663fb"
+}

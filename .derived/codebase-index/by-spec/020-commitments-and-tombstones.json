@@ -1,0 +1,174 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '020-commitments-and-tombstones' file unit 'crates/hqgit-ledger/src/commitment.rs' does not exist",
+        "path": "crates/hqgit-ledger/src/commitment.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '020-commitments-and-tombstones' file unit 'crates/hqgit-ledger/src/tombstone.rs' does not exist",
+        "path": "crates/hqgit-ledger/src/tombstone.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '020-commitments-and-tombstones' file unit 'crates/hqgit-object/src/encrypt.rs' does not exist",
+        "path": "crates/hqgit-object/src/encrypt.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '020-commitments-and-tombstones' file unit 'crates/hqgit-ledger/tests/erasure.rs' does not exist",
+        "path": "crates/hqgit-ledger/tests/erasure.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '020-commitments-and-tombstones' file unit 'crates/hqgit-ledger/src/lib.rs' does not exist",
+        "path": "crates/hqgit-ledger/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '020-commitments-and-tombstones' file unit 'crates/hqgit-object/src/lib.rs' does not exist",
+        "path": "crates/hqgit-object/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '020-commitments-and-tombstones' file unit 'crates/hqgit-object/src/store.rs' does not exist",
+        "path": "crates/hqgit-object/src/store.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '020-commitments-and-tombstones' file unit 'crates/hqgit-object/src/local.rs' does not exist",
+        "path": "crates/hqgit-object/src/local.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '020-commitments-and-tombstones' file unit 'crates/hqgit-object/src/memory.rs' does not exist",
+        "path": "crates/hqgit-object/src/memory.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '020-commitments-and-tombstones' file unit 'crates/hqgit-object/Cargo.toml' does not exist",
+        "path": "crates/hqgit-object/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '020-commitments-and-tombstones' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "019-facts-and-derived-state"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/commitment.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/tombstone.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/tests/erasure.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/encrypt.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/local.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/memory.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/store.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "020-commitments-and-tombstones",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "ad1bb4214de2d0bf662c0bfd8e9b4431390fbc37a536e4769527f0ed6d85dd3e"
+}

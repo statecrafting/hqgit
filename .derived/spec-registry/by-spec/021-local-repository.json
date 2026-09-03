@@ -1,0 +1,81 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "020-commitments-and-tombstones"
+    ],
+    "domain": "l1-ledger",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-ledger/src/repo.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-ledger/src/store.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-ledger/src/namespace.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-ledger/tests/repo.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "017-ledger-entry-dag",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "017-ledger-entry-dag",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "021-local-repository",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "high",
+    "sectionHeadings": [
+      "021: Local repository",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/021-local-repository/spec.md",
+    "status": "approved",
+    "summary": "Where the ledger meets a disk. This spec fixes the .hq directory inside a working tree (the redb-backed entry store, the object store, the local identity, the config file), the EntryStore trait with atomic fsynced appends, the Repository type with init, open, and the one append path every fact takes (encode, put the payload object, build the entry on the current heads, stamp the clock, sign, append), and namespaces as facts with main and quarantine present from init. Write ordering is chosen so a crash can leave an orphan object but never a dangling entry. This is the substrate the CLI (032), the server (090), and the sync protocol (110) all share, which is what makes offline-first true.\n",
+    "title": "Local repository: the .hq layout, the persistent entry store, namespaces, and the append path"
+  },
+  "shardHash": "185bd0c88a2d5b76f785cdb4d789480eed84cb98c8d8729c1b2137b06986912b",
+  "specVersion": "1.1.0"
+}

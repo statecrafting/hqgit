@@ -1,0 +1,80 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "018-deterministic-total-order"
+    ],
+    "domain": "l1-ledger",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-ledger/src/facts.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-ledger/src/derived.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-ledger/src/crdt/mod.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-ledger/src/crdt/lww.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-ledger/src/crdt/sequence.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-ledger/tests/facts.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "017-ledger-entry-dag",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "017-ledger-entry-dag",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/Cargo.toml"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "019-facts-and-derived-state",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "critical",
+    "sectionHeadings": [
+      "019: Facts and derived state",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/019-facts-and-derived-state/spec.md",
+    "status": "approved",
+    "summary": "The separation the thesis calls critical: facts are immutable events that never conflict and merge by set union; derived state is the mutable projection and the only thing that needs convergence. This spec fixes the fact envelope every entry payload decodes to, the registry seam through which domain crates declare fact kinds and validators while unknown kinds stay preserved and opaque, the last-writer-wins register keyed by hybrid logical clock that every derived field uses unless a spec argues otherwise, the fold that rebuilds any derived state from zero, and the sequence CRDT interface reserved for collaborative text and nothing else. It keeps the CRDT surface near five percent of the domain, which is the difference between a system that can be reasoned about and one that cannot.\n",
+    "title": "Facts and derived state: the immutable fact envelope, the registry seam, LWW registers, and the reserved sequence CRDT"
+  },
+  "shardHash": "880859432ca555cf0c53073356eabee3a4b43ed4f96df0f8a67330b2819d4c50",
+  "specVersion": "1.1.0"
+}

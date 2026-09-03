@@ -1,0 +1,100 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "028-issues-and-derived-state",
+      "026-review-threads",
+      "027-attestation-primitive",
+      "031-git-object-bridge"
+    ],
+    "domain": "l7-edge",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-mirror/Cargo.toml"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-mirror/src/lib.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-mirror/src/github/mod.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-mirror/src/github/client.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-mirror/src/github/import.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-mirror/src/github/model.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-mirror/src/quarantine.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-mirror/src/idmap.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-mirror/tests/"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-mirror/testdata/github/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 2
+    },
+    "id": "040-github-mirror-import",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "high",
+    "sectionHeadings": [
+      "040: GitHub mirror import",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/040-github-mirror-import/spec.md",
+    "status": "approved",
+    "summary": "The wedge in code (thesis D16, constitution XIV): value for users who migrate nothing. This spec founds hqgit-mirror and its GitHub import: a client seam over the REST API with a recorded-fixture implementation for tests, and an importer that turns issues, pull requests, review comments, approvals, check conclusions, and commits into facts in the repository's quarantine namespace. Pull requests become Changes with one Revision per head commit through the git bridge; review comments become threads anchored by path and line and then re-anchored semantically; approvals and check results become mirror attestations whose claims name the external source. An id map makes re-import idempotent. Nothing mirrored is trusted: promotion to the main namespace is spec 094's capability path.\n",
+    "title": "GitHub mirror import: issues, pull requests, reviews, and checks become quarantined facts"
+  },
+  "shardHash": "5683e97f8c338270557cdb277578fb77eaa21ef20f2b6961824e4b0904ba1d98",
+  "specVersion": "1.1.0"
+}

@@ -1,0 +1,417 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'proto/hqgit/v1/common.proto' does not exist",
+        "path": "proto/hqgit/v1/common.proto"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'proto/hqgit/v1/changes.proto' does not exist",
+        "path": "proto/hqgit/v1/changes.proto"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'proto/hqgit/v1/reviews.proto' does not exist",
+        "path": "proto/hqgit/v1/reviews.proto"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'proto/hqgit/v1/attestations.proto' does not exist",
+        "path": "proto/hqgit/v1/attestations.proto"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'proto/hqgit/v1/policy.proto' does not exist",
+        "path": "proto/hqgit/v1/policy.proto"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'proto/hqgit/v1/repos.proto' does not exist",
+        "path": "proto/hqgit/v1/repos.proto"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'crates/hqgit-server/build.rs' does not exist",
+        "path": "crates/hqgit-server/build.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'crates/hqgit-server/src/api/mod.rs' does not exist",
+        "path": "crates/hqgit-server/src/api/mod.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'crates/hqgit-server/src/api/connect.rs' does not exist",
+        "path": "crates/hqgit-server/src/api/connect.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'crates/hqgit-server/src/api/read_model.rs' does not exist",
+        "path": "crates/hqgit-server/src/api/read_model.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'crates/hqgit-server/src/api/changes.rs' does not exist",
+        "path": "crates/hqgit-server/src/api/changes.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'crates/hqgit-server/src/api/reviews.rs' does not exist",
+        "path": "crates/hqgit-server/src/api/reviews.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'crates/hqgit-server/src/api/attestations.rs' does not exist",
+        "path": "crates/hqgit-server/src/api/attestations.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'crates/hqgit-server/src/api/policy.rs' does not exist",
+        "path": "crates/hqgit-server/src/api/policy.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'crates/hqgit-server/src/api/repos.rs' does not exist",
+        "path": "crates/hqgit-server/src/api/repos.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'crates/hqgit-server/tests/api.rs' does not exist",
+        "path": "crates/hqgit-server/tests/api.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'crates/hqgit-cli/build.rs' does not exist",
+        "path": "crates/hqgit-cli/build.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'crates/hqgit-cli/src/client.rs' does not exist",
+        "path": "crates/hqgit-cli/src/client.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'crates/hqgit-cli/src/cmd_remote.rs' does not exist",
+        "path": "crates/hqgit-cli/src/cmd_remote.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'crates/hqgit-cli/tests/remote.rs' does not exist",
+        "path": "crates/hqgit-cli/tests/remote.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'crates/hqgit-server/src/lib.rs' does not exist",
+        "path": "crates/hqgit-server/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'crates/hqgit-server/src/app.rs' does not exist",
+        "path": "crates/hqgit-server/src/app.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'crates/hqgit-server/Cargo.toml' does not exist",
+        "path": "crates/hqgit-server/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'crates/hqgit-cli/src/main.rs' does not exist",
+        "path": "crates/hqgit-cli/src/main.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'crates/hqgit-cli/src/cli.rs' does not exist",
+        "path": "crates/hqgit-cli/src/cli.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'crates/hqgit-cli/src/config.rs' does not exist",
+        "path": "crates/hqgit-cli/src/config.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' file unit 'crates/hqgit-cli/Cargo.toml' does not exist",
+        "path": "crates/hqgit-cli/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '093-connect-api' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "090-server-skeleton",
+      "026-review-threads",
+      "027-attestation-primitive",
+      "067-policy-evaluation-attestation",
+      "032-cli-skeleton",
+      "081-change-and-review-views"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/build.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/client.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cmd_remote.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/tests/remote.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/build.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/api/attestations.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/api/changes.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/api/connect.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/api/mod.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/api/policy.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/api/read_model.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/api/repos.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/api/reviews.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/tests/api.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "proto/hqgit/v1/attestations.proto"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "proto/hqgit/v1/changes.proto"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "proto/hqgit/v1/common.proto"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "proto/hqgit/v1/policy.proto"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "proto/hqgit/v1/repos.proto"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "proto/hqgit/v1/reviews.proto"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cli.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/config.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/main.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/app.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "093-connect-api",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "08a70ef2073ad3d738e9c0e23b70d6447024a7cd8c6091fdc2f1a169e1de78b6"
+}

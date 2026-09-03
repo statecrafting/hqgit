@@ -1,0 +1,76 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "081-change-and-review-views"
+    ],
+    "domain": "l5-projection",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/src/feeds.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/tests/feeds.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/testdata/feeds/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "080-projection-framework",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "080-projection-framework",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/registry.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 6
+    },
+    "id": "085-attention-feeds",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "low",
+    "sectionHeadings": [
+      "085: Attention feeds",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/085-attention-feeds/spec.md",
+    "status": "approved",
+    "summary": "Design §1.1 point 8 names attention management as an email firehose with no prioritization. This spec replaces the firehose with a projection: for each principal, a feed of items derived from facts, ranked by integer weights for blocking someone's merge, an ownership match with its SLA when spec 104 supplies one, staleness measured in ledger time rather than wall-clock time, stack depth, and explicit requests, with the reasons listed on every item so there is never a notification without a reason. Requesting attention and muting are facts, so a rebuild reproduces the feed and a mute survives every replica. The feed is disposable, as-of a ledger entry, and never a source of anything.\n",
+    "title": "Attention feeds: a per-principal ranked feed where every item carries its reason"
+  },
+  "shardHash": "dfd322bc5070f7b89d01ba0cdad6a5f90b973ef2d011a18d610a2462fd3897af",
+  "specVersion": "1.1.0"
+}

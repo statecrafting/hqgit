@@ -1,0 +1,90 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '074-execution-provenance' file unit 'crates/hqgit-eval/src/provenance.rs' does not exist",
+        "path": "crates/hqgit-eval/src/provenance.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '074-execution-provenance' file unit 'crates/hqgit-eval/tests/provenance.rs' does not exist",
+        "path": "crates/hqgit-eval/tests/provenance.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '074-execution-provenance' file unit 'crates/hqgit-eval/testdata/slsa/' does not exist",
+        "path": "crates/hqgit-eval/testdata/slsa/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '074-execution-provenance' file unit 'crates/hqgit-eval/src/lib.rs' does not exist",
+        "path": "crates/hqgit-eval/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '074-execution-provenance' file unit 'crates/hqgit-domain/src/predicate.rs' does not exist",
+        "path": "crates/hqgit-domain/src/predicate.rs"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "072-execution-service",
+      "064-attestation-verification"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/provenance.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/testdata/slsa/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/tests/provenance.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/predicate.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/lib.rs"
+        }
+      }
+    ],
+    "specId": "074-execution-provenance",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "e59e26c17ca0cd4b230de09dae5bd994e2308b9ef80ebd2b983d34d875193de6"
+}

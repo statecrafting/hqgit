@@ -1,0 +1,82 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "027-attestation-primitive",
+      "024-change-and-revision"
+    ],
+    "domain": "l6-policy",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy/Cargo.toml"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy/src/lib.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy/src/engine.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy/src/abi.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy/src/module.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy/src/input.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy/tests/"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy/testdata/policies/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 4
+    },
+    "id": "065-policy-engine",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "critical",
+    "sectionHeadings": [
+      "065: Policy engine",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/065-policy-engine/spec.md",
+    "status": "approved",
+    "summary": "The merge predicate as the thesis states it: f(change, attestation_set, policy_version) -> Allow | Deny(reasons), deterministic and side-effect free. This spec founds hqgit-policy: a policy is a WebAssembly module stored as a content-addressed object whose Cid is its version; the engine is wasmtime configured for determinism (no clocks, no randomness, no filesystem, no network, no threads, fuel and memory limits, canonical NaNs); the ABI is one exported function taking the canonical bytes of a PolicyInput and returning the canonical bytes of a Verdict; and the input is built from domain types plus the attestation summaries of a verified set. Same input bytes and same module hash give the same output bytes, which is what makes a verdict replayable years later (067). Writing policies is the SDK's job (066); pinning them to a repository is 068's.\n",
+    "title": "Policy engine: deterministic WASM merge predicates, hash-pinned"
+  },
+  "shardHash": "761c63fcd8334322b9f2165efc39a682d7380c2ae834fe1499f166ea16cafb16",
+  "specVersion": "1.1.0"
+}

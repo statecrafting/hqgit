@@ -1,0 +1,70 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "028-issues-and-derived-state",
+      "060-identity-and-key-rotation",
+      "025-semantic-anchors"
+    ],
+    "domain": "l2-domain",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/ownership.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/tests/ownership.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/testdata/ownership/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 7
+    },
+    "id": "104-ownership-and-sla",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "medium",
+    "sectionHeadings": [
+      "104: Ownership and SLA",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/104-ownership-and-sla/spec.md",
+    "status": "approved",
+    "summary": "Ownership today is a text file with no SLA, delegation, or expiry (design §1.1 point 8). Here it is a set of facts: ownership.declared names a scope (a path pattern, a semantic anchor, or a crate), an owner, an optional delegator, an optional expiry, and an optional review SLA; ownership.revoked ends a declaration. OwnershipView folds them and answers owners_of(path, at) with expiry honored, revocations applied, delegation chains resolved to an accountable Human or Org root, and the most specific scope winning by an integer weight. Agents and services may hold delegated ownership but never a root, which is the other half of the accountability chain wave 7 builds. A CODEOWNERS import is a helper that emits facts; feeds (085) and policy (065) read the view, never the file.\n",
+    "title": "Ownership with delegation, expiry, and SLA: facts that replace CODEOWNERS"
+  },
+  "shardHash": "ee0720788bc65706571c63cc4578c3c32d1a849fe24d49c7a9e94f4e2e4a645e",
+  "specVersion": "1.1.0"
+}

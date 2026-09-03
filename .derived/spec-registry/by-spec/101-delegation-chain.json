@@ -1,0 +1,72 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "100-agent-principals"
+    ],
+    "domain": "l4-trust",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-agent/src/delegation.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-agent/src/authorize.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-agent/tests/delegation.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-agent/testdata/delegation/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "100-agent-principals",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-agent/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 7
+    },
+    "id": "101-delegation-chain",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "critical",
+    "sectionHeadings": [
+      "101: Delegation chain",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/101-delegation-chain/spec.md",
+    "status": "approved",
+    "summary": "The accountability chain as a cryptographic object. Every token an agent holds is mirrored by an agent.delegated fact naming who delegated, to which agent, under which pinned policy, with which caveats, expiring when, so the chain is queryable long after the bearer token is gone. A sub-delegation is a new token rooted in the delegating agent's identity key with a caveat set at least as strict as its parent's. This spec fixes the facts, the DelegationView fold, delegation_chain resolving an agent to its human or org root within a bounded depth, and authorize: a pure function combining Biscuit verification (100) with the ledger's registrations, revocations, and policy pin (068), returning Allow with the chain hash or Deny with a closed reason that the caller journals as an agent.action_denied fact.\n",
+    "title": "Delegation chain: delegation facts, chain resolution to a human root, and authorize"
+  },
+  "shardHash": "fe5ecac8ab7d8d44bd7af88e1a250d31183107426b29b4672d87828f15ebb093",
+  "specVersion": "1.1.0"
+}

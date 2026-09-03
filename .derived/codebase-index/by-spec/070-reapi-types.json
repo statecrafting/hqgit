@@ -1,0 +1,188 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '070-reapi-types' file unit 'crates/hqgit-eval/Cargo.toml' does not exist",
+        "path": "crates/hqgit-eval/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '070-reapi-types' file unit 'crates/hqgit-eval/build.rs' does not exist",
+        "path": "crates/hqgit-eval/build.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '070-reapi-types' file unit 'crates/hqgit-eval/proto/build/bazel/remote/execution/v2/remote_execution.proto' does not exist",
+        "path": "crates/hqgit-eval/proto/build/bazel/remote/execution/v2/remote_execution.proto"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '070-reapi-types' file unit 'crates/hqgit-eval/proto/build/bazel/semver/semver.proto' does not exist",
+        "path": "crates/hqgit-eval/proto/build/bazel/semver/semver.proto"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '070-reapi-types' file unit 'crates/hqgit-eval/proto/google/' does not exist",
+        "path": "crates/hqgit-eval/proto/google/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '070-reapi-types' file unit 'crates/hqgit-eval/src/lib.rs' does not exist",
+        "path": "crates/hqgit-eval/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '070-reapi-types' file unit 'crates/hqgit-eval/src/digest.rs' does not exist",
+        "path": "crates/hqgit-eval/src/digest.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '070-reapi-types' file unit 'crates/hqgit-eval/src/action.rs' does not exist",
+        "path": "crates/hqgit-eval/src/action.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '070-reapi-types' file unit 'crates/hqgit-eval/src/cas_adapter.rs' does not exist",
+        "path": "crates/hqgit-eval/src/cas_adapter.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '070-reapi-types' file unit 'crates/hqgit-eval/tests/' does not exist",
+        "path": "crates/hqgit-eval/tests/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '070-reapi-types' file unit 'crates/hqgit-eval/testdata/reapi/' does not exist",
+        "path": "crates/hqgit-eval/testdata/reapi/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '070-reapi-types' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "013-object-store"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/build.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/proto/build/bazel/remote/execution/v2/remote_execution.proto"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/proto/build/bazel/semver/semver.proto"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/proto/google/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/action.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/cas_adapter.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/digest.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/testdata/reapi/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/tests/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "070-reapi-types",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "2bd9ac4d4e8d8d9ed5bdb17a9daf81809e548b7057dd4352f0e861b149cf7bf2"
+}

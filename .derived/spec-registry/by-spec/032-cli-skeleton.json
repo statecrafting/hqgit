@@ -1,0 +1,85 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "021-local-repository"
+    ],
+    "domain": "l7-edge",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/Cargo.toml"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/src/main.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/src/cli.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/src/cmd_init.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/src/cmd_status.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/src/cmd_log.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/src/config.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/src/output.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/tests/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "032-cli-skeleton",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "high",
+    "sectionHeadings": [
+      "032: The hq binary",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/032-cli-skeleton/spec.md",
+    "status": "approved",
+    "summary": "The hq binary is the first client of the ledger and, by thesis §5, runs the same ledger implementation the server will. This spec founds hqgit-cli: a clap frame whose subcommands are one module each, exit codes mapped in exactly one place through Error::exit_code, a --json mode on every read verb that emits canonical sorted-key JSON, layered configuration (user and repository), and the three verbs that prove the local repository works: hq init creates .hq/ with a local ed25519 identity and the genesis entry, hq status reports heads and identity, and hq log renders entries in total order. Later specs add verbs by extending main.rs and cli.rs; nothing here talks to a network or to git.\n",
+    "title": "The hq binary: clap frame, exit codes, JSON output, init, status, log"
+  },
+  "shardHash": "a71e01397dfb71e604592716a4d26884e39f9c305b90848b6a24a8db35f6a244",
+  "specVersion": "1.1.0"
+}

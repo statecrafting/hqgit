@@ -1,0 +1,89 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "013-object-store"
+    ],
+    "domain": "l0-objects",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-object/src/chunk.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-object/src/merkle.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-object/tests/chunk.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-object/testdata/chunk/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "013-object-store",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "013-object-store",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/object.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "013-object-store",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "014-content-defined-chunking",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "high",
+    "sectionHeadings": [
+      "014: Content-defined chunking",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/014-content-defined-chunking/spec.md",
+    "status": "approved",
+    "summary": "Large files are the general path with different chunk statistics, not a special case bolted on later. This spec adds FastCDC content-defined chunking with parameters frozen forever (so chunk boundaries are stable across releases and replicas), the BlobManifest object that names a chunked blob by the list of its chunk ids, the rule that content at or below one chunk stays inline, a binary Merkle tree over chunk hashes with its own domain, and the put_blob and get_blob entry points that hide the split from every caller. The manifest id is the identity of a chunked blob; the whole-content BLAKE3 hash is recorded alongside for the git bridge and the BAO outboard alignment spec 015 needs.\n",
+    "title": "Content-defined chunking: FastCDC with frozen parameters and the chunked blob manifest"
+  },
+  "shardHash": "317070ed9ee4aa3edbd8bac6c7c90b754704b4245e09325122fe6329ca206622",
+  "specVersion": "1.1.0"
+}

@@ -1,0 +1,64 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "025-semantic-anchors"
+    ],
+    "domain": "l2-domain",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/review.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/tests/review.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "026-review-threads",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "medium",
+    "sectionHeadings": [
+      "026: Review threads",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/026-review-threads/spec.md",
+    "status": "approved",
+    "summary": "The review conversation as facts: a thread is opened on a change at a revision, optionally anchored (025), comments are posted with their bodies in the object store so they are erasable (constitution X), and resolution is a last-writer-wins register (constitution VII). Threads are re-anchored against every new revision, and a reviewer sees \"moved\" and \"lost\" rather than an orphaned comment. Approval is not a comment: it is a fact that references an Attestation (027) with the approval predicate, so \"who approved which revision\" is a signed, verifiable claim and never prose. This spec adds the ThreadView and ApprovalView folds and the pure builders the CLI (033) and the server (093) call.\n",
+    "title": "Review threads: anchored comments, resolution state, and approvals as attestations"
+  },
+  "shardHash": "9ddcedb1e1b077bb9656463410503d23ad39785dd02e598824da077844fe6e1f",
+  "specVersion": "1.1.0"
+}

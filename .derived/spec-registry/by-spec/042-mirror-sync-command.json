@@ -1,0 +1,85 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "041-github-mirror-export",
+      "032-cli-skeleton"
+    ],
+    "domain": "l7-edge",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-mirror/src/sync.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/src/cmd_mirror.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/tests/mirror.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "040-github-mirror-import",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-mirror/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/main.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cli.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/Cargo.toml"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 2
+    },
+    "id": "042-mirror-sync-command",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "medium",
+    "sectionHeadings": [
+      "042: hq mirror",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/042-mirror-sync-command/spec.md",
+    "status": "approved",
+    "summary": "The user-facing end of wave 2: hq mirror add registers a GitHub repository as a source, hq mirror sync runs import then export once or in a watch loop, and hq mirror status shows cursors and the last report. The sync driver persists cursors in the id map database so every run resumes where the last one stopped, backs off exponentially on rate limits and transient errors and never busy-loops, and prints a report of facts imported, items exported, items skipped, and disagreements reconciled. The token comes from the environment or the user config and never enters the ledger, the repository config, or any output.\n",
+    "title": "hq mirror: the sync loop with cursors, backoff, and reports"
+  },
+  "shardHash": "2c5a9ac0fc5b840a8f7d79726811806c4651895fd73d0e5a75dfd3d9c31f7828",
+  "specVersion": "1.1.0"
+}

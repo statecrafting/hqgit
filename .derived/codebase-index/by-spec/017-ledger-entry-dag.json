@@ -1,0 +1,146 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '017-ledger-entry-dag' file unit 'crates/hqgit-ledger/Cargo.toml' does not exist",
+        "path": "crates/hqgit-ledger/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '017-ledger-entry-dag' file unit 'crates/hqgit-ledger/src/lib.rs' does not exist",
+        "path": "crates/hqgit-ledger/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '017-ledger-entry-dag' file unit 'crates/hqgit-ledger/src/entry.rs' does not exist",
+        "path": "crates/hqgit-ledger/src/entry.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '017-ledger-entry-dag' file unit 'crates/hqgit-ledger/src/dag.rs' does not exist",
+        "path": "crates/hqgit-ledger/src/dag.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '017-ledger-entry-dag' file unit 'crates/hqgit-ledger/src/verify.rs' does not exist",
+        "path": "crates/hqgit-ledger/src/verify.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '017-ledger-entry-dag' file unit 'crates/hqgit-ledger/tests/' does not exist",
+        "path": "crates/hqgit-ledger/tests/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '017-ledger-entry-dag' file unit 'fuzz/fuzz_targets/entry_hash_stable.rs' does not exist",
+        "path": "fuzz/fuzz_targets/entry_hash_stable.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '017-ledger-entry-dag' file unit 'crates/hqgit-types/testdata/vectors/' does not exist",
+        "path": "crates/hqgit-types/testdata/vectors/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '017-ledger-entry-dag' file unit 'fuzz/Cargo.toml' does not exist",
+        "path": "fuzz/Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "011-canonical-encoding",
+      "013-object-store"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/dag.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/entry.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/verify.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/tests/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "fuzz/fuzz_targets/entry_hash_stable.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/testdata/vectors/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "fuzz/Cargo.toml"
+        }
+      }
+    ],
+    "specId": "017-ledger-entry-dag",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "47d61fdb820509f2f7313371dd1953f0b806f12331102018b9b8baaed2c3e9cf"
+}

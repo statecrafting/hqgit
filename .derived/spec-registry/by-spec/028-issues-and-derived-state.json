@@ -1,0 +1,64 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "023-domain-fact-vocabulary"
+    ],
+    "domain": "l2-domain",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/issue.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/tests/issue.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "028-issues-and-derived-state",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "medium",
+    "sectionHeadings": [
+      "028: Issues and derived state",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/028-issues-and-derived-state/spec.md",
+    "status": "approved",
+    "summary": "The worked example of constitution VII. An issue is a sequence of immutable facts (opened, field set, closed, link added) and its visible state is derived: title, state, assignee, and milestone are last-writer- wins registers over the hybrid logical clock, and labels are an add-wins observed-remove set whose removals name the additions they observed. Nothing is a counter, nothing is a row, and the IssueView rebuilds from zero on every replica to the same answer. This is the shape every later mutable noun copies, and it is what makes the GitHub mirror (040) a fact importer rather than a schema migration.\n",
+    "title": "Issues as facts with converging derived state: registers and an add-wins label set"
+  },
+  "shardHash": "5d02100262cc2f7d912145f6bf35c7ff6f2f50554b868c062678875951d223e6",
+  "specVersion": "1.1.0"
+}

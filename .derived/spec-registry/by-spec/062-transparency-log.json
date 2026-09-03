@@ -1,0 +1,72 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "060-identity-and-key-rotation"
+    ],
+    "domain": "l4-trust",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/src/tlog/mod.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/src/tlog/merkle.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/src/tlog/proofs.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/src/tlog/client.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/tests/tlog.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/testdata/tlog/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "060-identity-and-key-rotation",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/src/lib.rs"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 4
+    },
+    "id": "062-transparency-log",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "critical",
+    "sectionHeadings": [
+      "062: Transparency log",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/062-transparency-log/spec.md",
+    "status": "approved",
+    "summary": "An append-only Merkle log in the RFC 6962 shape over BLAKE3, holding attestation ids and identity facts, with inclusion proofs, consistency proofs, and checkpoints signed by the log key and cosignable by witnesses. A signature proves who; the log proves that the signed thing was published and cannot later be quietly withdrawn or forked. This spec fixes the leaf and node hashing, the proof shapes, the checkpoint envelope, and the TlogClient seam with an in-process implementation; keyless signing (063) logs its certificates here and attestation verification (064) requires an inclusion proof when the repository policy demands one. The served log is a later extension.\n",
+    "title": "Transparency log: Merkle log, inclusion and consistency proofs, signed checkpoints"
+  },
+  "shardHash": "3028e97b8ed0ef849215dad8af82de8b578f6d7b4feb075dfa78bfd136c08658",
+  "specVersion": "1.1.0"
+}

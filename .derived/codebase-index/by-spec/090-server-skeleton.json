@@ -1,0 +1,174 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '090-server-skeleton' file unit 'crates/hqgit-server/Cargo.toml' does not exist",
+        "path": "crates/hqgit-server/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '090-server-skeleton' file unit 'crates/hqgit-server/src/main.rs' does not exist",
+        "path": "crates/hqgit-server/src/main.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '090-server-skeleton' file unit 'crates/hqgit-server/src/lib.rs' does not exist",
+        "path": "crates/hqgit-server/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '090-server-skeleton' file unit 'crates/hqgit-server/src/config.rs' does not exist",
+        "path": "crates/hqgit-server/src/config.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '090-server-skeleton' file unit 'crates/hqgit-server/src/app.rs' does not exist",
+        "path": "crates/hqgit-server/src/app.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '090-server-skeleton' file unit 'crates/hqgit-server/src/health.rs' does not exist",
+        "path": "crates/hqgit-server/src/health.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '090-server-skeleton' file unit 'crates/hqgit-server/src/repos.rs' does not exist",
+        "path": "crates/hqgit-server/src/repos.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '090-server-skeleton' file unit 'crates/hqgit-server/src/auth.rs' does not exist",
+        "path": "crates/hqgit-server/src/auth.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '090-server-skeleton' file unit 'crates/hqgit-server/src/telemetry.rs' does not exist",
+        "path": "crates/hqgit-server/src/telemetry.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '090-server-skeleton' file unit 'crates/hqgit-server/tests/' does not exist",
+        "path": "crates/hqgit-server/tests/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '090-server-skeleton' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "021-local-repository"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/app.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/auth.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/config.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/health.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/main.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/repos.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/telemetry.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/tests/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "090-server-skeleton",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "a52dc040be8b6985b6c31be226ffccbc9e8816eb6862f9459f3a5d0dcee6796d"
+}

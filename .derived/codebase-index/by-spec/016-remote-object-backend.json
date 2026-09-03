@@ -1,0 +1,105 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '016-remote-object-backend' file unit 'crates/hqgit-object/src/s3.rs' does not exist",
+        "path": "crates/hqgit-object/src/s3.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '016-remote-object-backend' file unit 'crates/hqgit-object/src/layered.rs' does not exist",
+        "path": "crates/hqgit-object/src/layered.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '016-remote-object-backend' file unit 'crates/hqgit-object/tests/s3.rs' does not exist",
+        "path": "crates/hqgit-object/tests/s3.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '016-remote-object-backend' file unit 'crates/hqgit-object/src/lib.rs' does not exist",
+        "path": "crates/hqgit-object/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '016-remote-object-backend' file unit 'crates/hqgit-object/Cargo.toml' does not exist",
+        "path": "crates/hqgit-object/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '016-remote-object-backend' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "013-object-store",
+      "015-verified-streaming"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/layered.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/s3.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/tests/s3.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "016-remote-object-backend",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "f23e74ee29e8c54409355723d81aca58e08ead951aa9fa74516ad7cb08468de3"
+}

@@ -1,0 +1,85 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "067-policy-evaluation-attestation",
+      "021-local-repository"
+    ],
+    "domain": "l6-policy",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy/src/pin.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy/src/scope.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy/tests/pin.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "065-policy-engine",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "020-commitments-and-tombstones",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/tombstone.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cmd_policy.rs"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 4
+    },
+    "id": "068-policy-in-repo",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "high",
+    "sectionHeadings": [
+      "068: Policy in the repository",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/068-policy-in-repo/spec.md",
+    "status": "approved",
+    "summary": "Where a repository's policy lives: in the ledger, as facts. A policy.pinned fact names a policy module Cid, a scope (a namespace or a path pattern), the clock from which it applies, and who pinned it; policy.unpinned retires one. The PolicyPinView fold answers active_policy(repo, at, scope): the policy that governs a revision is the one active at the revision's submission clock, so a decision recorded in wave 4 replays identically in wave 8 against the pin that was in force. There is no settings table to toggle, which is constitution XI made structural. The same fold is what lets a policy verdict mint the erase capability of spec 020 and what the agent authority of spec 100 compares its policy version against.\n",
+    "title": "Policy in the repository: pinned by fact, resolved by clock, no settings table"
+  },
+  "shardHash": "cad3b03eac971560e9e08eabd1ce4a98ced4757102cfa22dfab86a9f45e7f09c",
+  "specVersion": "1.1.0"
+}

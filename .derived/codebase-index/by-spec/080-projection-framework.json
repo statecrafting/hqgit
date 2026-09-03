@@ -1,0 +1,203 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '080-projection-framework' file unit 'crates/hqgit-projection/Cargo.toml' does not exist",
+        "path": "crates/hqgit-projection/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '080-projection-framework' file unit 'crates/hqgit-projection/src/lib.rs' does not exist",
+        "path": "crates/hqgit-projection/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '080-projection-framework' file unit 'crates/hqgit-projection/src/projection.rs' does not exist",
+        "path": "crates/hqgit-projection/src/projection.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '080-projection-framework' file unit 'crates/hqgit-projection/src/runner.rs' does not exist",
+        "path": "crates/hqgit-projection/src/runner.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '080-projection-framework' file unit 'crates/hqgit-projection/src/sqlite.rs' does not exist",
+        "path": "crates/hqgit-projection/src/sqlite.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '080-projection-framework' file unit 'crates/hqgit-projection/src/checkpoint.rs' does not exist",
+        "path": "crates/hqgit-projection/src/checkpoint.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '080-projection-framework' file unit 'crates/hqgit-projection/src/registry.rs' does not exist",
+        "path": "crates/hqgit-projection/src/registry.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '080-projection-framework' file unit 'crates/hqgit-projection/tests/' does not exist",
+        "path": "crates/hqgit-projection/tests/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '080-projection-framework' file unit 'crates/hqgit-cli/src/cmd_projection.rs' does not exist",
+        "path": "crates/hqgit-cli/src/cmd_projection.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '080-projection-framework' file unit 'crates/hqgit-cli/src/main.rs' does not exist",
+        "path": "crates/hqgit-cli/src/main.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '080-projection-framework' file unit 'crates/hqgit-cli/src/cli.rs' does not exist",
+        "path": "crates/hqgit-cli/src/cli.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '080-projection-framework' file unit 'crates/hqgit-cli/Cargo.toml' does not exist",
+        "path": "crates/hqgit-cli/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '080-projection-framework' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "021-local-repository",
+      "032-cli-skeleton"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cmd_projection.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/checkpoint.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/projection.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/registry.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/runner.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/sqlite.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/tests/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cli.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/main.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "080-projection-framework",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "005730c78926670d51bfdb1c9d810ded7721aa272eb286662bdcf15d82ed1680"
+}

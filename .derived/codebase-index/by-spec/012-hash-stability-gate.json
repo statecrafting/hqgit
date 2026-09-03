@@ -1,0 +1,117 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '012-hash-stability-gate' file unit 'fuzz/Cargo.toml' does not exist",
+        "path": "fuzz/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '012-hash-stability-gate' file unit 'fuzz/fuzz_targets/codec_roundtrip.rs' does not exist",
+        "path": "fuzz/fuzz_targets/codec_roundtrip.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '012-hash-stability-gate' file unit 'fuzz/fuzz_targets/canonical_idempotent.rs' does not exist",
+        "path": "fuzz/fuzz_targets/canonical_idempotent.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '012-hash-stability-gate' file unit 'fuzz/fuzz_targets/value_ordering.rs' does not exist",
+        "path": "fuzz/fuzz_targets/value_ordering.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '012-hash-stability-gate' file unit 'fuzz/corpus-seeds/' does not exist",
+        "path": "fuzz/corpus-seeds/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '012-hash-stability-gate' file unit 'crates/hqgit-types/tests/golden.rs' does not exist",
+        "path": "crates/hqgit-types/tests/golden.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '012-hash-stability-gate' file unit '.github/workflows/hash-stability.yml' does not exist",
+        "path": ".github/workflows/hash-stability.yml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "011-canonical-encoding"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": ".github/workflows/hash-stability.yml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/tests/golden.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "fuzz/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "fuzz/corpus-seeds/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "fuzz/fuzz_targets/canonical_idempotent.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "fuzz/fuzz_targets/codec_roundtrip.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "fuzz/fuzz_targets/value_ordering.rs"
+        }
+      }
+    ],
+    "specId": "012-hash-stability-gate",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "3f0cc3caf8b146d8bfe6964778db9aaf1f79f0432177f137ae578099c79a6300"
+}

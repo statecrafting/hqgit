@@ -1,0 +1,82 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "061-oidc-login",
+      "062-transparency-log"
+    ],
+    "domain": "l4-trust",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/src/keyless.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/src/bundle.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/tests/keyless.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/testdata/keyless/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "060-identity-and-key-rotation",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "060-identity-and-key-rotation",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 4
+    },
+    "id": "063-keyless-signing",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "high",
+    "sectionHeadings": [
+      "063: Keyless signing",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/063-keyless-signing/spec.md",
+    "status": "approved",
+    "summary": "The Sigstore shape, self-hosted: a session proven by OIDC login (061) is exchanged for an X.509 certificate over an ephemeral ed25519 key that is valid for ten minutes, the certificate is published to the transparency log (062), and the attestation signed with that key carries a SignatureBundle (certificate chain plus the certificate's inclusion proof) in its extra map, so a verifier can check it long after the key is gone. This spec fixes the certificate profile, the issuer seam with an in-process reference issuer, the bundle's canonical form, keyless issuance, and the pure bundle verifier that spec 064 calls as one stage of its chain. The identity's long-lived key (060) remains the offline signing path; keyless is the default when a session exists.\n",
+    "title": "Keyless signing: short-lived certificates bound to an OIDC identity, the signature bundle, and bundle verification"
+  },
+  "shardHash": "4409072d066b416364c2501285bdddc212b11c05980e37b8faf4d10aab3ebf80",
+  "specVersion": "1.1.0"
+}

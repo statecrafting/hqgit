@@ -1,0 +1,68 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "023-domain-fact-vocabulary"
+    ],
+    "domain": "l2-domain",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/change.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/revision.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/tests/change.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "024-change-and-revision",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "high",
+    "sectionHeadings": [
+      "024: Change and Revision",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/024-change-and-revision/spec.md",
+    "status": "approved",
+    "summary": "The unit of change is a Change with stable identity and an ordered sequence of Revisions, never a mutable branch pointer (design §1.1 point 2; Gerrit's Change-Id, then jj and Sapling). A revision is a tree hash plus its base; a force-push is a new revision and destroys nothing; the revision number is derived from the ledger's total order so every replica numbers identically. This spec adds the Change and Revision types, the pure fact builders the CLI and the server call, and the ChangeView fold with its state machine (Open, Merged, Abandoned) and lineage queries. What changed since a reviewer last looked becomes a query in spec 050; this spec makes the sequence it runs over exist.\n",
+    "title": "Change and Revision: stable change identity over an ordered revision sequence"
+  },
+  "shardHash": "be8d39aeecbe01bfab06d66196ccc0b8572ba08bf27c70be3fdea6e9a23adcf8",
+  "specVersion": "1.1.0"
+}

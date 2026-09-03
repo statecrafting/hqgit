@@ -1,0 +1,147 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '100-agent-principals' file unit 'crates/hqgit-agent/Cargo.toml' does not exist",
+        "path": "crates/hqgit-agent/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '100-agent-principals' file unit 'crates/hqgit-agent/src/lib.rs' does not exist",
+        "path": "crates/hqgit-agent/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '100-agent-principals' file unit 'crates/hqgit-agent/src/token.rs' does not exist",
+        "path": "crates/hqgit-agent/src/token.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '100-agent-principals' file unit 'crates/hqgit-agent/src/principal.rs' does not exist",
+        "path": "crates/hqgit-agent/src/principal.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '100-agent-principals' file unit 'crates/hqgit-agent/src/caveats.rs' does not exist",
+        "path": "crates/hqgit-agent/src/caveats.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '100-agent-principals' file unit 'crates/hqgit-agent/tests/' does not exist",
+        "path": "crates/hqgit-agent/tests/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '100-agent-principals' file unit 'crates/hqgit-agent/testdata/tokens/' does not exist",
+        "path": "crates/hqgit-agent/testdata/tokens/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '100-agent-principals' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '100-agent-principals' file unit 'crates/hqgit-domain/src/facts.rs' does not exist",
+        "path": "crates/hqgit-domain/src/facts.rs"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "060-identity-and-key-rotation",
+      "068-policy-in-repo"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-agent/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-agent/src/caveats.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-agent/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-agent/src/principal.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-agent/src/token.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-agent/testdata/tokens/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-agent/tests/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "100-agent-principals",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "15b21bcb8318da6251523645a5b3b81f26beec2666a09fb85af7c729a029dbc7"
+}

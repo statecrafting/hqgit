@@ -1,0 +1,97 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "065-policy-engine",
+      "034-cli-attest-and-verify"
+    ],
+    "domain": "l6-policy",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy/src/evaluate.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy/src/replay.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/src/cmd_policy.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/tests/policy.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "065-policy-engine",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "027-attestation-primitive",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/predicate.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/main.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cli.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/Cargo.toml"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 4
+    },
+    "id": "067-policy-evaluation-attestation",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "critical",
+    "sectionHeadings": [
+      "067: Policy evaluation as evidence",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/067-policy-evaluation-attestation/spec.md",
+    "status": "approved",
+    "summary": "A merge decision is evidence, not a moment. Every engine evaluation (065) is recorded as an Attestation with predicate hqgit/policy-eval/v1 whose claim names the policy Cid, the input hash, the engine configuration digest, and the verdict, signed by the evaluating principal and appended as a fact. A gate consumes that attestation, never a live evaluation, so the decision that let a revision merge can be produced years later and replayed: this spec's replay rebuilds the input from the ledger, re-runs the pinned policy, and reports Match, Mismatch with the differing bytes named, or Unavailable when an input was erased. The CLI grows hq policy eval, replay, and build so the whole loop runs offline on a laptop before anything is pushed.\n",
+    "title": "Policy evaluation as evidence: the policy-eval attestation, replay, and hq policy"
+  },
+  "shardHash": "a4632867ab97f1f511cf3c55b230c1d8526da2c5bb20fa55257c22637533df4d",
+  "specVersion": "1.1.0"
+}

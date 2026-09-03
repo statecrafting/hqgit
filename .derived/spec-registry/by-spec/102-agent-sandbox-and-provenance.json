@@ -1,0 +1,102 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "101-delegation-chain",
+      "074-execution-provenance",
+      "090-server-skeleton"
+    ],
+    "domain": "l7-edge",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-agent/src/sandbox.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-agent/src/provenance.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-agent/tests/provenance.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/agent_auth.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/tests/agent_auth.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "100-agent-principals",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-agent/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "090-server-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "090-server-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/app.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "090-server-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "027-attestation-primitive",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/predicate.rs"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 7
+    },
+    "id": "102-agent-sandbox-and-provenance",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "high",
+    "sectionHeadings": [
+      "102: Agent sandbox and provenance",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/102-agent-sandbox-and-provenance/spec.md",
+    "status": "approved",
+    "summary": "Constitution XII's last two clauses: an agent's sandbox is declared and every artifact it produces carries provenance. This spec types the sandbox an agent registration names (always the Untrusted tier of 073 for execution, with declared tools and network), fills the hqgit/agent-action/v1 claim slot 027 reserved with a schema binding the agent, its delegation chain hash (101), its sandbox, its inputs, a summary of its tool calls, and the execution provenance (074) of anything it ran, signed by the agent's own key; fixes the rule that an agent-submitted revision without such an attestation is refused; and builds the server seam that accepts Biscuit credentials, refuses a human session on an agent route and the reverse, journals every denial (101), and tags every agent write so quarantine (094) applies.\n",
+    "title": "Agent sandbox and provenance: declared sandboxes, the agent-action attestation, and the server seam"
+  },
+  "shardHash": "baabd1ee264488b09e9c24d670fc762cb21e98a9dfa36c3dd3401f95fb4cf671",
+  "specVersion": "1.1.0"
+}

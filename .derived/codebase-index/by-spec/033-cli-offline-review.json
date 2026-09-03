@@ -1,0 +1,120 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '033-cli-offline-review' file unit 'crates/hqgit-cli/src/cmd_change.rs' does not exist",
+        "path": "crates/hqgit-cli/src/cmd_change.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '033-cli-offline-review' file unit 'crates/hqgit-cli/src/cmd_review.rs' does not exist",
+        "path": "crates/hqgit-cli/src/cmd_review.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '033-cli-offline-review' file unit 'crates/hqgit-cli/tests/review.rs' does not exist",
+        "path": "crates/hqgit-cli/tests/review.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '033-cli-offline-review' file unit 'crates/hqgit-cli/testdata/review/' does not exist",
+        "path": "crates/hqgit-cli/testdata/review/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '033-cli-offline-review' file unit 'crates/hqgit-cli/src/main.rs' does not exist",
+        "path": "crates/hqgit-cli/src/main.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '033-cli-offline-review' file unit 'crates/hqgit-cli/src/cli.rs' does not exist",
+        "path": "crates/hqgit-cli/src/cli.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '033-cli-offline-review' file unit 'crates/hqgit-cli/Cargo.toml' does not exist",
+        "path": "crates/hqgit-cli/Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "032-cli-skeleton",
+      "031-git-object-bridge",
+      "026-review-threads",
+      "027-attestation-primitive"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cmd_change.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cmd_review.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/testdata/review/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/tests/review.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cli.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/main.rs"
+        }
+      }
+    ],
+    "specId": "033-cli-offline-review",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "0f72d8c3b24e1ce6db9e475cffb7033e166d33149678287b6db2cd43ff9f1f84"
+}

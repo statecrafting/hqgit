@@ -1,0 +1,287 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '095-web-review-ui' file unit 'web/package.json' does not exist",
+        "path": "web/package.json"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '095-web-review-ui' file unit 'web/tsconfig.json' does not exist",
+        "path": "web/tsconfig.json"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '095-web-review-ui' file unit 'web/vite.config.ts' does not exist",
+        "path": "web/vite.config.ts"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '095-web-review-ui' file unit 'web/index.html' does not exist",
+        "path": "web/index.html"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '095-web-review-ui' file unit 'web/src/main.tsx' does not exist",
+        "path": "web/src/main.tsx"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '095-web-review-ui' file unit 'web/src/api.ts' does not exist",
+        "path": "web/src/api.ts"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '095-web-review-ui' file unit 'web/src/format.ts' does not exist",
+        "path": "web/src/format.ts"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '095-web-review-ui' file unit 'web/src/views/ChangeList.tsx' does not exist",
+        "path": "web/src/views/ChangeList.tsx"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '095-web-review-ui' file unit 'web/src/views/ChangeDetail.tsx' does not exist",
+        "path": "web/src/views/ChangeDetail.tsx"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '095-web-review-ui' file unit 'web/src/views/DeltaPanel.tsx' does not exist",
+        "path": "web/src/views/DeltaPanel.tsx"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '095-web-review-ui' file unit 'web/src/views/LineDiff.tsx' does not exist",
+        "path": "web/src/views/LineDiff.tsx"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '095-web-review-ui' file unit 'web/src/views/EvidencePanel.tsx' does not exist",
+        "path": "web/src/views/EvidencePanel.tsx"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '095-web-review-ui' file unit 'web/src/views/ThreadPanel.tsx' does not exist",
+        "path": "web/src/views/ThreadPanel.tsx"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '095-web-review-ui' file unit 'web/test/' does not exist",
+        "path": "web/test/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '095-web-review-ui' file unit 'crates/hqgit-server/src/static_files.rs' does not exist",
+        "path": "crates/hqgit-server/src/static_files.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '095-web-review-ui' file unit 'crates/hqgit-server/src/lib.rs' does not exist",
+        "path": "crates/hqgit-server/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '095-web-review-ui' file unit 'crates/hqgit-server/src/app.rs' does not exist",
+        "path": "crates/hqgit-server/src/app.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '095-web-review-ui' file unit 'crates/hqgit-server/Cargo.toml' does not exist",
+        "path": "crates/hqgit-server/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '095-web-review-ui' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "093-connect-api",
+      "081-change-and-review-views"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/static_files.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "web/index.html"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "web/package.json"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "web/src/api.ts"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "web/src/format.ts"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "web/src/main.tsx"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "web/src/views/ChangeDetail.tsx"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "web/src/views/ChangeList.tsx"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "web/src/views/DeltaPanel.tsx"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "web/src/views/EvidencePanel.tsx"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "web/src/views/LineDiff.tsx"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "web/src/views/ThreadPanel.tsx"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "web/test/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "web/tsconfig.json"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "web/vite.config.ts"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/app.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "095-web-review-ui",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "1523dfcfcc51b7f74108fd40992333a011f97db376502f72e42163f6cb5ee015"
+}
