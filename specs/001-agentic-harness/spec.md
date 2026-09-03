@@ -171,6 +171,16 @@ floor and is deliberately not claimed here: it changes only through a spec
 that `amends` it, which is the governed path the constitution's own
 Amendment section names.
 
+D-3 (2026-09-03, first CI run). B-3's "cargo gates when a workspace
+exists" is guarded by an output of the `spine` job, not by `hashFiles` in
+a job-level `if`. GitHub allows `hashFiles` only inside a step (a
+job-level `if` is evaluated before any checkout), and the workflow fails
+at startup with `calling function "hashFiles" is not allowed here`, which
+reports as a run with no checks rather than as a failed gate. The `spine`
+job probes for `Cargo.toml` and `deny.toml` after its checkout and
+publishes `has_cargo` and `has_deny`; the `cargo` and `deny` jobs gate on
+those. The guard's meaning is unchanged.
+
 ## Verification
 
 ```verify:cli
