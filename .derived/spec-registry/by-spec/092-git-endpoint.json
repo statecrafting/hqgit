@@ -1,0 +1,91 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "090-server-skeleton",
+      "031-git-object-bridge",
+      "024-change-and-revision",
+      "068-policy-in-repo"
+    ],
+    "domain": "l7-edge",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/git/mod.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/git/refs.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/git/upload_pack.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/git/receive_pack.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/git/gate.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/tests/git_endpoint.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "090-server-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "090-server-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/app.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "090-server-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/Cargo.toml"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 6
+    },
+    "id": "092-git-endpoint",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "high",
+    "sectionHeadings": [
+      "092: Git smart HTTP endpoint",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/092-git-endpoint/spec.md",
+    "status": "approved",
+    "summary": "Git compatibility is a hard requirement (constitution XIV), so the server speaks the git smart HTTP protocol without becoming a git host: refs are computed from the ledger, packs are built from the object store through the spec 031 bridge, and a push is a revision submission rather than a pointer move. Each open change exposes refs/changes/<id>/ <n>; main is the merged lineage rendered as deterministic commits; a push to a change ref imports the tree and appends change.revision_submitted; a push to main is accepted only when a policy-eval attestation with an Allow verdict exists for that revision under the policy pinned in the repository, and then appends change.merged. Every fact lands where the namespace router says (quarantine for unverified pushers), the endpoint never spawns git, and the tests drive a real git client against the ephemeral server.\n",
+    "title": "Git smart HTTP endpoint: refs as a projection of changes, push as revision submission, gated main"
+  },
+  "shardHash": "22646381818c52405ceddd787c87ddb5601cebc24640119980142479b55354c3",
+  "specVersion": "1.1.0"
+}

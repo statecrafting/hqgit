@@ -1,0 +1,89 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "070-reapi-types"
+    ],
+    "domain": "l3-evaluation",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/src/graph/mod.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/src/graph/manifest.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/src/graph/toolchain.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/src/graph/affected.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/tests/graph.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/testdata/graph/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "070-reapi-types",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "070-reapi-types",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 5
+    },
+    "id": "075-build-graph",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "high",
+    "sectionHeadings": [
+      "075: Build graph",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/075-build-graph/spec.md",
+    "status": "approved",
+    "summary": "Design doc §1.1 point 4: CI is a pure function of repository state. This spec gives that function its argument list. A repository declares its targets in hq-build.toml (inputs as globs over the tree, an argv command, a pinned toolchain, declared outputs, target dependencies, and the escape hatches network and nondeterministic), a toolchain is the content hash of a pinned image or a nix-style closure, and a target's identity is a pure function of the subtree its globs select. Affected-target selection is a comparison of those identities between two tree cids, transitive over dependencies, with no execution. Every declaration becomes an action platform property (070), so an escape hatch is visible in provenance (074) rather than hidden in a script, and a target that declares nothing cannot read anything it did not declare in the Trusted tier (073).\n",
+    "title": "Build graph: the hq-build.toml manifest, pinned toolchains, and affected-target selection"
+  },
+  "shardHash": "3cd1692dde978a6fb41b97b631139abb1fb313e51fc539d824120b84174493e9",
+  "specVersion": "1.1.0"
+}

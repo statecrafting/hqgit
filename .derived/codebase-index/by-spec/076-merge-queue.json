@@ -1,0 +1,91 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '076-merge-queue' file unit 'crates/hqgit-eval/src/queue.rs' does not exist",
+        "path": "crates/hqgit-eval/src/queue.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '076-merge-queue' file unit 'crates/hqgit-eval/src/speculate.rs' does not exist",
+        "path": "crates/hqgit-eval/src/speculate.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '076-merge-queue' file unit 'crates/hqgit-eval/tests/queue.rs' does not exist",
+        "path": "crates/hqgit-eval/tests/queue.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '076-merge-queue' file unit 'crates/hqgit-eval/src/lib.rs' does not exist",
+        "path": "crates/hqgit-eval/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '076-merge-queue' file unit 'crates/hqgit-domain/src/facts.rs' does not exist",
+        "path": "crates/hqgit-domain/src/facts.rs"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "075-build-graph",
+      "074-execution-provenance",
+      "067-policy-evaluation-attestation"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/queue.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/speculate.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/tests/queue.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/lib.rs"
+        }
+      }
+    ],
+    "specId": "076-merge-queue",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "d2a4c1e8c71c74609feb7feaf49ecce673caa36f6f7aea2667c3886d72caf94a"
+}

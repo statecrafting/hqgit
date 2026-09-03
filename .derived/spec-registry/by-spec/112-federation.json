@@ -1,0 +1,126 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "111-quic-transport",
+      "094-quarantine-and-promotion",
+      "032-cli-skeleton"
+    ],
+    "domain": "l7-edge",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/federation.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/peers.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/src/cmd_sync.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/tests/federation.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/tests/sync.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "090-server-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "090-server-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/app.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "090-server-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/config.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "090-server-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/main.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cli.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 8
+    },
+    "id": "112-federation",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "high",
+    "sectionHeadings": [
+      "112: Federation",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/112-federation/spec.md",
+    "status": "approved",
+    "summary": "Thesis §6 step 8: hosts replicate signed history, not authority. A repository's peers are facts (identity, transport key, endpoints, namespaces, and the capability attestation that says what the peer may do here), folded into a registry that implements the transport's Authorizer with spec 094's capability checks. The server runs a per repository driver over 111 that pulls from every peer and pushes to the peers it is configured to push to; entries arriving from a peer without the promote capability go into a per-peer hold that no fold reads until a promotion fact (094) admits them, so a foreign host can contribute history but never decide what this host treats as main (constitution XV). The CLI is a peer like any other: hq sync, hq push, and hq pull speak the same protocol against a server or another laptop.\n",
+    "title": "Federation: peer registries as facts, the server sync driver, holds for unpromoted peers, and hq sync"
+  },
+  "shardHash": "b0945c1732038dd0955b1035578891971c2a518035249f24fdfe30032e0d0ba9",
+  "specVersion": "1.1.0"
+}

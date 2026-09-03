@@ -1,0 +1,85 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "090-server-skeleton"
+    ],
+    "domain": "l7-edge",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/control/mod.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/control/raft.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/control/placement.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/control/apply.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/tests/control.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "090-server-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "090-server-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 6
+    },
+    "id": "091-per-repo-control-plane",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "critical",
+    "sectionHeadings": [
+      "091: Per-repo control plane",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/091-per-repo-control-plane/spec.md",
+    "status": "approved",
+    "summary": "Thesis §4.2, last paragraph: repositories are independent consistency domains, so the hosted server replicates each one in its own Raft group rather than through a shared database tier. This spec adds the control plane to hqgit-server: a ControlPlane seam with a hiqlite-backed implementation and an in-process one for tests; a per-namespace group whose replicated state is the append order of signed entries and the head set, never payload content and never a signature of the cluster's own; a proposal path that validates before forwarding and commits through the leader; an applier that feeds committed entries into the local spec 021 store in order with the payload present first; and consistent-hash placement of groups onto nodes with rebalancing as an operator command. A single node is a one-member group on the same path.\n",
+    "title": "Per-repo control plane: one Raft group per repository over hiqlite, proposal, apply, placement"
+  },
+  "shardHash": "5f16a91a4cba0ba4b565970c4810ef6feb56832f0af28ccf7c63b1748b662e53",
+  "specVersion": "1.1.0"
+}

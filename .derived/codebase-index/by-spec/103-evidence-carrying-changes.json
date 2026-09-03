@@ -1,0 +1,203 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '103-evidence-carrying-changes' file unit 'crates/hqgit-domain/src/evidence.rs' does not exist",
+        "path": "crates/hqgit-domain/src/evidence.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '103-evidence-carrying-changes' file unit 'crates/hqgit-domain/tests/evidence.rs' does not exist",
+        "path": "crates/hqgit-domain/tests/evidence.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '103-evidence-carrying-changes' file unit 'crates/hqgit-domain/testdata/evidence/' does not exist",
+        "path": "crates/hqgit-domain/testdata/evidence/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '103-evidence-carrying-changes' file unit 'crates/hqgit-policy-sdk/examples/evidence_required.rs' does not exist",
+        "path": "crates/hqgit-policy-sdk/examples/evidence_required.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '103-evidence-carrying-changes' file unit 'crates/hqgit-cli/src/cmd_evidence.rs' does not exist",
+        "path": "crates/hqgit-cli/src/cmd_evidence.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '103-evidence-carrying-changes' file unit 'crates/hqgit-cli/tests/evidence.rs' does not exist",
+        "path": "crates/hqgit-cli/tests/evidence.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '103-evidence-carrying-changes' file unit 'crates/hqgit-domain/src/lib.rs' does not exist",
+        "path": "crates/hqgit-domain/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '103-evidence-carrying-changes' file unit 'crates/hqgit-domain/src/facts.rs' does not exist",
+        "path": "crates/hqgit-domain/src/facts.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '103-evidence-carrying-changes' file unit 'crates/hqgit-domain/src/predicate.rs' does not exist",
+        "path": "crates/hqgit-domain/src/predicate.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '103-evidence-carrying-changes' file unit 'crates/hqgit-policy-sdk/src/evidence.rs' does not exist",
+        "path": "crates/hqgit-policy-sdk/src/evidence.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '103-evidence-carrying-changes' file unit 'crates/hqgit-cli/src/main.rs' does not exist",
+        "path": "crates/hqgit-cli/src/main.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '103-evidence-carrying-changes' file unit 'crates/hqgit-cli/src/cli.rs' does not exist",
+        "path": "crates/hqgit-cli/src/cli.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '103-evidence-carrying-changes' file unit 'crates/hqgit-cli/Cargo.toml' does not exist",
+        "path": "crates/hqgit-cli/Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "102-agent-sandbox-and-provenance",
+      "067-policy-evaluation-attestation",
+      "051-semantic-deltas"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cmd_evidence.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/tests/evidence.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/evidence.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/testdata/evidence/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/tests/evidence.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy-sdk/examples/evidence_required.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cli.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/main.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/predicate.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy-sdk/src/evidence.rs"
+        }
+      }
+    ],
+    "specId": "103-evidence-carrying-changes",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "68d5f42193536c8738a59b2adb584a81580b4d921f666c37da9297fc95482b26"
+}

@@ -1,0 +1,160 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '025-semantic-anchors' file unit 'crates/hqgit-domain/src/anchor.rs' does not exist",
+        "path": "crates/hqgit-domain/src/anchor.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '025-semantic-anchors' file unit 'crates/hqgit-domain/src/syntax/mod.rs' does not exist",
+        "path": "crates/hqgit-domain/src/syntax/mod.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '025-semantic-anchors' file unit 'crates/hqgit-domain/src/syntax/rust.rs' does not exist",
+        "path": "crates/hqgit-domain/src/syntax/rust.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '025-semantic-anchors' file unit 'crates/hqgit-domain/src/syntax/typescript.rs' does not exist",
+        "path": "crates/hqgit-domain/src/syntax/typescript.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '025-semantic-anchors' file unit 'crates/hqgit-domain/src/syntax/text.rs' does not exist",
+        "path": "crates/hqgit-domain/src/syntax/text.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '025-semantic-anchors' file unit 'crates/hqgit-domain/tests/anchor.rs' does not exist",
+        "path": "crates/hqgit-domain/tests/anchor.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '025-semantic-anchors' file unit 'crates/hqgit-domain/testdata/anchors/' does not exist",
+        "path": "crates/hqgit-domain/testdata/anchors/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '025-semantic-anchors' file unit 'crates/hqgit-domain/src/lib.rs' does not exist",
+        "path": "crates/hqgit-domain/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '025-semantic-anchors' file unit 'crates/hqgit-domain/Cargo.toml' does not exist",
+        "path": "crates/hqgit-domain/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '025-semantic-anchors' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "024-change-and-revision"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/anchor.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/syntax/mod.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/syntax/rust.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/syntax/text.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/syntax/typescript.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/testdata/anchors/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/tests/anchor.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "025-semantic-anchors",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "ec51f3e40f70185ea0d0c0454637cfabd0a4b9d2fca07ede6a0784534b3bc3af"
+}

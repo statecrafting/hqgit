@@ -1,0 +1,77 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "051-semantic-deltas"
+    ],
+    "domain": "l2-domain",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/conflict.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/tests/conflict.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/testdata/conflicts/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 3
+    },
+    "id": "052-semantic-conflicts",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "medium",
+    "sectionHeadings": [
+      "052: Semantic conflicts",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/052-semantic-conflicts/spec.md",
+    "status": "approved",
+    "summary": "Conflict detection should be semantic, not textual (design §1.1 point 3). Given two revisions and their common base tree, this spec computes a deterministic ConflictReport from the 051 deltas and the 025 syntax trees: SameSymbolEdited when both sides edit one definition, SignatureChangedAndCalled when one side changes a signature the other side calls, DependencyVersionDiverged when both move one dependency to different versions or sources, and CapabilityOverlap when both gain the same capability in one file. Textual overlap is computed too, from line hunks, but reported as its own Text kind so a merge that is clean in git and broken in meaning, or the reverse, is never mistaken for the other. Two changes editing different functions in one file produce no conflict of either kind; changing a signature the other calls does.\n",
+    "title": "Semantic conflicts: pairwise conflict detection over deltas and anchors, with text kept separate"
+  },
+  "shardHash": "1d9cfb80ba37f342e409032f45a1a0e0df1192f374926fd0896f0eeafebcaeeb",
+  "specVersion": "1.1.0"
+}

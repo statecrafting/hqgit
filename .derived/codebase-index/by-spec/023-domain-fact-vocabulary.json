@@ -1,0 +1,117 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '023-domain-fact-vocabulary' file unit 'crates/hqgit-domain/Cargo.toml' does not exist",
+        "path": "crates/hqgit-domain/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '023-domain-fact-vocabulary' file unit 'crates/hqgit-domain/src/lib.rs' does not exist",
+        "path": "crates/hqgit-domain/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '023-domain-fact-vocabulary' file unit 'crates/hqgit-domain/src/facts.rs' does not exist",
+        "path": "crates/hqgit-domain/src/facts.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '023-domain-fact-vocabulary' file unit 'crates/hqgit-domain/src/validate.rs' does not exist",
+        "path": "crates/hqgit-domain/src/validate.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '023-domain-fact-vocabulary' file unit 'crates/hqgit-domain/src/ids.rs' does not exist",
+        "path": "crates/hqgit-domain/src/ids.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '023-domain-fact-vocabulary' file unit 'crates/hqgit-domain/tests/' does not exist",
+        "path": "crates/hqgit-domain/tests/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '023-domain-fact-vocabulary' file unit 'crates/hqgit-types/testdata/vectors/' does not exist",
+        "path": "crates/hqgit-types/testdata/vectors/"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "019-facts-and-derived-state"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/ids.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/validate.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/tests/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/testdata/vectors/"
+        }
+      }
+    ],
+    "specId": "023-domain-fact-vocabulary",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "57e9bb7e97d1ba4543144cb2e56a06a13983cfbf3ee437432ae8de7c080dd169"
+}

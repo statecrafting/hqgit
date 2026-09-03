@@ -1,0 +1,77 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "070-reapi-types",
+      "064-attestation-verification"
+    ],
+    "domain": "l3-evaluation",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/src/cache.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/src/executor_identity.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/tests/cache.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "070-reapi-types",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "070-reapi-types",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 5
+    },
+    "id": "071-action-cache",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "critical",
+    "sectionHeadings": [
+      "071: Action cache as a trust boundary",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/071-action-cache/spec.md",
+    "status": "approved",
+    "summary": "A poisoned action cache forges provenance for arbitrary code, so the cache is a trust boundary (thesis D10, constitution XI). Entries are immutable and keyed by both the action digest and the executor that produced them, so two executors' results coexist instead of overwriting; every entry names its executor's Service identity and the provenance attestation that vouches for it; and a lookup declares its purpose. A gating lookup, the kind a merge decision consumes, treats an entry whose attestation is absent or fails spec 064 verification as a miss. An advisory lookup may serve the same entry, flagged, for developer feedback. Executors are registered Service identities with a trust tier, and a quorum rule can demand that several of them agree before an output counts.\n",
+    "title": "Action cache as a trust boundary: attested entries, gating versus advisory lookups"
+  },
+  "shardHash": "57d321e20648030f757bf02e339073e9e7d89106030c1dbf6e0e91eaec6cb2cd",
+  "specVersion": "1.1.0"
+}

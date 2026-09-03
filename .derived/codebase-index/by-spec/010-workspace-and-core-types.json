@@ -1,0 +1,201 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '010-workspace-and-core-types' file unit 'Cargo.toml' does not exist",
+        "path": "Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '010-workspace-and-core-types' file unit 'rust-toolchain.toml' does not exist",
+        "path": "rust-toolchain.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '010-workspace-and-core-types' file unit 'deny.toml' does not exist",
+        "path": "deny.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '010-workspace-and-core-types' file unit 'crates/hqgit-types/Cargo.toml' does not exist",
+        "path": "crates/hqgit-types/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '010-workspace-and-core-types' file unit 'crates/hqgit-types/src/lib.rs' does not exist",
+        "path": "crates/hqgit-types/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '010-workspace-and-core-types' file unit 'crates/hqgit-types/src/hash.rs' does not exist",
+        "path": "crates/hqgit-types/src/hash.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '010-workspace-and-core-types' file unit 'crates/hqgit-types/src/cid.rs' does not exist",
+        "path": "crates/hqgit-types/src/cid.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '010-workspace-and-core-types' file unit 'crates/hqgit-types/src/principal.rs' does not exist",
+        "path": "crates/hqgit-types/src/principal.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '010-workspace-and-core-types' file unit 'crates/hqgit-types/src/key.rs' does not exist",
+        "path": "crates/hqgit-types/src/key.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '010-workspace-and-core-types' file unit 'crates/hqgit-types/src/hlc.rs' does not exist",
+        "path": "crates/hqgit-types/src/hlc.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '010-workspace-and-core-types' file unit 'crates/hqgit-types/src/error.rs' does not exist",
+        "path": "crates/hqgit-types/src/error.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '010-workspace-and-core-types' file unit 'crates/hqgit-types/src/version.rs' does not exist",
+        "path": "crates/hqgit-types/src/version.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '010-workspace-and-core-types' file unit 'crates/hqgit-types/tests/' does not exist",
+        "path": "crates/hqgit-types/tests/"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "002-platform-thesis"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/src/cid.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/src/error.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/src/hash.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/src/hlc.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/src/key.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/src/principal.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/src/version.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/tests/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "deny.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "rust-toolchain.toml"
+        }
+      }
+    ],
+    "specId": "010-workspace-and-core-types",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "d56f7360c0288e1ebd2ff85051f156dbb2a9fc08862ad021929d321c1fe7afba"
+}

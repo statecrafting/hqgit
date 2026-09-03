@@ -1,0 +1,148 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '081-change-and-review-views' file unit 'crates/hqgit-projection/src/views/mod.rs' does not exist",
+        "path": "crates/hqgit-projection/src/views/mod.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '081-change-and-review-views' file unit 'crates/hqgit-projection/src/views/changes.rs' does not exist",
+        "path": "crates/hqgit-projection/src/views/changes.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '081-change-and-review-views' file unit 'crates/hqgit-projection/src/views/threads.rs' does not exist",
+        "path": "crates/hqgit-projection/src/views/threads.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '081-change-and-review-views' file unit 'crates/hqgit-projection/src/views/attestations.rs' does not exist",
+        "path": "crates/hqgit-projection/src/views/attestations.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '081-change-and-review-views' file unit 'crates/hqgit-projection/src/views/stacks.rs' does not exist",
+        "path": "crates/hqgit-projection/src/views/stacks.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '081-change-and-review-views' file unit 'crates/hqgit-projection/tests/views.rs' does not exist",
+        "path": "crates/hqgit-projection/tests/views.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '081-change-and-review-views' file unit 'crates/hqgit-projection/testdata/views/' does not exist",
+        "path": "crates/hqgit-projection/testdata/views/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '081-change-and-review-views' file unit 'crates/hqgit-projection/src/lib.rs' does not exist",
+        "path": "crates/hqgit-projection/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '081-change-and-review-views' file unit 'crates/hqgit-projection/src/registry.rs' does not exist",
+        "path": "crates/hqgit-projection/src/registry.rs"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "080-projection-framework",
+      "026-review-threads",
+      "027-attestation-primitive",
+      "050-stacked-changes"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/views/attestations.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/views/changes.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/views/mod.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/views/stacks.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/views/threads.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/testdata/views/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/tests/views.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/registry.rs"
+        }
+      }
+    ],
+    "specId": "081-change-and-review-views",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "999333537a2a1feb5dc3c435e8eaa565725a1a1be8f5afed9388bd9793f572e6"
+}

@@ -1,0 +1,80 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "023-domain-fact-vocabulary"
+    ],
+    "domain": "l2-domain",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/attestation.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/predicate.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/tests/attestation.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/testdata/attestations/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "011-canonical-encoding",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/testdata/vectors/"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "027-attestation-primitive",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "critical",
+    "sectionHeadings": [
+      "027: The attestation primitive",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/027-attestation-primitive/spec.md",
+    "status": "approved",
+    "summary": "The single most valuable simplification in the design (thesis §4.3, constitution IX): every form of evidence is one primitive, Attestation { subject, predicate, issuer, claim, sig }. Human approval, build provenance, test result, static finding, license scan, policy evaluation, mirrored external state, semantic delta, and agent action are the same shape, stored the same way, verified the same way, and fed to policy the same way. This spec fixes the attestation's canonical bytes, signing preimage, and id (frozen with vectors), the predicate registry with claim validators for the built-in predicates and reserved slots later specs fill, signature verification, and a lossless mapping to in-toto Statement v1 so SLSA tooling reads hqgit evidence. Requests to special-case a predicate are refused by construction: there is no other noun.\n",
+    "title": "The attestation primitive: one signed evidence shape, a predicate registry, in-toto interop"
+  },
+  "shardHash": "71a6d4e82b699973acd82ad5a3638c60044a2b2ffc57270a351e8bb9968244df",
+  "specVersion": "1.1.0"
+}

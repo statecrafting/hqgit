@@ -1,0 +1,75 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '018-deterministic-total-order' file unit 'crates/hqgit-ledger/src/order.rs' does not exist",
+        "path": "crates/hqgit-ledger/src/order.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '018-deterministic-total-order' file unit 'crates/hqgit-ledger/src/clock.rs' does not exist",
+        "path": "crates/hqgit-ledger/src/clock.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '018-deterministic-total-order' file unit 'crates/hqgit-ledger/tests/order.rs' does not exist",
+        "path": "crates/hqgit-ledger/tests/order.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '018-deterministic-total-order' file unit 'crates/hqgit-ledger/src/lib.rs' does not exist",
+        "path": "crates/hqgit-ledger/src/lib.rs"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "017-ledger-entry-dag"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/clock.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/order.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/tests/order.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/lib.rs"
+        }
+      }
+    ],
+    "specId": "018-deterministic-total-order",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "ce1f9177e2b75debfbc01b2778a593d87909b6ae45973f5cf7d18e164a9c5bb2"
+}

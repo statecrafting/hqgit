@@ -1,0 +1,89 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "010-workspace-and-core-types"
+    ],
+    "domain": "l1-ledger",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-types/src/codec/mod.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-types/src/codec/cbor.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-types/src/codec/envelope.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-types/src/codec/value.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-types/testdata/vectors/"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-types/tests/codec.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "011-canonical-encoding",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "critical",
+    "sectionHeadings": [
+      "011: Canonical encoding",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/011-canonical-encoding/spec.md",
+    "status": "approved",
+    "summary": "The one serialization every hashed and signed byte in hqgit passes through. This spec fixes canonical DAG-CBOR (RFC 8949 deterministic encoding under the IPLD DAG-CBOR restrictions: definite lengths, shortest integers, length-then-bytes key order, no floats, no indefinite items, no tags except the link tag), the in-memory Value model it encodes, the versioned Envelope every object is wrapped in, and the unknown-field preservation rule that lets a newer writer's fields survive an older reader byte for byte. It establishes the golden vector corpus that spec 012 gates and every later release must reproduce. Nothing here reads a clock or the environment; decode of encode is the identity and encode of decode is the identity on canonical bytes, and both are frozen at tier 1.\n",
+    "title": "Canonical encoding: deterministic DAG-CBOR, the Value model, envelopes, unknown-field preservation"
+  },
+  "shardHash": "91181516e6ee0cadbc58ec98e2d9bab35bf36c93c2dbe6149d787385bbabab15",
+  "specVersion": "1.1.0"
+}

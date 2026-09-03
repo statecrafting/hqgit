@@ -1,0 +1,103 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '101-delegation-chain' file unit 'crates/hqgit-agent/src/delegation.rs' does not exist",
+        "path": "crates/hqgit-agent/src/delegation.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '101-delegation-chain' file unit 'crates/hqgit-agent/src/authorize.rs' does not exist",
+        "path": "crates/hqgit-agent/src/authorize.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '101-delegation-chain' file unit 'crates/hqgit-agent/tests/delegation.rs' does not exist",
+        "path": "crates/hqgit-agent/tests/delegation.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '101-delegation-chain' file unit 'crates/hqgit-agent/testdata/delegation/' does not exist",
+        "path": "crates/hqgit-agent/testdata/delegation/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '101-delegation-chain' file unit 'crates/hqgit-agent/src/lib.rs' does not exist",
+        "path": "crates/hqgit-agent/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '101-delegation-chain' file unit 'crates/hqgit-domain/src/facts.rs' does not exist",
+        "path": "crates/hqgit-domain/src/facts.rs"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "100-agent-principals"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-agent/src/authorize.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-agent/src/delegation.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-agent/testdata/delegation/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-agent/tests/delegation.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-agent/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      }
+    ],
+    "specId": "101-delegation-chain",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "e1af80d46ebcbc39d3eca9b6294450821b9d7e30be678a6f262e3115c9379da9"
+}

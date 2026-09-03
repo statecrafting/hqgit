@@ -1,0 +1,113 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "019-facts-and-derived-state"
+    ],
+    "domain": "l1-ledger",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-ledger/src/commitment.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-ledger/src/tombstone.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-object/src/encrypt.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-ledger/tests/erasure.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "017-ledger-entry-dag",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "013-object-store",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "013-object-store",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/store.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "013-object-store",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/local.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "013-object-store",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/memory.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "013-object-store",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "020-commitments-and-tombstones",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "critical",
+    "sectionHeadings": [
+      "020: Commitments and tombstones",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/020-commitments-and-tombstones/spec.md",
+    "status": "approved",
+    "summary": "The erasure design decided at entry one because it cannot be retrofitted: the signed log contains commitments (content identifiers), never user content; content lives in the object store, encrypted per namespace where it must be; deletion removes the blob and appends a tombstone over the commitment; the chain stays verifiable and the content is genuinely gone. This spec fixes payload resolution with its three honest answers (present, erased, missing), the namespace encryption envelope whose commitment is over plaintext while the store holds ciphertext, the tombstone fact, the erase operation, and the unforgeable capability that gates it. Every projection must render an erased payload as erased and never fail.\n",
+    "title": "Commitments and tombstones: content indirection, per-namespace encryption, and erasure that keeps the chain verifiable"
+  },
+  "shardHash": "6c17c8a4192342a92b007b2bc9b4117de9ed7fe8aee63be6ab14485313583916",
+  "specVersion": "1.1.0"
+}

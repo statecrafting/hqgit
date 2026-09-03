@@ -1,0 +1,78 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "060-identity-and-key-rotation",
+      "062-transparency-log",
+      "027-attestation-primitive"
+    ],
+    "domain": "l4-trust",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/src/verify.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/src/verified.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/src/verify_policy.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/tests/verify.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/testdata/verify/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "060-identity-and-key-rotation",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "060-identity-and-key-rotation",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/Cargo.toml"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 4
+    },
+    "id": "064-attestation-verification",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "critical",
+    "sectionHeadings": [
+      "064: Attestation verification",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/064-attestation-verification/spec.md",
+    "status": "approved",
+    "summary": "The one path by which an attestation becomes evidence. Spec 027 checks a signature against a verifier it is handed; this spec fixes the whole chain in one order: signature, issuer key valid at the attestation's clock (060), keyless bundle when present (063), transparency-log inclusion when the verify policy requires it (062), and claim shape against the predicate registry (027). The output is VerifiedAttestation, a type nothing outside this module can construct, gathered into a VerifiedAttestationSet that carries a per-item verdict and never hides a failure inside a partial success. That set is the only shape the policy engine (065), the action cache (071), quarantine promotion (094), and the projections (081) accept: verification happens here or it did not happen.\n",
+    "title": "Attestation verification: the fixed pipeline from signature to verified set"
+  },
+  "shardHash": "eee71d6a4bbebbbd032a06d80411f0cb2c9bcd6bfd9aea654f86848d4e4850c2",
+  "specVersion": "1.1.0"
+}

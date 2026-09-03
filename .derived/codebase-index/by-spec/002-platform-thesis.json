@@ -1,0 +1,49 @@
+{
+  "mapping": {
+    "dependsOn": [
+      "000-hqgit-bootstrap"
+    ],
+    "implementingPaths": [
+      {
+        "path": "docs/design/00-architecture.md",
+        "source": "spec-edge"
+      },
+      {
+        "path": "docs/design/01-build-order.md",
+        "source": "spec-edge"
+      }
+    ],
+    "resolvedUnits": [
+      {
+        "locations": [
+          {
+            "file": "docs/design/00-architecture.md"
+          }
+        ],
+        "ownership": false,
+        "sourceField": "references",
+        "unit": {
+          "kind": "file",
+          "path": "docs/design/00-architecture.md"
+        }
+      },
+      {
+        "locations": [
+          {
+            "file": "docs/design/01-build-order.md"
+          }
+        ],
+        "ownership": false,
+        "sourceField": "references",
+        "unit": {
+          "kind": "file",
+          "path": "docs/design/01-build-order.md"
+        }
+      }
+    ],
+    "specId": "002-platform-thesis",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "681466f2734d5fb6275f78326ad56f836ca3aae61972599aa8acc011a0580d15"
+}

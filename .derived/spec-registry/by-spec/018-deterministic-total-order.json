@@ -1,0 +1,60 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "017-ledger-entry-dag"
+    ],
+    "domain": "l1-ledger",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-ledger/src/order.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-ledger/src/clock.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-ledger/tests/order.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "017-ledger-entry-dag",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/lib.rs"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "018-deterministic-total-order",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "critical",
+    "sectionHeadings": [
+      "018: Deterministic total order and clock generation",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/018-deterministic-total-order/spec.md",
+    "status": "approved",
+    "summary": "Concurrent facts merge by set union under a deterministic total order, topological with a tiebreak on hash: that sentence from the thesis is what lets two replicas holding the same entries fold to the same state without coordination. This spec fixes the order (a Kahn sort whose ready set is ordered by hybrid logical clock then entry hash), its incremental form from a checkpoint, and the fold cursor projections resume from. It also owns the one place in the ledger crate that reads a clock: the hybrid logical clock generator, with an injected clock source, a drift bound, and the guarantee that it is never called on a hashing path.\n",
+    "title": "Deterministic total order over the DAG and hybrid logical clock generation"
+  },
+  "shardHash": "1e1bb96a09a5e12ec25e2cb813f85d4892844719d90b64518a393a54776ab223",
+  "specVersion": "1.1.0"
+}

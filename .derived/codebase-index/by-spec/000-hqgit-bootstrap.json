@@ -1,0 +1,9 @@
+{
+  "mapping": {
+    "implementingPaths": [],
+    "specId": "000-hqgit-bootstrap",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "293ff969fca8955f8c02c56c5d7e2852ddc20810e3d5a449c2f7bbc5e5e1e0ed"
+}

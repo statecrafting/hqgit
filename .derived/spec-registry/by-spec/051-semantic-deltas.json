@@ -1,0 +1,99 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "027-attestation-primitive",
+      "050-stacked-changes",
+      "025-semantic-anchors"
+    ],
+    "domain": "l2-domain",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/delta/mod.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/delta/api_surface.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/delta/dependencies.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/delta/capabilities.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/tests/delta.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/testdata/deltas/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "027-attestation-primitive",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/predicate.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 3
+    },
+    "id": "051-semantic-deltas",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "high",
+    "sectionHeadings": [
+      "051: Semantic deltas",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/051-semantic-deltas/spec.md",
+    "status": "approved",
+    "summary": "The line diff is the lowest-value view of a change (design §1.1 point 3). For a pair of trees this spec computes the three views a reviewer wants first: the public API surface delta (items added, removed, and re-signatured, via tree-sitter for Rust and TypeScript), the dependency delta (Cargo and npm manifests and lockfiles, new registry or git sources called out), and the capability delta (network, filesystem, process, environment, secret, unsafe, and dynamic-code access by static heuristics that deliberately over-report). Each delta is issued as an Attestation under hqgit/semantic-delta/v1 (constitution IX), so policy and the UI consume evidence rather than a rendering. The result is deterministic for two trees and a pinned analyzer, and a file it cannot analyze is listed as unsupported, never silently skipped.\n",
+    "title": "Semantic deltas: API surface, dependency, and capability changes as attestations"
+  },
+  "shardHash": "da6a6d4b527d125bc395c9ee8887565ba1cdace170b5c53ce57aa11efb9114ff",
+  "specVersion": "1.1.0"
+}

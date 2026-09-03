@@ -1,0 +1,91 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '104-ownership-and-sla' file unit 'crates/hqgit-domain/src/ownership.rs' does not exist",
+        "path": "crates/hqgit-domain/src/ownership.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '104-ownership-and-sla' file unit 'crates/hqgit-domain/tests/ownership.rs' does not exist",
+        "path": "crates/hqgit-domain/tests/ownership.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '104-ownership-and-sla' file unit 'crates/hqgit-domain/testdata/ownership/' does not exist",
+        "path": "crates/hqgit-domain/testdata/ownership/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '104-ownership-and-sla' file unit 'crates/hqgit-domain/src/lib.rs' does not exist",
+        "path": "crates/hqgit-domain/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '104-ownership-and-sla' file unit 'crates/hqgit-domain/src/facts.rs' does not exist",
+        "path": "crates/hqgit-domain/src/facts.rs"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "028-issues-and-derived-state",
+      "060-identity-and-key-rotation",
+      "025-semantic-anchors"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/ownership.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/testdata/ownership/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/tests/ownership.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/lib.rs"
+        }
+      }
+    ],
+    "specId": "104-ownership-and-sla",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "07381d3520e7359ce8b425c9ec6bd5718cb8ec8c1f7f9fd7a014815f788f829c"
+}

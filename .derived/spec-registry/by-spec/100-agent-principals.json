@@ -1,0 +1,86 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "060-identity-and-key-rotation",
+      "068-policy-in-repo"
+    ],
+    "domain": "l4-trust",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-agent/Cargo.toml"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-agent/src/lib.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-agent/src/token.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-agent/src/principal.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-agent/src/caveats.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-agent/tests/"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-agent/testdata/tokens/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 7
+    },
+    "id": "100-agent-principals",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "critical",
+    "sectionHeadings": [
+      "100: Agent principals",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/100-agent-principals/spec.md",
+    "status": "approved",
+    "summary": "Constitution XII and thesis D12: an agent is a distinct principal class and never authenticates as a human. This spec founds hqgit-agent and fixes how an agent becomes one: an identity of kind Agent (060) that an operator, a human or an org, registers with a fact naming the runtime and the declared sandbox; a Biscuit token whose authority block is signed by the operator's identity key and names the agent, the registration entry, the pinned policy (068), the namespaces, the capabilities, and an expiry; attenuation that can only add caveats, from a frozen datalog vocabulary over namespace, path, predicate, revision size, operation, and time window; offline verification against the operator's key as the 060 fold knew it at issuance; and revocation by fact. The chain of delegations and the authorize function are 101.\n",
+    "title": "Agent principals: registration facts, Biscuit tokens, and the caveat vocabulary"
+  },
+  "shardHash": "e551b1890f0d793255db3725d0cb533ba4477766a023f687b8cddc00b8599d57",
+  "specVersion": "1.1.0"
+}

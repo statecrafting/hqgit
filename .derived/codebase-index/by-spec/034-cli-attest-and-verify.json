@@ -1,0 +1,89 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '034-cli-attest-and-verify' file unit 'crates/hqgit-cli/src/cmd_attest.rs' does not exist",
+        "path": "crates/hqgit-cli/src/cmd_attest.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '034-cli-attest-and-verify' file unit 'crates/hqgit-cli/src/cmd_verify.rs' does not exist",
+        "path": "crates/hqgit-cli/src/cmd_verify.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '034-cli-attest-and-verify' file unit 'crates/hqgit-cli/tests/verify.rs' does not exist",
+        "path": "crates/hqgit-cli/tests/verify.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '034-cli-attest-and-verify' file unit 'crates/hqgit-cli/src/main.rs' does not exist",
+        "path": "crates/hqgit-cli/src/main.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '034-cli-attest-and-verify' file unit 'crates/hqgit-cli/src/cli.rs' does not exist",
+        "path": "crates/hqgit-cli/src/cli.rs"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "033-cli-offline-review"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cmd_attest.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cmd_verify.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/tests/verify.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cli.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/main.rs"
+        }
+      }
+    ],
+    "specId": "034-cli-attest-and-verify",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "d4ef93ac7dd50107f83b686970f3b0c68dc7f97bd6cab78d028d86a48bf3ff01"
+}

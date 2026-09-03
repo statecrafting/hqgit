@@ -1,0 +1,76 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "024-change-and-revision"
+    ],
+    "domain": "l2-domain",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/stack.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/interdiff.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/tests/stack.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "011-canonical-encoding",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/testdata/vectors/"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 3
+    },
+    "id": "050-stacked-changes",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "high",
+    "sectionHeadings": [
+      "050: Stacked changes",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/050-stacked-changes/spec.md",
+    "status": "approved",
+    "summary": "Graphite exists because the branch pointer is the wrong unit of change (design §1.1 point 2). With Change and Revision in place (024), a stack is nothing more than a relation between changes: change.depends_on and change.dependency_dropped facts converge per edge as a last-writer-wins register, StackView folds them, and the stack order is a topological sort with ties broken on ChangeId so every replica prints the same stack. A restack is a pure plan (which revision goes onto which base, in which order) that the CLI executes through the git bridge; the domain never rebases. Interdiff answers \"what changed since I last looked\" by comparing what two revisions of one change each did to their base at the tree level, so base movement alone produces an empty interdiff.\n",
+    "title": "Stacked changes: dependency facts, a deterministic stack order, restack plans, and interdiff"
+  },
+  "shardHash": "804873832f8b6214c2005572e31ee2af57d92c7698f5f78b2ba47a269e58ebe7",
+  "specVersion": "1.1.0"
+}

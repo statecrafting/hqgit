@@ -1,0 +1,93 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "024-change-and-revision"
+    ],
+    "domain": "l2-domain",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/anchor.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/syntax/mod.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/syntax/rust.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/syntax/typescript.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/syntax/text.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/tests/anchor.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/testdata/anchors/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "025-semantic-anchors",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "high",
+    "sectionHeadings": [
+      "025: Semantic anchors",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/025-semantic-anchors/spec.md",
+    "status": "approved",
+    "summary": "Review is anchored to text in every incumbent, which is why a rebase orphans every comment. hqgit anchors a location to a syntax node: the path, the named-node path from the root, and the BLAKE3 hash of the node's content, with a text position as the fallback of last resort. Resolution against a new tree answers Exact, Moved (the same content elsewhere, rename-tolerant), Text (parsing failed or the language is unknown), or Lost, never a silent guess. Rust and TypeScript are the first languages, with tree-sitter grammars pinned exact so spans are identical across releases; everything else degrades to the text path, visibly. This is the primitive spec 026's threads and spec 051's deltas build on.\n",
+    "title": "Semantic anchors: comments that survive rebase by resolving against content"
+  },
+  "shardHash": "9b1c529823301dbc04c35b732a369872b0bbd687d8c90fc59719dd6966d7e360",
+  "specVersion": "1.1.0"
+}

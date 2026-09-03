@@ -1,0 +1,122 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "102-agent-sandbox-and-provenance",
+      "067-policy-evaluation-attestation",
+      "051-semantic-deltas"
+    ],
+    "domain": "l6-policy",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/evidence.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/tests/evidence.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/testdata/evidence/"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy-sdk/examples/evidence_required.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/src/cmd_evidence.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-cli/tests/evidence.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "027-attestation-primitive",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/predicate.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "066-policy-sdk",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy-sdk/src/evidence.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/main.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/src/cli.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "032-cli-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-cli/Cargo.toml"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 7
+    },
+    "id": "103-evidence-carrying-changes",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "high",
+    "sectionHeadings": [
+      "103: Evidence-carrying changes",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/103-evidence-carrying-changes/spec.md",
+    "status": "approved",
+    "summary": "Design §1.1 point 7: as authoring cost approaches zero, trusted review capacity is the binding constraint, so a change should arrive carrying machine-checkable evidence and a human should review the argument rather than the diff. This spec names that argument: an EvidenceBundle is the set of attestations a revision carries (provenance, test and property-test results, invariant checks, semantic deltas, policy evaluations, agent actions, approvals, spec conformance), declared by an evidence.attached fact, each item classified by whether a machine or a human must check it and carrying its verification verdict. The CLI renders the argument with a throughput line (how much verified itself, how much needs a person), completeness is computed against a required predicate set, and the SDK example policy evidence_required denies a revision lacking one. Nothing here is a new noun: every item is an attestation (constitution IX).\n",
+    "title": "Evidence-carrying changes: the bundle, the argument view, and the evidence_required policy"
+  },
+  "shardHash": "86c6f7ac2c6e596c39d7572eebb335cf68750d89c8e1b64c24e10a8da37caeec",
+  "specVersion": "1.1.0"
+}

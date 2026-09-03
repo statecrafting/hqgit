@@ -1,0 +1,131 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '019-facts-and-derived-state' file unit 'crates/hqgit-ledger/src/facts.rs' does not exist",
+        "path": "crates/hqgit-ledger/src/facts.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '019-facts-and-derived-state' file unit 'crates/hqgit-ledger/src/derived.rs' does not exist",
+        "path": "crates/hqgit-ledger/src/derived.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '019-facts-and-derived-state' file unit 'crates/hqgit-ledger/src/crdt/mod.rs' does not exist",
+        "path": "crates/hqgit-ledger/src/crdt/mod.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '019-facts-and-derived-state' file unit 'crates/hqgit-ledger/src/crdt/lww.rs' does not exist",
+        "path": "crates/hqgit-ledger/src/crdt/lww.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '019-facts-and-derived-state' file unit 'crates/hqgit-ledger/src/crdt/sequence.rs' does not exist",
+        "path": "crates/hqgit-ledger/src/crdt/sequence.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '019-facts-and-derived-state' file unit 'crates/hqgit-ledger/tests/facts.rs' does not exist",
+        "path": "crates/hqgit-ledger/tests/facts.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '019-facts-and-derived-state' file unit 'crates/hqgit-ledger/src/lib.rs' does not exist",
+        "path": "crates/hqgit-ledger/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '019-facts-and-derived-state' file unit 'crates/hqgit-ledger/Cargo.toml' does not exist",
+        "path": "crates/hqgit-ledger/Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "018-deterministic-total-order"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/crdt/lww.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/crdt/mod.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/crdt/sequence.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/derived.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/facts.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/tests/facts.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/lib.rs"
+        }
+      }
+    ],
+    "specId": "019-facts-and-derived-state",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "7a4910c096daa009883558661b64570b0de53576efdea030fd4e27abce78c478"
+}

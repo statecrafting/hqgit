@@ -1,0 +1,82 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "110-set-reconciliation",
+      "060-identity-and-key-rotation"
+    ],
+    "domain": "l1-ledger",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-sync/src/transport.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-sync/src/session.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-sync/src/object_source.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-sync/tests/transport.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "110-set-reconciliation",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-sync/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "110-set-reconciliation",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-sync/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 8
+    },
+    "id": "111-quic-transport",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "high",
+    "sectionHeadings": [
+      "111: QUIC transport",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/111-quic-transport/spec.md",
+    "status": "approved",
+    "summary": "The wire under reconciliation: QUIC through iroh and quinn (thesis §4.2), where the peer's TLS key is its hqgit identity key, so a handshake is an identity proof checked against the rotation chain (060) and nothing else names a peer. One ALPN, one framed message stream per session, and one stream per object fetch. The session runs heads exchange, reconciliation (110) per namespace, entry ingest, and payload fetch through a RemoteObjectSource that implements spec 015's ObjectSource, so every byte from a peer arrives with a range proof and a tampered slice is refused before it exists locally. Reads are gated per namespace by an Authorizer seam and quarantine is never pulled unless asked for; an interrupted session leaves a valid replica and the next one resumes from the last completed watermark.\n",
+    "title": "QUIC transport: identity-bound endpoints, the sync session, and the remote object source"
+  },
+  "shardHash": "d0bc25bf4e4ceb506fe5cc8c872968b245bf9802399d851c3e5a50b2af4e88cf",
+  "specVersion": "1.1.0"
+}

@@ -1,0 +1,52 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "domain": "governance",
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "000-hqgit-bootstrap",
+    "implementation": "n-a",
+    "kind": "constitutional-bootstrap",
+    "origin": {
+      "retroactive": true
+    },
+    "risk": "critical",
+    "sectionHeadings": [
+      "000: Bootstrap spec system for hqgit",
+      "1. The authoring / derived boundary",
+      "2. Identity: directory name equals id",
+      "3. The typed authority graph",
+      "4. Determinism",
+      "5. The refusal rule",
+      "6. The frozen system invariants",
+      "7. Corpus conventions",
+      "8. Lifecycle as scheduling",
+      "9. Bootstrap order"
+    ],
+    "specPath": "specs/000-hqgit-bootstrap/spec.md",
+    "status": "approved",
+    "summary": "Foundational contract for the hqgit corpus. Authored truth lives only in markdown with YAML frontmatter; machine-consumable truth about the corpus is compiler-emitted JSON read only through spec-spine; every artifact is a deterministic function of (config, file contents); and a typed authority graph governs who owns what. hqgit is specified in full before a line of it is built: the corpus is the design, spec numbers are the build order, and an orchestrator drives one spec per fresh session through build, ship, shepherd, and verify. This spec also freezes the seven system invariants (constitution VI through XIII) that no later spec may amend, because the first of them (hash stability of the ledger) is the only mistake the project cannot recover from.\n",
+    "title": "Bootstrap spec system for hqgit (specify first, build by spec)",
+    "unamendable": [
+      "markdown-truth-boundary",
+      "json-truth-boundary",
+      "determinism-requirement",
+      "directory-name-equals-id",
+      "typed-authority-graph",
+      "refusal-rule",
+      "canonical-derived-boundary",
+      "facts-immutable",
+      "hash-stability",
+      "single-evidence-primitive",
+      "erasure-by-tombstone",
+      "agent-principal-class",
+      "layer-direction"
+    ]
+  },
+  "shardHash": "eccf066bf7d3ec4377f434a34872e0eb24e358ea854295f17cae074a19dc2d9b",
+  "specVersion": "1.1.0"
+}

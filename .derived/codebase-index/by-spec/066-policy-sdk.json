@@ -1,0 +1,187 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '066-policy-sdk' file unit 'crates/hqgit-policy-sdk/Cargo.toml' does not exist",
+        "path": "crates/hqgit-policy-sdk/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '066-policy-sdk' file unit 'crates/hqgit-policy-sdk/src/lib.rs' does not exist",
+        "path": "crates/hqgit-policy-sdk/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '066-policy-sdk' file unit 'crates/hqgit-policy-sdk/src/prelude.rs' does not exist",
+        "path": "crates/hqgit-policy-sdk/src/prelude.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '066-policy-sdk' file unit 'crates/hqgit-policy-sdk/src/evidence.rs' does not exist",
+        "path": "crates/hqgit-policy-sdk/src/evidence.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '066-policy-sdk' file unit 'crates/hqgit-policy-sdk/src/export.rs' does not exist",
+        "path": "crates/hqgit-policy-sdk/src/export.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '066-policy-sdk' file unit 'crates/hqgit-policy-sdk/src/testing.rs' does not exist",
+        "path": "crates/hqgit-policy-sdk/src/testing.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '066-policy-sdk' file unit 'crates/hqgit-policy-sdk/examples/allow_all.rs' does not exist",
+        "path": "crates/hqgit-policy-sdk/examples/allow_all.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '066-policy-sdk' file unit 'crates/hqgit-policy-sdk/examples/two_approvals.rs' does not exist",
+        "path": "crates/hqgit-policy-sdk/examples/two_approvals.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '066-policy-sdk' file unit 'crates/hqgit-policy-sdk/examples/provenance_required.rs' does not exist",
+        "path": "crates/hqgit-policy-sdk/examples/provenance_required.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '066-policy-sdk' file unit 'crates/hqgit-policy-sdk/examples/no_self_approval.rs' does not exist",
+        "path": "crates/hqgit-policy-sdk/examples/no_self_approval.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '066-policy-sdk' file unit 'crates/hqgit-policy-sdk/tests/' does not exist",
+        "path": "crates/hqgit-policy-sdk/tests/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '066-policy-sdk' file unit 'crates/hqgit-policy/testdata/policies/' does not exist",
+        "path": "crates/hqgit-policy/testdata/policies/"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "065-policy-engine"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy-sdk/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy-sdk/examples/allow_all.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy-sdk/examples/no_self_approval.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy-sdk/examples/provenance_required.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy-sdk/examples/two_approvals.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy-sdk/src/evidence.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy-sdk/src/export.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy-sdk/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy-sdk/src/prelude.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy-sdk/src/testing.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy-sdk/tests/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy/testdata/policies/"
+        }
+      }
+    ],
+    "specId": "066-policy-sdk",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "1b8b611f354a0eaac1500941fe4a8545e69ade42dd4d768a6610d0d53916008c"
+}

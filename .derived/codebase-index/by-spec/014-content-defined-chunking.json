@@ -1,0 +1,132 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '014-content-defined-chunking' file unit 'crates/hqgit-object/src/chunk.rs' does not exist",
+        "path": "crates/hqgit-object/src/chunk.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '014-content-defined-chunking' file unit 'crates/hqgit-object/src/merkle.rs' does not exist",
+        "path": "crates/hqgit-object/src/merkle.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '014-content-defined-chunking' file unit 'crates/hqgit-object/tests/chunk.rs' does not exist",
+        "path": "crates/hqgit-object/tests/chunk.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '014-content-defined-chunking' file unit 'crates/hqgit-object/testdata/chunk/' does not exist",
+        "path": "crates/hqgit-object/testdata/chunk/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '014-content-defined-chunking' file unit 'crates/hqgit-object/src/lib.rs' does not exist",
+        "path": "crates/hqgit-object/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '014-content-defined-chunking' file unit 'crates/hqgit-object/src/object.rs' does not exist",
+        "path": "crates/hqgit-object/src/object.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '014-content-defined-chunking' file unit 'crates/hqgit-object/Cargo.toml' does not exist",
+        "path": "crates/hqgit-object/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '014-content-defined-chunking' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "013-object-store"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/chunk.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/merkle.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/testdata/chunk/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/tests/chunk.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/object.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "014-content-defined-chunking",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "2dbc500962954cc1cd74abaa2188205ab353733a41f0e873c3797f40055342cc"
+}

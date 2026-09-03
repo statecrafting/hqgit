@@ -1,0 +1,75 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '026-review-threads' file unit 'crates/hqgit-domain/src/review.rs' does not exist",
+        "path": "crates/hqgit-domain/src/review.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '026-review-threads' file unit 'crates/hqgit-domain/tests/review.rs' does not exist",
+        "path": "crates/hqgit-domain/tests/review.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '026-review-threads' file unit 'crates/hqgit-domain/src/lib.rs' does not exist",
+        "path": "crates/hqgit-domain/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '026-review-threads' file unit 'crates/hqgit-domain/src/facts.rs' does not exist",
+        "path": "crates/hqgit-domain/src/facts.rs"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "025-semantic-anchors"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/review.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/tests/review.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/lib.rs"
+        }
+      }
+    ],
+    "specId": "026-review-threads",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "8728314cfe9cf7cae7b2c16b604976cafdf388f784cecfb0e921cf06cf42ca30"
+}

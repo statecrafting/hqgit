@@ -1,0 +1,131 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '110-set-reconciliation' file unit 'crates/hqgit-sync/Cargo.toml' does not exist",
+        "path": "crates/hqgit-sync/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '110-set-reconciliation' file unit 'crates/hqgit-sync/src/lib.rs' does not exist",
+        "path": "crates/hqgit-sync/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '110-set-reconciliation' file unit 'crates/hqgit-sync/src/reconcile.rs' does not exist",
+        "path": "crates/hqgit-sync/src/reconcile.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '110-set-reconciliation' file unit 'crates/hqgit-sync/src/fingerprint.rs' does not exist",
+        "path": "crates/hqgit-sync/src/fingerprint.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '110-set-reconciliation' file unit 'crates/hqgit-sync/src/protocol.rs' does not exist",
+        "path": "crates/hqgit-sync/src/protocol.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '110-set-reconciliation' file unit 'crates/hqgit-sync/tests/' does not exist",
+        "path": "crates/hqgit-sync/tests/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '110-set-reconciliation' file unit 'crates/hqgit-sync/testdata/protocol/' does not exist",
+        "path": "crates/hqgit-sync/testdata/protocol/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '110-set-reconciliation' file unit 'crates/hqgit-ledger/src/repo.rs' does not exist",
+        "path": "crates/hqgit-ledger/src/repo.rs"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "021-local-repository"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-sync/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-sync/src/fingerprint.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-sync/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-sync/src/protocol.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-sync/src/reconcile.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-sync/testdata/protocol/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-sync/tests/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/repo.rs"
+        }
+      }
+    ],
+    "specId": "110-set-reconciliation",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "69878756165b37d05fbcf669c768b23add47faad1ad78a13098560b617a3a5af"
+}

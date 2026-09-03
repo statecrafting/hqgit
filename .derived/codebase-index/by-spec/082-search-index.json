@@ -1,0 +1,104 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '082-search-index' file unit 'crates/hqgit-projection/src/search.rs' does not exist",
+        "path": "crates/hqgit-projection/src/search.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '082-search-index' file unit 'crates/hqgit-projection/tests/search.rs' does not exist",
+        "path": "crates/hqgit-projection/tests/search.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '082-search-index' file unit 'crates/hqgit-projection/src/lib.rs' does not exist",
+        "path": "crates/hqgit-projection/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '082-search-index' file unit 'crates/hqgit-projection/src/registry.rs' does not exist",
+        "path": "crates/hqgit-projection/src/registry.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '082-search-index' file unit 'crates/hqgit-projection/Cargo.toml' does not exist",
+        "path": "crates/hqgit-projection/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '082-search-index' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "080-projection-framework"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/search.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/tests/search.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/registry.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "082-search-index",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "cb62dc4850a9a3ee190e8cccc165db76d6e4bdb426e5690a2668eaeb8ad2cc35"
+}

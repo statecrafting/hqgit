@@ -1,0 +1,146 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '011-canonical-encoding' file unit 'crates/hqgit-types/src/codec/mod.rs' does not exist",
+        "path": "crates/hqgit-types/src/codec/mod.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '011-canonical-encoding' file unit 'crates/hqgit-types/src/codec/cbor.rs' does not exist",
+        "path": "crates/hqgit-types/src/codec/cbor.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '011-canonical-encoding' file unit 'crates/hqgit-types/src/codec/envelope.rs' does not exist",
+        "path": "crates/hqgit-types/src/codec/envelope.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '011-canonical-encoding' file unit 'crates/hqgit-types/src/codec/value.rs' does not exist",
+        "path": "crates/hqgit-types/src/codec/value.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '011-canonical-encoding' file unit 'crates/hqgit-types/testdata/vectors/' does not exist",
+        "path": "crates/hqgit-types/testdata/vectors/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '011-canonical-encoding' file unit 'crates/hqgit-types/tests/codec.rs' does not exist",
+        "path": "crates/hqgit-types/tests/codec.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '011-canonical-encoding' file unit 'crates/hqgit-types/src/lib.rs' does not exist",
+        "path": "crates/hqgit-types/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '011-canonical-encoding' file unit 'crates/hqgit-types/Cargo.toml' does not exist",
+        "path": "crates/hqgit-types/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '011-canonical-encoding' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "010-workspace-and-core-types"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/src/codec/cbor.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/src/codec/envelope.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/src/codec/mod.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/src/codec/value.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/testdata/vectors/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/tests/codec.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "011-canonical-encoding",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "9955f4646e54b558d3686274cfe46b8cd04863580b19978fcacd8a7fea2a3383"
+}

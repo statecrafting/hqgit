@@ -1,0 +1,86 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "083-code-graph",
+      "075-build-graph",
+      "051-semantic-deltas"
+    ],
+    "domain": "l5-projection",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/src/ecosystem/mod.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/src/ecosystem/deps.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/src/ecosystem/impact.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/tests/ecosystem.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/testdata/ecosystem/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "080-projection-framework",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "080-projection-framework",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/registry.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "080-projection-framework",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/Cargo.toml"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 6
+    },
+    "id": "084-ecosystem-graph",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "high",
+    "sectionHeadings": [
+      "084: Ecosystem graph",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/084-ecosystem-graph/spec.md",
+    "status": "approved",
+    "summary": "The second half of design §1.1 point 6: the package dependency graph, read from manifests and lockfiles in each revision tree for Cargo, npm, Go, and Python, joined to the code graph (083) through the SCIP package coordinates so that \"who depends on this package\" becomes \"which call sites in which repositories use the symbols this change removed or re-signed\". It answers downstream impact for an API-surface delta (051) before the API breaks, plans crater-style downstream test runs as data the evaluation plane materializes through the build manifest (075), and reports usage with honest denominators: how many dependents are known, how many are indexed, how many are hit. It shares the 083 file and its isolation: non-authoritative, per-namespace rebuildable, integer-only.\n",
+    "title": "Ecosystem graph: package dependencies joined to the code graph for downstream impact"
+  },
+  "shardHash": "fdafa48027651555b7e0767a49d043650bf841f7b9e58178a268adb0bfffde7e",
+  "specVersion": "1.1.0"
+}

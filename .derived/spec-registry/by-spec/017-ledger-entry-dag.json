@@ -1,0 +1,85 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "011-canonical-encoding",
+      "013-object-store"
+    ],
+    "domain": "l1-ledger",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-ledger/Cargo.toml"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-ledger/src/lib.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-ledger/src/entry.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-ledger/src/dag.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-ledger/src/verify.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-ledger/tests/"
+      },
+      {
+        "kind": "file",
+        "path": "fuzz/fuzz_targets/entry_hash_stable.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "011-canonical-encoding",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/testdata/vectors/"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "012-hash-stability-gate",
+        "unit": {
+          "kind": "file",
+          "path": "fuzz/Cargo.toml"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "017-ledger-entry-dag",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "critical",
+    "sectionHeadings": [
+      "017: Ledger entry and the hash-linked DAG",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/017-ledger-entry-dag/spec.md",
+    "status": "approved",
+    "summary": "The core primitive of the platform: a ledger entry is { parents, issuer, hlc, payload, sig }, a hash-linked DAG rather than a linear log because concurrent authors are the normal case. This spec founds hqgit-ledger and fixes, permanently, the entry's canonical shape, its signing preimage, and its hash; the in-memory DAG with append and head tracking; and chain verification (hash links, parent presence, signature through an issuer resolver seam, clock monotonicity). Nothing here persists (021) or orders (018) or interprets payloads (019, 023): it is the substrate those specs build on, and the golden entry vectors it freezes are the record every later release must reproduce byte for byte.\n",
+    "title": "Ledger entry and the hash-linked DAG: shape, signing bytes, append, verify"
+  },
+  "shardHash": "9e2807f788d0942703eb415aa049090bb0d085a2bb413fa4d218b39f7aec5512",
+  "specVersion": "1.1.0"
+}

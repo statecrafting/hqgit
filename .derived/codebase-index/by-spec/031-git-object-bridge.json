@@ -1,0 +1,160 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '031-git-object-bridge' file unit 'crates/hqgit-git/Cargo.toml' does not exist",
+        "path": "crates/hqgit-git/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '031-git-object-bridge' file unit 'crates/hqgit-git/src/lib.rs' does not exist",
+        "path": "crates/hqgit-git/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '031-git-object-bridge' file unit 'crates/hqgit-git/src/import.rs' does not exist",
+        "path": "crates/hqgit-git/src/import.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '031-git-object-bridge' file unit 'crates/hqgit-git/src/export.rs' does not exist",
+        "path": "crates/hqgit-git/src/export.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '031-git-object-bridge' file unit 'crates/hqgit-git/src/mapping.rs' does not exist",
+        "path": "crates/hqgit-git/src/mapping.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '031-git-object-bridge' file unit 'crates/hqgit-git/src/worktree.rs' does not exist",
+        "path": "crates/hqgit-git/src/worktree.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '031-git-object-bridge' file unit 'crates/hqgit-git/src/mode.rs' does not exist",
+        "path": "crates/hqgit-git/src/mode.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '031-git-object-bridge' file unit 'crates/hqgit-git/tests/' does not exist",
+        "path": "crates/hqgit-git/tests/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '031-git-object-bridge' file unit 'crates/hqgit-git/testdata/' does not exist",
+        "path": "crates/hqgit-git/testdata/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '031-git-object-bridge' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "014-content-defined-chunking"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-git/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-git/src/export.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-git/src/import.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-git/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-git/src/mapping.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-git/src/mode.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-git/src/worktree.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-git/testdata/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-git/tests/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "031-git-object-bridge",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "00b56ee70ef380410984096a40ed9f4da6c31937db96221b4fdcd77b171e599a"
+}

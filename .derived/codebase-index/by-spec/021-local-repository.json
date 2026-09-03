@@ -1,0 +1,118 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '021-local-repository' file unit 'crates/hqgit-ledger/src/repo.rs' does not exist",
+        "path": "crates/hqgit-ledger/src/repo.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '021-local-repository' file unit 'crates/hqgit-ledger/src/store.rs' does not exist",
+        "path": "crates/hqgit-ledger/src/store.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '021-local-repository' file unit 'crates/hqgit-ledger/src/namespace.rs' does not exist",
+        "path": "crates/hqgit-ledger/src/namespace.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '021-local-repository' file unit 'crates/hqgit-ledger/tests/repo.rs' does not exist",
+        "path": "crates/hqgit-ledger/tests/repo.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '021-local-repository' file unit 'crates/hqgit-ledger/src/lib.rs' does not exist",
+        "path": "crates/hqgit-ledger/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '021-local-repository' file unit 'crates/hqgit-ledger/Cargo.toml' does not exist",
+        "path": "crates/hqgit-ledger/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '021-local-repository' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "020-commitments-and-tombstones"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/namespace.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/repo.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/store.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/tests/repo.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-ledger/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "021-local-repository",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "a5b8669c402f7bb86b9df901d50c016100982dbee4c0f1f93861e11c6c102990"
+}

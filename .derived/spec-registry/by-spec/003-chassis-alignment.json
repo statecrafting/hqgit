@@ -1,0 +1,54 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "constrains": [
+      {
+        "kind": "family-boundary",
+        "target_specs": [
+          "010-workspace-and-core-types",
+          "017-ledger-entry-dag",
+          "060-identity-and-key-rotation",
+          "061-oidc-login",
+          "090-server-skeleton",
+          "091-per-repo-control-plane",
+          "093-connect-api",
+          "094-quarantine-and-promotion",
+          "095-web-review-ui",
+          "100-agent-principals",
+          "101-delegation-chain"
+        ]
+      }
+    ],
+    "created": "2026-09-03",
+    "dependsOn": [
+      "002-platform-thesis"
+    ],
+    "domain": "governance",
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "003-chassis-alignment",
+    "implementation": "n-a",
+    "kind": "governance",
+    "risk": "critical",
+    "sectionHeadings": [
+      "003: Chassis alignment",
+      "1. Purpose",
+      "2. What this spec settles",
+      "3. Affected specs",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/003-chassis-alignment/spec.md",
+    "status": "approved",
+    "summary": "A Rust chassis named rahi now exists in this family and owns identity, replicated operational state, a decision chain, a capability kernel, an axum edge, and single-container packaging. Without a decision on record, the wave 6 server specs would found all of that a second time, and a deployment would contain two things called a ledger. This spec draws the boundary: waves 1 through 5 stay chassis-free so the CLI works with no server, the wave 6 server composes rahi as a Cell, the evidence DAG never moves into the chassis store, hqgit's cryptographic identity stays authoritative with the IdP as an authentication subject bound to it, and the word ledger keeps one meaning in this repository.\n",
+    "title": "Chassis alignment: what the hosted edge consumes from rahi, and what stays hqgit's"
+  },
+  "shardHash": "f653631bb641354d812b6ab345ecf1424a888143005cf282d1389e1d4af6c9dd",
+  "specVersion": "1.1.0"
+}

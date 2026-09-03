@@ -1,0 +1,81 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "060-identity-and-key-rotation"
+    ],
+    "domain": "l4-trust",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/src/oidc.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/src/session.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/tests/oidc.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-trust/testdata/oidc/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "060-identity-and-key-rotation",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "060-identity-and-key-rotation",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 4
+    },
+    "id": "061-oidc-login",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "high",
+    "sectionHeadings": [
+      "061: OIDC login",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/061-oidc-login/spec.md",
+    "status": "approved",
+    "summary": "Login is OIDC; identity is a keypair (060). This spec adds the OIDC client (discovery, authorization code with PKCE, the device authorization grant for the CLI) with an injected HTTP seam so every flow is testable against a mock issuer, and the binding that ties an OIDC subject to a ledger identity: an identity.binding_added fact signed by the identity's active key, so a login proves control of a subject the issuer vouches for and the fact proves control of a key the ledger already knows. Workforce federation is a per-repository allow-list of issuers, with Rauthy as the self-hosted reference. No password is handled anywhere in the crate.\n",
+    "title": "OIDC login: authorization code with PKCE, device flow, and subject binding"
+  },
+  "shardHash": "8a7cdc60aaed5a43972d32b85b39cbfcb0f29398b38998b55d5f98cddb01917a",
+  "specVersion": "1.1.0"
+}

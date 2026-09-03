@@ -1,0 +1,70 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "075-build-graph",
+      "074-execution-provenance",
+      "067-policy-evaluation-attestation"
+    ],
+    "domain": "l3-evaluation",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/src/queue.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/src/speculate.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/tests/queue.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "070-reapi-types",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 5
+    },
+    "id": "076-merge-queue",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "high",
+    "sectionHeadings": [
+      "076: Merge queue",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/076-merge-queue/spec.md",
+    "status": "approved",
+    "summary": "Thesis §4.4: merge queues become speculative evaluation over candidate merge states. A candidate is a change whose latest revision carries a verified policy-eval attestation (067) with verdict Allow; the queue never runs a policy live (constitution XI). The speculator builds the merge tree of trunk plus the candidates in order, computes the affected targets (075), and evaluates every gating target through the execution service with gating cache lookups (071), so a target whose key is unchanged since trunk costs a verified cache hit and nothing else. A green batch merges by appending facts; a red batch bisects until each failure is pinned on one candidate, which is dequeued with the evidence. Queue state is facts, so the queue is a fold any replica can rebuild.\n",
+    "title": "Merge queue: speculative evaluation over candidate merge states, batching, and bisection"
+  },
+  "shardHash": "a6d2105a8b5ea8701db4a84b9cd08cfe181fa776079644b2fe2265580b919116",
+  "specVersion": "1.1.0"
+}

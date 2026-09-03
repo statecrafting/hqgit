@@ -1,0 +1,113 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "071-action-cache"
+    ],
+    "domain": "l3-evaluation",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/proto/hqgit/eval/v1/worker.proto"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/src/service/mod.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/src/service/capabilities.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/src/service/cas.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/src/service/bytestream.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/src/service/action_cache.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/src/service/execution.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/src/service/worker.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/src/scheduler.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/tests/service.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "070-reapi-types",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "070-reapi-types",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/build.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "070-reapi-types",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 5
+    },
+    "id": "072-execution-service",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "high",
+    "sectionHeadings": [
+      "072: Execution service",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/072-execution-service/spec.md",
+    "status": "approved",
+    "summary": "The listening half of the evaluation plane: tonic implementations of the four REAPI services (Capabilities, ContentAddressableStorage with ByteStream, ActionCache, Execution with long-running operations) over the spec 070 adapter and the spec 071 cache, plus the scheduler that turns an Execute request into a leased unit of work for an external worker. Nothing executes in this process: workers (073) register, lease, heartbeat, and complete through a small hqgit-owned Worker service, because REAPI standardizes the client side and not the worker side. Identical in-flight actions coalesce, lost leases requeue, the sandbox tier is a platform property the scheduler matches, and every completion passes through a hook seam that spec 074 fills with provenance before the cache sees it.\n",
+    "title": "Execution service: REAPI Capabilities, CAS, ByteStream, ActionCache, Execution, and the scheduler"
+  },
+  "shardHash": "719ad28c429fd35e5fbde2d55fb7a21f0d40eaaf7d3de4c07d166972591af657",
+  "specVersion": "1.1.0"
+}

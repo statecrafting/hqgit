@@ -1,0 +1,89 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "021-local-repository"
+    ],
+    "domain": "l7-edge",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/Cargo.toml"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/main.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/lib.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/config.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/app.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/health.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/repos.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/auth.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/telemetry.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/tests/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 6
+    },
+    "id": "090-server-skeleton",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "high",
+    "sectionHeadings": [
+      "090: The hqgit-server binary",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/090-server-skeleton/spec.md",
+    "status": "approved",
+    "summary": "The hosted edge begins here. This spec founds hqgit-server, the binary that serves every later L7 surface (the git endpoint 092, the Connect API 093, the review UI 095, federation 112) from one listener, and fixes the frame those specs hang on: TOML plus environment configuration, one axum router that multiplexes HTTP/1.1 and gRPC on a single port, a registry that opens spec 021 repositories lazily under a fixed data-directory layout, a server identity of kind Service, the caller and namespace routing seams every request passes through, health and readiness endpoints, structured logs, graceful shutdown, and exit codes through Error::exit_code. The server runs the same ledger implementation as the CLI (thesis §5) and never depends on hqgit-cli (constitution XIII).\n",
+    "title": "The hqgit-server binary: one listener for HTTP and gRPC, config, the repo registry, health, shutdown"
+  },
+  "shardHash": "30c242f4995dd4c98377efccf5c43a26f571853f477c4d2ccd9421b1d6b01e35",
+  "specVersion": "1.1.0"
+}

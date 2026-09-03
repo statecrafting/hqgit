@@ -1,0 +1,146 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '075-build-graph' file unit 'crates/hqgit-eval/src/graph/mod.rs' does not exist",
+        "path": "crates/hqgit-eval/src/graph/mod.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '075-build-graph' file unit 'crates/hqgit-eval/src/graph/manifest.rs' does not exist",
+        "path": "crates/hqgit-eval/src/graph/manifest.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '075-build-graph' file unit 'crates/hqgit-eval/src/graph/toolchain.rs' does not exist",
+        "path": "crates/hqgit-eval/src/graph/toolchain.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '075-build-graph' file unit 'crates/hqgit-eval/src/graph/affected.rs' does not exist",
+        "path": "crates/hqgit-eval/src/graph/affected.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '075-build-graph' file unit 'crates/hqgit-eval/tests/graph.rs' does not exist",
+        "path": "crates/hqgit-eval/tests/graph.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '075-build-graph' file unit 'crates/hqgit-eval/testdata/graph/' does not exist",
+        "path": "crates/hqgit-eval/testdata/graph/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '075-build-graph' file unit 'crates/hqgit-eval/src/lib.rs' does not exist",
+        "path": "crates/hqgit-eval/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '075-build-graph' file unit 'crates/hqgit-eval/Cargo.toml' does not exist",
+        "path": "crates/hqgit-eval/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '075-build-graph' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "070-reapi-types"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/graph/affected.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/graph/manifest.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/graph/mod.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/graph/toolchain.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/testdata/graph/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/tests/graph.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "075-build-graph",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "130e541c7b826d5adc976e3dac602c3a2d4a916162f3c095a2feff6487a74522"
+}

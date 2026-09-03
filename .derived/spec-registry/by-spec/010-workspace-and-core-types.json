@@ -1,0 +1,90 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "002-platform-thesis"
+    ],
+    "domain": "l2-domain",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "Cargo.toml"
+      },
+      {
+        "kind": "file",
+        "path": "rust-toolchain.toml"
+      },
+      {
+        "kind": "file",
+        "path": "deny.toml"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-types/Cargo.toml"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-types/src/lib.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-types/src/hash.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-types/src/cid.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-types/src/principal.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-types/src/key.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-types/src/hlc.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-types/src/error.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-types/src/version.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-types/tests/"
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "010-workspace-and-core-types",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "critical",
+    "sectionHeadings": [
+      "010: Cargo workspace and the core types",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/010-workspace-and-core-types/spec.md",
+    "status": "approved",
+    "summary": "The first build: a virtual Cargo workspace with the toolchain pinned, unsafe forbidden, one shared dependency table, and a supply-chain policy; plus hqgit-types, the plain-data substrate every other crate depends on and that depends on nothing in the workspace. It fixes the value types that reach hashed bytes: Hash (BLAKE3-256), Cid (codec plus hash), the four-variant Principal, KeyId and Signature with the ed25519 Signer and Verifier seams and the frozen signing preimage, the Hlc timestamp with its total order, the Error enum with the four exit codes, and the schema version constants. Everything here is owned data with serde derives and no lifetimes, generics, or trait objects at the boundary, so the same types back the CLI, the server, and any future binding.\n",
+    "title": "Cargo workspace and the core types: Hash, Cid, Principal, keys, Hlc, Error"
+  },
+  "shardHash": "9d0057c953dd7f43cce03161d474640b8a0f555cf76422af4048eb447ff2ec05",
+  "specVersion": "1.1.0"
+}

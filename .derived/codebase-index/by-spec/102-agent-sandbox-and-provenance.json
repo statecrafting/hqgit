@@ -1,0 +1,161 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '102-agent-sandbox-and-provenance' file unit 'crates/hqgit-agent/src/sandbox.rs' does not exist",
+        "path": "crates/hqgit-agent/src/sandbox.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '102-agent-sandbox-and-provenance' file unit 'crates/hqgit-agent/src/provenance.rs' does not exist",
+        "path": "crates/hqgit-agent/src/provenance.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '102-agent-sandbox-and-provenance' file unit 'crates/hqgit-agent/tests/provenance.rs' does not exist",
+        "path": "crates/hqgit-agent/tests/provenance.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '102-agent-sandbox-and-provenance' file unit 'crates/hqgit-server/src/agent_auth.rs' does not exist",
+        "path": "crates/hqgit-server/src/agent_auth.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '102-agent-sandbox-and-provenance' file unit 'crates/hqgit-server/tests/agent_auth.rs' does not exist",
+        "path": "crates/hqgit-server/tests/agent_auth.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '102-agent-sandbox-and-provenance' file unit 'crates/hqgit-agent/src/lib.rs' does not exist",
+        "path": "crates/hqgit-agent/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '102-agent-sandbox-and-provenance' file unit 'crates/hqgit-server/src/lib.rs' does not exist",
+        "path": "crates/hqgit-server/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '102-agent-sandbox-and-provenance' file unit 'crates/hqgit-server/src/app.rs' does not exist",
+        "path": "crates/hqgit-server/src/app.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '102-agent-sandbox-and-provenance' file unit 'crates/hqgit-server/Cargo.toml' does not exist",
+        "path": "crates/hqgit-server/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '102-agent-sandbox-and-provenance' file unit 'crates/hqgit-domain/src/predicate.rs' does not exist",
+        "path": "crates/hqgit-domain/src/predicate.rs"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "101-delegation-chain",
+      "074-execution-provenance",
+      "090-server-skeleton"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-agent/src/provenance.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-agent/src/sandbox.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-agent/tests/provenance.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/agent_auth.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/tests/agent_auth.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-agent/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/predicate.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/app.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/lib.rs"
+        }
+      }
+    ],
+    "specId": "102-agent-sandbox-and-provenance",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "46241ad27af960c9f13bee477b1355af5b5c6f2aeb5af1f3dcef396fce39d85f"
+}

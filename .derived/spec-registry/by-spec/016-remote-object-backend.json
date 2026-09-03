@@ -1,0 +1,78 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "013-object-store",
+      "015-verified-streaming"
+    ],
+    "domain": "l0-objects",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-object/src/s3.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-object/src/layered.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-object/tests/s3.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "013-object-store",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "013-object-store",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "016-remote-object-backend",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "medium",
+    "sectionHeadings": [
+      "016: Remote object backend",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/016-remote-object-backend/spec.md",
+    "status": "approved",
+    "summary": "Thesis §4.1: local index in redb, remote in any S3-compatible store, and immutability makes every cache layer trivially correct. This spec adds an ObjectStore over any S3-compatible endpoint through the object_store crate, with a hash-sharded key layout, outboard sidecars, and conditional puts for idempotency; an ObjectSource over the same endpoint so verified range fetches (015) work against remote objects; and a LayeredStore that reads through a local store to a remote one and writes through to both. Negative caching is forbidden by design: content is immutable, presence is not, so a miss is retried and never memoized.\n",
+    "title": "Remote object backend: an S3-compatible store and the layered read-through cache"
+  },
+  "shardHash": "37ffd22af30d0626741a4d676eb87a95b74dc62b7b8d1f9642def13ee20f1e75",
+  "specVersion": "1.1.0"
+}

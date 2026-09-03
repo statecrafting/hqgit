@@ -1,0 +1,216 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '072-execution-service' file unit 'crates/hqgit-eval/proto/hqgit/eval/v1/worker.proto' does not exist",
+        "path": "crates/hqgit-eval/proto/hqgit/eval/v1/worker.proto"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '072-execution-service' file unit 'crates/hqgit-eval/src/service/mod.rs' does not exist",
+        "path": "crates/hqgit-eval/src/service/mod.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '072-execution-service' file unit 'crates/hqgit-eval/src/service/capabilities.rs' does not exist",
+        "path": "crates/hqgit-eval/src/service/capabilities.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '072-execution-service' file unit 'crates/hqgit-eval/src/service/cas.rs' does not exist",
+        "path": "crates/hqgit-eval/src/service/cas.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '072-execution-service' file unit 'crates/hqgit-eval/src/service/bytestream.rs' does not exist",
+        "path": "crates/hqgit-eval/src/service/bytestream.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '072-execution-service' file unit 'crates/hqgit-eval/src/service/action_cache.rs' does not exist",
+        "path": "crates/hqgit-eval/src/service/action_cache.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '072-execution-service' file unit 'crates/hqgit-eval/src/service/execution.rs' does not exist",
+        "path": "crates/hqgit-eval/src/service/execution.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '072-execution-service' file unit 'crates/hqgit-eval/src/service/worker.rs' does not exist",
+        "path": "crates/hqgit-eval/src/service/worker.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '072-execution-service' file unit 'crates/hqgit-eval/src/scheduler.rs' does not exist",
+        "path": "crates/hqgit-eval/src/scheduler.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '072-execution-service' file unit 'crates/hqgit-eval/tests/service.rs' does not exist",
+        "path": "crates/hqgit-eval/tests/service.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '072-execution-service' file unit 'crates/hqgit-eval/src/lib.rs' does not exist",
+        "path": "crates/hqgit-eval/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '072-execution-service' file unit 'crates/hqgit-eval/build.rs' does not exist",
+        "path": "crates/hqgit-eval/build.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '072-execution-service' file unit 'crates/hqgit-eval/Cargo.toml' does not exist",
+        "path": "crates/hqgit-eval/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '072-execution-service' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "071-action-cache"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/proto/hqgit/eval/v1/worker.proto"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/scheduler.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/service/action_cache.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/service/bytestream.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/service/capabilities.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/service/cas.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/service/execution.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/service/mod.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/service/worker.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/tests/service.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/build.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "072-execution-service",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "7cfa0b0defa715d9b0732500062ff97b54213aed57a56a8e43a347387e37e9c4"
+}

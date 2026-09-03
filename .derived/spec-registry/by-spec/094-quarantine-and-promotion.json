@@ -1,0 +1,89 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "091-per-repo-control-plane",
+      "064-attestation-verification"
+    ],
+    "domain": "l7-edge",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/quarantine.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/capability.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/tests/quarantine.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/testdata/capabilities/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "090-server-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "090-server-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/app.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "090-server-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "023-domain-fact-vocabulary",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 6
+    },
+    "id": "094-quarantine-and-promotion",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "critical",
+    "sectionHeadings": [
+      "094: Quarantine and promotion",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/094-quarantine-and-promotion/spec.md",
+    "status": "approved",
+    "summary": "Constitution XV in code. Every write reaching the server from a principal that is not verified and not capable (anonymous pushers, fork contributors, the mirror's Service principal, any agent) is appended to the repository's quarantine namespace, never to main. A capability is an attestation with predicate hqgit/capability/v1 over a principal, rooted at the repository's genesis identity, verified end to end by spec 064, and evaluated by pure functions over the verified set at the Hlc of the write in question. Promotion is a namespace.promoted fact signed by a holder of the promote capability; main's fold is main's facts plus what main has promoted, so a promoted fact keeps its original issuer and signature. Per-principal rate and size limits bound abuse of the append-only store, and quarantine content is served only to holders of read-quarantine.\n",
+    "title": "Quarantine and promotion: untrusted writes land quarantined, capabilities are attestations, promotion is a fact"
+  },
+  "shardHash": "1384ac3dc487002e5edf7099f3175b38a60107b2eb82a0e26c6a7727ae85d348",
+  "specVersion": "1.1.0"
+}

@@ -1,0 +1,12 @@
+{
+  "mapping": {
+    "dependsOn": [
+      "002-platform-thesis"
+    ],
+    "implementingPaths": [],
+    "specId": "003-chassis-alignment",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "832d8b0ea02c21ddd55619ba0c64cb9f71f19c0522bf51d9ec0dcbb186ca0014"
+}

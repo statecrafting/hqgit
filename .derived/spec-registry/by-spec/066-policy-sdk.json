@@ -1,0 +1,92 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "065-policy-engine"
+    ],
+    "domain": "l6-policy",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy-sdk/Cargo.toml"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy-sdk/src/lib.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy-sdk/src/prelude.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy-sdk/src/evidence.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy-sdk/src/export.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy-sdk/src/testing.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy-sdk/examples/allow_all.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy-sdk/examples/two_approvals.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy-sdk/examples/provenance_required.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy-sdk/examples/no_self_approval.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-policy-sdk/tests/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "065-policy-engine",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-policy/testdata/policies/"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 4
+    },
+    "id": "066-policy-sdk",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "high",
+    "sectionHeadings": [
+      "066: Policy SDK",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/066-policy-sdk/spec.md",
+    "status": "approved",
+    "summary": "Policies must be unit-testable code, not settings, and a policy author should never touch the WASM ABI by hand. This spec founds hqgit-policy-sdk: a no_std-capable library that a policy crate depends on to write `fn evaluate(&PolicyInput) -> Verdict` in plain Rust, an `hqgit_policy!` macro that emits spec 065's exports around it, typed query helpers over the attestation summaries (approvals by distinct humans, provenance present, issuer kinds, predicate presence) with no floating point anywhere, and a native test harness so the same function runs under `cargo test` on the host and under wasmtime in the engine with identical verdicts. Four example policies are the fixtures the engine tests and later specs (103) reuse.\n",
+    "title": "Policy SDK: typed Rust policies compiled to WASM, testable natively"
+  },
+  "shardHash": "778da60d8b8fff138d4afd679a158024be48c0e65b1e1a797b5e3237d319f2a0",
+  "specVersion": "1.1.0"
+}

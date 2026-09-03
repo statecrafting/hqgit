@@ -1,0 +1,117 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '060-identity-and-key-rotation' file unit 'crates/hqgit-trust/Cargo.toml' does not exist",
+        "path": "crates/hqgit-trust/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '060-identity-and-key-rotation' file unit 'crates/hqgit-trust/src/lib.rs' does not exist",
+        "path": "crates/hqgit-trust/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '060-identity-and-key-rotation' file unit 'crates/hqgit-trust/src/identity.rs' does not exist",
+        "path": "crates/hqgit-trust/src/identity.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '060-identity-and-key-rotation' file unit 'crates/hqgit-trust/src/rotation.rs' does not exist",
+        "path": "crates/hqgit-trust/src/rotation.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '060-identity-and-key-rotation' file unit 'crates/hqgit-trust/src/resolver.rs' does not exist",
+        "path": "crates/hqgit-trust/src/resolver.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '060-identity-and-key-rotation' file unit 'crates/hqgit-trust/tests/' does not exist",
+        "path": "crates/hqgit-trust/tests/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '060-identity-and-key-rotation' file unit 'crates/hqgit-trust/testdata/identity/' does not exist",
+        "path": "crates/hqgit-trust/testdata/identity/"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "019-facts-and-derived-state"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/src/identity.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/src/resolver.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/src/rotation.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/testdata/identity/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/tests/"
+        }
+      }
+    ],
+    "specId": "060-identity-and-key-rotation",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "25dbc5b56ce367ca4401c5eb35c5fff79ad2b40c51baa6b17a967015165ddb1b"
+}

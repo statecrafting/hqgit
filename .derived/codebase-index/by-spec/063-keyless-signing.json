@@ -1,0 +1,119 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '063-keyless-signing' file unit 'crates/hqgit-trust/src/keyless.rs' does not exist",
+        "path": "crates/hqgit-trust/src/keyless.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '063-keyless-signing' file unit 'crates/hqgit-trust/src/bundle.rs' does not exist",
+        "path": "crates/hqgit-trust/src/bundle.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '063-keyless-signing' file unit 'crates/hqgit-trust/tests/keyless.rs' does not exist",
+        "path": "crates/hqgit-trust/tests/keyless.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '063-keyless-signing' file unit 'crates/hqgit-trust/testdata/keyless/' does not exist",
+        "path": "crates/hqgit-trust/testdata/keyless/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '063-keyless-signing' file unit 'crates/hqgit-trust/src/lib.rs' does not exist",
+        "path": "crates/hqgit-trust/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '063-keyless-signing' file unit 'crates/hqgit-trust/Cargo.toml' does not exist",
+        "path": "crates/hqgit-trust/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '063-keyless-signing' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "061-oidc-login",
+      "062-transparency-log"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/src/bundle.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/src/keyless.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/testdata/keyless/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/tests/keyless.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "063-keyless-signing",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "10823f639732b8d5510d611fdb4edc8704a1fbb60793dcf0aac7ad0c2bf5ba15"
+}

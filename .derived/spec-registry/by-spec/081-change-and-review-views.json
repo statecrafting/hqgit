@@ -1,0 +1,87 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "080-projection-framework",
+      "026-review-threads",
+      "027-attestation-primitive",
+      "050-stacked-changes"
+    ],
+    "domain": "l5-projection",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/src/views/mod.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/src/views/changes.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/src/views/threads.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/src/views/attestations.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/src/views/stacks.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/tests/views.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/testdata/views/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "080-projection-framework",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "080-projection-framework",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/registry.rs"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 6
+    },
+    "id": "081-change-and-review-views",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "medium",
+    "sectionHeadings": [
+      "081: Change and review views",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/081-change-and-review-views/spec.md",
+    "status": "approved",
+    "summary": "The four read models the API (093) and the review UI (095) query: changes with their revisions and stack position, threads with their per-revision anchor resolution (exact, moved, text, lost), attestations by subject and predicate with a verification column a composing binary fills, and stacks. Each is a Projection instance (080) with its own schema version, every write is an upsert keyed by a fact-derived id so replay is idempotent, comment bodies stay in the object store as a Cid plus an erased flag, and every query answers as of a ledger entry. Nothing here is authority: a rebuild from zero reproduces every row.\n",
+    "title": "Change and review views: the SQL read models for changes, threads, attestations, stacks"
+  },
+  "shardHash": "e868a45ea0e16004371eae9feb882e08f96ff7c30cf32dfb799c0de4df78edd7",
+  "specVersion": "1.1.0"
+}

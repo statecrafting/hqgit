@@ -1,0 +1,69 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "072-execution-service",
+      "064-attestation-verification"
+    ],
+    "domain": "l3-evaluation",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/src/provenance.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/tests/provenance.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-eval/testdata/slsa/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "070-reapi-types",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-eval/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "027-attestation-primitive",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/predicate.rs"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 5
+    },
+    "id": "074-execution-provenance",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "critical",
+    "sectionHeadings": [
+      "074: Execution provenance",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/074-execution-provenance/spec.md",
+    "status": "approved",
+    "summary": "CI results are not a separate system; they are evidence (thesis §4.4). This spec closes that loop: every completed execution emits an Attestation with predicate hqgit/provenance/v1 whose claim is a SLSA Provenance v1 predicate (builder = the executor's Service identity, buildType = the REAPI action, resolved dependencies = the input tree, command, and toolchain hashes, byproducts = the output digests, plus the sandbox report), signed by the executor and appended to the repository ledger as an attestation.issued fact. The cache entry (071) references that attestation, and verifying it through the trust plane (064) is exactly what turns a cache hit into a gating-grade hit. An execution whose sandbox report is missing gets no attestation and no cache entry.\n",
+    "title": "Execution provenance: every completed action emits a signed SLSA attestation"
+  },
+  "shardHash": "d606bf6becc19e253b8b8c2a8ada4cb2f92f42e4ae832ca80ed0bb0879445df8",
+  "specVersion": "1.1.0"
+}

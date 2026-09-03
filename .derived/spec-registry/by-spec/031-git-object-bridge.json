@@ -1,0 +1,85 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "014-content-defined-chunking"
+    ],
+    "domain": "l0-objects",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-git/Cargo.toml"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-git/src/lib.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-git/src/import.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-git/src/export.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-git/src/mapping.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-git/src/worktree.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-git/src/mode.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-git/tests/"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-git/testdata/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "031-git-object-bridge",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "high",
+    "sectionHeadings": [
+      "031: Git object bridge",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/031-git-object-bridge/spec.md",
+    "status": "approved",
+    "summary": "Git compatibility is a hard requirement of the wedge (thesis D16), so the object store must speak git without becoming git. This spec founds hqgit-git, the pure-Rust bridge over gix: import a git commit's tree and blobs into hqgit objects (blobs through the chunking path so large files are the general case), export an hqgit tree back as git objects, keep a bidirectional oid map for both SHA-1 and SHA-256 repositories, and snapshot a working tree into a tree Cid without touching git's index. Git commits are not hqgit objects: a Revision references a tree, and the git commit oid rides along as provenance. Everything here is deterministic, never shells out, and never writes a git ref.\n",
+    "title": "Git object bridge: gix import and export, the bidirectional oid map, worktree snapshots"
+  },
+  "shardHash": "98b5c0a68948bf529ca5692ad28c1b3bd1271734437c0b4ae3ee23020754ceb0",
+  "specVersion": "1.1.0"
+}

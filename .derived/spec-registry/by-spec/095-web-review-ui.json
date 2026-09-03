@@ -1,0 +1,134 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "093-connect-api",
+      "081-change-and-review-views"
+    ],
+    "domain": "l7-edge",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "web/package.json"
+      },
+      {
+        "kind": "file",
+        "path": "web/tsconfig.json"
+      },
+      {
+        "kind": "file",
+        "path": "web/vite.config.ts"
+      },
+      {
+        "kind": "file",
+        "path": "web/index.html"
+      },
+      {
+        "kind": "file",
+        "path": "web/src/main.tsx"
+      },
+      {
+        "kind": "file",
+        "path": "web/src/api.ts"
+      },
+      {
+        "kind": "file",
+        "path": "web/src/format.ts"
+      },
+      {
+        "kind": "file",
+        "path": "web/src/views/ChangeList.tsx"
+      },
+      {
+        "kind": "file",
+        "path": "web/src/views/ChangeDetail.tsx"
+      },
+      {
+        "kind": "file",
+        "path": "web/src/views/DeltaPanel.tsx"
+      },
+      {
+        "kind": "file",
+        "path": "web/src/views/LineDiff.tsx"
+      },
+      {
+        "kind": "file",
+        "path": "web/src/views/EvidencePanel.tsx"
+      },
+      {
+        "kind": "file",
+        "path": "web/src/views/ThreadPanel.tsx"
+      },
+      {
+        "kind": "file",
+        "path": "web/test/"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-server/src/static_files.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "090-server-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "090-server-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/app.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "090-server-skeleton",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 6
+    },
+    "id": "095-web-review-ui",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "medium",
+    "sectionHeadings": [
+      "095: The web review client",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/095-web-review-ui/spec.md",
+    "status": "approved",
+    "summary": "The minimal review client (thesis §9: a UI beyond review is a later client). A TypeScript, React, and Vite single-page application under web/ that speaks only the Connect JSON form of the spec 093 API and renders four things: a paginated change list; a change detail whose order is the argument of design §1.1 point 3 (policy verdict, then the semantic delta views for API surface, dependencies, and capabilities, then threads, then the line diff last and collapsed); threads with their per-revision exact, moved, text, lost, and unavailable markers; and an evidence panel listing every attestation over the revision with its verification status. Every view prints which ledger entry it is projected as of. The server serves web/dist from static_files.rs, the package carries its spec-spine binding, and no tsconfig exists at the repository root (spec 001 D-1).\n",
+    "title": "The web review client: change list, change detail with semantic deltas first, threads, the evidence panel"
+  },
+  "shardHash": "23d3f9697ff223a82fdd32b358ed90fcaaa75b7f41c687086baea78620d86bc9",
+  "specVersion": "1.1.0"
+}

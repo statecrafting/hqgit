@@ -1,0 +1,132 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '091-per-repo-control-plane' file unit 'crates/hqgit-server/src/control/mod.rs' does not exist",
+        "path": "crates/hqgit-server/src/control/mod.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '091-per-repo-control-plane' file unit 'crates/hqgit-server/src/control/raft.rs' does not exist",
+        "path": "crates/hqgit-server/src/control/raft.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '091-per-repo-control-plane' file unit 'crates/hqgit-server/src/control/placement.rs' does not exist",
+        "path": "crates/hqgit-server/src/control/placement.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '091-per-repo-control-plane' file unit 'crates/hqgit-server/src/control/apply.rs' does not exist",
+        "path": "crates/hqgit-server/src/control/apply.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '091-per-repo-control-plane' file unit 'crates/hqgit-server/tests/control.rs' does not exist",
+        "path": "crates/hqgit-server/tests/control.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '091-per-repo-control-plane' file unit 'crates/hqgit-server/src/lib.rs' does not exist",
+        "path": "crates/hqgit-server/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '091-per-repo-control-plane' file unit 'crates/hqgit-server/Cargo.toml' does not exist",
+        "path": "crates/hqgit-server/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '091-per-repo-control-plane' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "090-server-skeleton"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/control/apply.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/control/mod.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/control/placement.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/control/raft.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/tests/control.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-server/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "091-per-repo-control-plane",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "2e20e69ec6533c62e7a2345736ebddef6c565f7dfc1723384133c00527540f14"
+}

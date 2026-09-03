@@ -1,0 +1,132 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '013-object-store' file unit 'crates/hqgit-object/Cargo.toml' does not exist",
+        "path": "crates/hqgit-object/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '013-object-store' file unit 'crates/hqgit-object/src/lib.rs' does not exist",
+        "path": "crates/hqgit-object/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '013-object-store' file unit 'crates/hqgit-object/src/object.rs' does not exist",
+        "path": "crates/hqgit-object/src/object.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '013-object-store' file unit 'crates/hqgit-object/src/store.rs' does not exist",
+        "path": "crates/hqgit-object/src/store.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '013-object-store' file unit 'crates/hqgit-object/src/memory.rs' does not exist",
+        "path": "crates/hqgit-object/src/memory.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '013-object-store' file unit 'crates/hqgit-object/src/local.rs' does not exist",
+        "path": "crates/hqgit-object/src/local.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '013-object-store' file unit 'crates/hqgit-object/tests/' does not exist",
+        "path": "crates/hqgit-object/tests/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '013-object-store' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "011-canonical-encoding"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/local.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/memory.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/object.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/src/store.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-object/tests/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "013-object-store",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "e92071329ac8c64353ef6dc3e3c462f1436a72d550106eb4992617300a45a0f7"
+}

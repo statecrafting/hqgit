@@ -1,0 +1,81 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "080-projection-framework"
+    ],
+    "domain": "l5-projection",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/src/search.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-projection/tests/search.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "080-projection-framework",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "080-projection-framework",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/registry.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "080-projection-framework",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/Cargo.toml"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "010-workspace-and-core-types",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 6
+    },
+    "id": "082-search-index",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "medium",
+    "sectionHeadings": [
+      "082: Search index",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/082-search-index/spec.md",
+    "status": "approved",
+    "summary": "Full-text search as one more disposable projection: a tantivy index over change titles, comment bodies resolved from the object store, issue fields, and attestation predicates, keyed by stable document ids so replay is idempotent, with erased bodies never indexed and removed on tombstone, quarantine documents excluded by default, and a query API whose pages carry the ledger cursor they were computed from. Because tantivy is not SQLite, this spec fixes the commit ordering that keeps the index crash-consistent with the 080 checkpoint. Rebuild wipes the directory; nothing here is authority.\n",
+    "title": "Search index: a tantivy projection over changes, comments, issues, and attestations"
+  },
+  "shardHash": "822fa31ca346ed69a1c25fe4b0b58b2da7733717fc8cbbf3aef8b43765e25b13",
+  "specVersion": "1.1.0"
+}

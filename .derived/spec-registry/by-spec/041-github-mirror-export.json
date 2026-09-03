@@ -1,0 +1,68 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "040-github-mirror-import"
+    ],
+    "domain": "l7-edge",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-mirror/src/github/export.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-mirror/src/reconcile.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-mirror/tests/export.rs"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "040-github-mirror-import",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-mirror/src/lib.rs"
+        }
+      },
+      {
+        "nature": "additive",
+        "spec": "040-github-mirror-import",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-mirror/src/github/client.rs"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 2
+    },
+    "id": "041-github-mirror-export",
+    "implementation": "pending",
+    "kind": "feature",
+    "risk": "high",
+    "sectionHeadings": [
+      "041: GitHub mirror export and reconciliation",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/041-github-mirror-export/spec.md",
+    "status": "approved",
+    "summary": "The other direction of the wedge: comments, thread resolutions, approvals, and issue field changes made in the ledger are pushed to GitHub through the same client seam, so a reviewer who works offline in hq still shows up on the pull request. Reconciliation is ordered by the hybrid logical clock, idempotent through the id map, and loop-safe: an item the exporter created is recognized by its external id on the next import and produces no new fact. Where GitHub and the ledger disagree on a derived field, the newer observation wins the field and both sides are recorded as facts, so nothing is lost and the disagreement is auditable. A dry-run mode prints the plan without writing.\n",
+    "title": "GitHub mirror export and reconciliation: local facts back to GitHub, loop-safe and idempotent"
+  },
+  "shardHash": "ded46c9db78b741e0a8c8fc9f850e3fb784782b7efc94973071623371d06b15d",
+  "specVersion": "1.1.0"
+}

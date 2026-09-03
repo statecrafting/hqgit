@@ -1,0 +1,72 @@
+{
+  "record": {
+    "authors": [
+      "Bartek Kus"
+    ],
+    "created": "2026-09-02",
+    "dependsOn": [
+      "019-facts-and-derived-state"
+    ],
+    "domain": "l2-domain",
+    "establishes": [
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/Cargo.toml"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/lib.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/facts.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/validate.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/src/ids.rs"
+      },
+      {
+        "kind": "file",
+        "path": "crates/hqgit-domain/tests/"
+      }
+    ],
+    "extends": [
+      {
+        "nature": "additive",
+        "spec": "011-canonical-encoding",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/testdata/vectors/"
+        }
+      }
+    ],
+    "extraFrontmatter": {
+      "wave": 1
+    },
+    "id": "023-domain-fact-vocabulary",
+    "implementation": "pending",
+    "kind": "kernel",
+    "risk": "high",
+    "sectionHeadings": [
+      "023: Domain fact vocabulary",
+      "1. Purpose",
+      "2. Territory",
+      "3. Behavior",
+      "4. Functional requirements",
+      "5. Acceptance criteria",
+      "6. Out of scope",
+      "7. Resolved decisions",
+      "Verification"
+    ],
+    "specPath": "specs/023-domain-fact-vocabulary/spec.md",
+    "status": "approved",
+    "summary": "Founds hqgit-domain, the L2 crate every collaboration noun lives in, and fixes the fact vocabulary the ledger carries: one DomainFact variant per kind (change, review, attestation, issue, ownership, mirror), each with a frozen namespaced kind string, a versioned body schema encoded through the spec 011 canonical codec, and unknown-field preservation. Ids are never counters: a ChangeId, RevisionId, ThreadId, CommentId, IssueId, or AttestationId is the BLAKE3 hash of the canonical bytes of the fact that brought it into being, so an id is content-derived and identical on every replica. Structural validation runs on decode, before any fold sees a fact, and the crate registers every kind with spec 019's FactRegistry. Later specs add variants and semantics by extending facts.rs; this spec is the vocabulary, not the behavior.\n",
+    "title": "Domain fact vocabulary: the typed facts, their ids, and their validation"
+  },
+  "shardHash": "2eabf048b41b0ca9d9cad35e177f6bd6db6b3f3046fb5d5a48996cd0b02878d8",
+  "specVersion": "1.1.0"
+}

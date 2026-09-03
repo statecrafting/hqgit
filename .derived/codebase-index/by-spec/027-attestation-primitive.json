@@ -1,0 +1,117 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '027-attestation-primitive' file unit 'crates/hqgit-domain/src/attestation.rs' does not exist",
+        "path": "crates/hqgit-domain/src/attestation.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '027-attestation-primitive' file unit 'crates/hqgit-domain/src/predicate.rs' does not exist",
+        "path": "crates/hqgit-domain/src/predicate.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '027-attestation-primitive' file unit 'crates/hqgit-domain/tests/attestation.rs' does not exist",
+        "path": "crates/hqgit-domain/tests/attestation.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '027-attestation-primitive' file unit 'crates/hqgit-domain/testdata/attestations/' does not exist",
+        "path": "crates/hqgit-domain/testdata/attestations/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '027-attestation-primitive' file unit 'crates/hqgit-domain/src/lib.rs' does not exist",
+        "path": "crates/hqgit-domain/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '027-attestation-primitive' file unit 'crates/hqgit-domain/src/facts.rs' does not exist",
+        "path": "crates/hqgit-domain/src/facts.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '027-attestation-primitive' file unit 'crates/hqgit-types/testdata/vectors/' does not exist",
+        "path": "crates/hqgit-types/testdata/vectors/"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "023-domain-fact-vocabulary"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/attestation.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/predicate.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/testdata/attestations/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/tests/attestation.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/facts.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-types/testdata/vectors/"
+        }
+      }
+    ],
+    "specId": "027-attestation-primitive",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "0f4c93f15e6badf69e77d8de55ecce523eee1465c474ab45a073110b3ab04ab5"
+}

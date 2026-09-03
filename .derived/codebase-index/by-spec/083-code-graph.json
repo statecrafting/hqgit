@@ -1,0 +1,161 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '083-code-graph' file unit 'crates/hqgit-projection/src/codegraph/mod.rs' does not exist",
+        "path": "crates/hqgit-projection/src/codegraph/mod.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '083-code-graph' file unit 'crates/hqgit-projection/src/codegraph/scip.rs' does not exist",
+        "path": "crates/hqgit-projection/src/codegraph/scip.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '083-code-graph' file unit 'crates/hqgit-projection/src/codegraph/store.rs' does not exist",
+        "path": "crates/hqgit-projection/src/codegraph/store.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '083-code-graph' file unit 'crates/hqgit-projection/tests/codegraph.rs' does not exist",
+        "path": "crates/hqgit-projection/tests/codegraph.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '083-code-graph' file unit 'crates/hqgit-projection/testdata/scip/' does not exist",
+        "path": "crates/hqgit-projection/testdata/scip/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '083-code-graph' file unit 'crates/hqgit-projection/src/lib.rs' does not exist",
+        "path": "crates/hqgit-projection/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '083-code-graph' file unit 'crates/hqgit-projection/src/registry.rs' does not exist",
+        "path": "crates/hqgit-projection/src/registry.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '083-code-graph' file unit 'crates/hqgit-projection/Cargo.toml' does not exist",
+        "path": "crates/hqgit-projection/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '083-code-graph' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '083-code-graph' file unit 'crates/hqgit-domain/src/predicate.rs' does not exist",
+        "path": "crates/hqgit-domain/src/predicate.rs"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "080-projection-framework",
+      "025-semantic-anchors"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/codegraph/mod.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/codegraph/scip.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/codegraph/store.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/testdata/scip/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/tests/codegraph.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-domain/src/predicate.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-projection/src/registry.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "083-code-graph",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "6db26d7169484df93b73915d8d3207e3c5decf9105288b76257deced969ff9bc"
+}

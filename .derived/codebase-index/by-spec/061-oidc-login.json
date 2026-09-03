@@ -1,0 +1,118 @@
+{
+  "diagnostics": {
+    "errors": [],
+    "warnings": [
+      {
+        "code": "W-001",
+        "message": "spec '061-oidc-login' file unit 'crates/hqgit-trust/src/oidc.rs' does not exist",
+        "path": "crates/hqgit-trust/src/oidc.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '061-oidc-login' file unit 'crates/hqgit-trust/src/session.rs' does not exist",
+        "path": "crates/hqgit-trust/src/session.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '061-oidc-login' file unit 'crates/hqgit-trust/tests/oidc.rs' does not exist",
+        "path": "crates/hqgit-trust/tests/oidc.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '061-oidc-login' file unit 'crates/hqgit-trust/testdata/oidc/' does not exist",
+        "path": "crates/hqgit-trust/testdata/oidc/"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '061-oidc-login' file unit 'crates/hqgit-trust/src/lib.rs' does not exist",
+        "path": "crates/hqgit-trust/src/lib.rs"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '061-oidc-login' file unit 'crates/hqgit-trust/Cargo.toml' does not exist",
+        "path": "crates/hqgit-trust/Cargo.toml"
+      },
+      {
+        "code": "W-001",
+        "message": "spec '061-oidc-login' section unit 'workspace.dependencies' not found in Cargo.toml",
+        "path": "Cargo.toml"
+      }
+    ]
+  },
+  "mapping": {
+    "dependsOn": [
+      "060-identity-and-key-rotation"
+    ],
+    "implementingPaths": [],
+    "resolvedUnits": [
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/src/oidc.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/src/session.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/testdata/oidc/"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "establishes",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/tests/oidc.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/Cargo.toml"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "kind": "file",
+          "path": "crates/hqgit-trust/src/lib.rs"
+        }
+      },
+      {
+        "locations": [],
+        "ownership": true,
+        "sourceField": "extends",
+        "unit": {
+          "anchor": "workspace.dependencies",
+          "file": "Cargo.toml",
+          "kind": "section"
+        }
+      }
+    ],
+    "specId": "061-oidc-login",
+    "specStatus": "approved"
+  },
+  "schemaVersion": "1.1.0",
+  "shardHash": "d7def29468ca44840a50de2c722f992bf3c3fc8007eb69b36bcf78f3f3df66da"
+}
