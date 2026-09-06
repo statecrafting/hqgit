@@ -3,16 +3,7 @@
     "dependsOn": [
       "000-hqgit-bootstrap"
     ],
-    "implementingPaths": [
-      {
-        "path": "docs/design/00-architecture.md",
-        "source": "spec-edge"
-      },
-      {
-        "path": "docs/design/01-build-order.md",
-        "source": "spec-edge"
-      }
-    ],
+    "implementingPaths": [],
     "resolvedUnits": [
       {
         "locations": [
@@ -45,5 +36,5 @@
     "specStatus": "approved"
   },
   "schemaVersion": "1.1.0",
-  "shardHash": "681466f2734d5fb6275f78326ad56f836ca3aae61972599aa8acc011a0580d15"
+  "shardHash": "4d0326ae93420b0e254cf3f693bb9f583b3656923bc1ea043177b7f2a7456905"
 }

@@ -57,7 +57,7 @@ the project cannot recover from.
 ## Governance
 
 The corpus is governed by [spec-spine](https://github.com/statecrafting/spec-spine)
-0.11.0. `make spine` runs the gate (compile, index, lint, index check,
+0.14.0. `make spine` runs the gate (compile, index, lint, index check,
 couple, DAG check); `make ci` adds ownership coverage and the cargo gates
 once a workspace exists. Derived artifacts under `.derived/` are committed
 and read only through `spec-spine` subcommands. Every source file inside a
@@ -65,7 +65,7 @@ crate must be specifically claimed by a spec; a session that adds a file
 claims it in the spec it is implementing.
 
 ```sh
-cargo install spec-spine-cli --locked   # or: npm i -g spec-spine@0.11.0
+cargo install spec-spine-cli --locked   # or: npm i -g spec-spine@0.14.0
 make spine
 spec-spine registry list
 scripts/spec-dag.sh

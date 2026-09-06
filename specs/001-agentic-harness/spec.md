@@ -181,6 +181,21 @@ job probes for `Cargo.toml` and `deny.toml` after its checkout and
 publishes `has_cargo` and `has_deny`; the `cargo` and `deny` jobs gate on
 those. The guard's meaning is unchanged.
 
+D-4 (2026-09-06, pin bump). The `spec-spine` pin moves from 0.11.0 to
+0.14.0 in every site that states it (`govern.yml`, `AGENTS.md`, `README.md`,
+`/setup`, the architect agent). The corpus was verified byte-compatible
+first: 0.14.0's `compile --check` and `index check` both report fresh
+against shards written by 0.11.0. What the bump buys: `registry plan`
+(spec-spine 038, which `/next` reimplemented in Python), `--json` verdicts
+on the gate verbs (037), `layout.state_dir` (039), the `depends_on` cycle
+refusal (033, half of `scripts/spec-dag.sh`), and the lifecycle fixes
+(041, 044, 045) this specify-first corpus lives inside. `spec-spine index`
+now prints the `W-001` warnings it always recorded; on a corpus with no
+code yet that is one line per not-yet-written unit and is the expected
+state, not a defect. Follow-ons (add `registry plan` to the init reads,
+retire the Python in `/next`, declare `data/` as `state_dir`) are their
+own change.
+
 ## Verification
 
 ```verify:cli
