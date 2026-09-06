@@ -22,7 +22,7 @@ jobs:
       has_cargo: ${{ steps.tree.outputs.has_cargo }}
       has_deny: ${{ steps.tree.outputs.has_deny }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
       # `hashFiles` is not available in a job-level `if` (its contexts are
@@ -78,7 +78,7 @@ jobs:
     if: needs.spine.outputs.has_cargo == 'true'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       # rustup installs the toolchain pinned in rust-toolchain.toml (spec 010).
       - run: rustup show
       - uses: Swatinem/rust-cache@v2
@@ -93,7 +93,7 @@ jobs:
     if: needs.spine.outputs.has_deny == 'true'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: EmbarkStudios/cargo-deny-action@v2
 
   attest:
@@ -101,7 +101,7 @@ jobs:
     needs: spine
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - name: Install spec-spine
