@@ -196,6 +196,25 @@ state, not a defect. Follow-ons (add `registry plan` to the init reads,
 retire the Python in `/next`, declare `data/` as `state_dir`) are their
 own change.
 
+D-5 (2026-09-06, kit adoption). The fifteen skills under `.claude/skills/`
+are the spec-spine kit's own (spec-spine spec 048), taken byte for byte,
+and the three standing rules are the kit's spec 047 text. The kit moved
+every project fact out of the skills into `AGENTS.md` and the path-scoped
+rules, which this repository already held (`make spine`, `make ci`, the
+0.14.0 pin, the invariants), so nothing was lost in the swap and a future
+kit update is a copy. What changed in substance: `/next` wraps
+`spec-spine registry plan` and drops the Python readiness script (the D-4
+follow-on), `/spec` derives the ordinal from `registry list --ids-only`,
+`/code-review` uses `compile --check` so a review never writes, `/commit`
+carries the session-link and em-dash bans, and `scripts/verify-spec.sh`
+is the kit's copy, which also accepts a numbered `## N. Verification`
+heading. `scripts/spec-dag.sh` stays: `compile` now refuses a cycle, but
+the lower-numbered-dependency check is this corpus's own rule. B-4's hooks
+are unchanged: the kit's hooks now read and never write (spec-spine spec
+046), and porting them here changes what B-4 requires of the `PreToolUse`
+and `Stop` hooks, which is an amendment for a human to file, not a
+mid-build edit.
+
 ## Verification
 
 ```verify:cli
