@@ -215,6 +215,45 @@ are unchanged: the kit's hooks now read and never write (spec-spine spec
 and `Stop` hooks, which is an amendment for a human to file, not a
 mid-build edit.
 
+D-6 (2026-09-09, pin bump). The `spec-spine` pin moves from 0.14.0 to
+0.17.0 in every site that states it (`govern.yml`, `AGENTS.md`, `README.md`,
+the architect agent). As in D-4 the corpus was verified byte-compatible
+first: 0.17.0's `compile --check` and `index check` both report fresh
+against shards written by 0.14.0, and no registry shard changes in this
+commit. Unlike D-4, two gate steps refuse under the new pin, and both
+refusals are correct.
+
+`lint --fail-on-warn` reported seven `L-008` warnings (spec-spine 057):
+claimed paths that no content hash covers, so their contents could change
+without staling any shard. The cause was in this repository's own config.
+Six of the ten `[index] extra_hashed_inputs` patterns ended in `**`, which
+matches directories only and contributes no bytes, so `standards/`,
+`.github/workflows/`, `.claude/agents/`, `.claude/rules/`, `.claude/skills/`
+and `docs/design/` were folded into the global scalar by nothing at all.
+Every one is rewritten as `**/*`, and `scripts/**/*`, `.mcp.json` and
+`.github/dependabot.yml` are added for the four claims that had no covering
+pattern. `lint` is now clean. Because those files finally contribute bytes,
+the global scalar moves and all 68 index shards restale; they are
+regenerated and committed here. This was a live governance hole, not a
+lint preference: an edit to `AGENTS.md` or a rule under `.claude/` staled
+nothing before this change.
+
+`index coverage --fail-on-untraced` refuses an empty coverage universe
+(spec-spine 059) rather than passing it vacuously, on the reasoning that a
+CI step which did not run its check should not be green. This corpus has
+no packages yet, so the flag can only refuse. `govern.yml` runs bare
+`index coverage`, which still reports the fact and exits 0. The flag
+returns with the first package that carries source files, and restoring it
+is part of that spec's change, not a follow-on to forget.
+
+What the bump buys: `verify` running a spec's declared acceptance (049),
+`index diagnostics` for unresolved units (050), `couple` naming the
+`extends` crossing that cleared a change (052), the `L-008` lint that found
+the dead globs above (057), `registry plan` answering blocked as well as
+ready (060), `[meta] required_version` so the CLI can check its own floor
+(062), and a malformed spec id refused rather than panicking (070). Setting
+`required_version` is the obvious follow-on and is its own change.
+
 ## Verification
 
 ```verify:cli

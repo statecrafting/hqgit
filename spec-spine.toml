@@ -53,16 +53,19 @@ standalone_npm_packages = ["web"]
 # Beyond the always-hashed core (manifests, specs, span-backing sources): the
 # surfaces that steer driven sessions, and the design doc the thesis cites.
 extra_hashed_inputs = [
-  "standards/**",
-  ".github/workflows/**",
-  ".claude/agents/**",
-  ".claude/rules/**",
-  ".claude/skills/**",
+  "standards/**/*",
+  ".github/workflows/**/*",
+  ".claude/agents/**/*",
+  ".claude/rules/**/*",
+  ".claude/skills/**/*",
   ".claude/settings.json",
   "AGENTS.md",
   "CLAUDE.md",
   "Makefile",
-  "docs/design/**",
+  "scripts/**/*",
+  ".mcp.json",
+  ".github/dependabot.yml",
+  "docs/design/**/*",
 ]
 resolver_exclusions = ["target", "node_modules", ".derived", "dist", "build", ".next", "data"]
 
