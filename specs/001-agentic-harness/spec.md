@@ -241,10 +241,16 @@ nothing before this change.
 `index coverage --fail-on-untraced` refuses an empty coverage universe
 (spec-spine 059) rather than passing it vacuously, on the reasoning that a
 CI step which did not run its check should not be green. This corpus has
-no packages yet, so the flag can only refuse. `govern.yml` runs bare
-`index coverage`, which still reports the fact and exits 0. The flag
-returns with the first package that carries source files, and restoring it
-is part of that spec's change, not a follow-on to forget.
+no packages, so under 0.17.0 that step can only refuse, and the gate is
+red on it. **This entry does not resolve that, because it may not.** B-2
+names the flag as part of `make ci` and B-3 names it as part of
+`govern.yml`; B-7 admits a decision entry for a choice the spec is silent
+on, and B-2 and B-3 are not silent. Removing the flag to make the pin
+green would be a decision entry doing an amendment's work. The bump is
+blocked on one of two human instruments: an amendment to B-2 and B-3
+saying coverage runs as a report until the first package carries source
+files, or an approved `Spec-Drift-Waiver:` for this change. The red step
+is left visible rather than routed around.
 
 What the bump buys: `verify` running a spec's declared acceptance (049),
 `index diagnostics` for unresolved units (050), `couple` naming the
