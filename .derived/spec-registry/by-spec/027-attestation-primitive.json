@@ -76,5 +76,5 @@
     "title": "The attestation primitive: one signed evidence shape, a predicate registry, in-toto interop"
   },
   "shardHash": "71a6d4e82b699973acd82ad5a3638c60044a2b2ffc57270a351e8bb9968244df",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

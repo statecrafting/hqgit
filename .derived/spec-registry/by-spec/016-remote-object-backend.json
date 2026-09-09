@@ -74,5 +74,5 @@
     "title": "Remote object backend: an S3-compatible store and the layered read-through cache"
   },
   "shardHash": "37ffd22af30d0626741a4d676eb87a95b74dc62b7b8d1f9642def13ee20f1e75",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

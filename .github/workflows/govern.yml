@@ -12,7 +12,7 @@ permissions:
 
 env:
   # Pinned to the version AGENTS.md names; bump both together.
-  SPEC_SPINE_VERSION: v0.17.0
+  SPEC_SPINE_VERSION: v0.18.0
 
 jobs:
   spine:
@@ -50,11 +50,16 @@ jobs:
             | SPEC_SPINE_VERSION="$SPEC_SPINE_VERSION" SPEC_SPINE_BIN_DIR="$HOME/.local/bin" sh
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
       - run: spec-spine --version
-      # `compile --check` validates the corpus AND proves the committed
-      # registry shards match it, without writing. Never run it after a
-      # plain `compile` in the same job.
-      - run: spec-spine compile --check
-      - run: spec-spine index check
+      # One verb, both committed trees (spec-spine 075). It validates the
+      # corpus AND proves the committed registry and index shards match it,
+      # without writing: a gate that repairs what it judges hides the defect.
+      # Never run it after a plain `compile` or `index` in the same job.
+      #
+      # `--fail-on-unresolved` is deliberately absent. It refuses while any
+      # spec declares a file no code has created yet, which on this
+      # specify-first corpus is true until the last wave lands; it is not the
+      # `has_cargo` guard the coverage step below uses (spec 001 D-8).
+      - run: spec-spine check --fail-on-warn
       - run: spec-spine lint --fail-on-warn
       - name: Coupling gate
         if: github.event_name == 'pull_request'

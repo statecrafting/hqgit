@@ -130,5 +130,5 @@
     "title": "The web review client: change list, change detail with semantic deltas first, threads, the evidence panel"
   },
   "shardHash": "23d3f9697ff223a82fdd32b358ed90fcaaa75b7f41c687086baea78620d86bc9",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

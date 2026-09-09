@@ -79,5 +79,5 @@
     "title": "Offline review from the CLI: changes, revisions, anchored threads, approvals"
   },
   "shardHash": "69d8e8e9590cf4cdcae7d49432e721904f5f09bd3a0b0e91ed13930caeca0265",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

@@ -77,5 +77,5 @@
     "title": "Local repository: the .hq layout, the persistent entry store, namespaces, and the append path"
   },
   "shardHash": "185bd0c88a2d5b76f785cdb4d789480eed84cb98c8d8729c1b2137b06986912b",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

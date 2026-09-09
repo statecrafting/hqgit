@@ -63,7 +63,11 @@
       },
       {
         "kind": "file",
-        "path": "scripts/verify-spec.sh"
+        "path": ".githooks/"
+      },
+      {
+        "kind": "file",
+        "path": ".gitattributes"
       },
       {
         "kind": "file",
@@ -82,17 +86,13 @@
       "1. Purpose",
       "2. Territory",
       "3. Behavior",
-      "4. Functional requirements",
-      "5. Acceptance criteria",
-      "6. Out of scope",
-      "7. Resolved decisions",
-      "Verification"
+      "4. Functional requirements"
     ],
     "specPath": "specs/001-agentic-harness/spec.md",
     "status": "approved",
-    "summary": "The governed-development loop every human and every driven session runs inside: the cross-agent New Sessions protocol and the Working the backlog protocol in AGENTS.md, the Claude Code skills (init, setup, next, build, verify, spec, commit, code-review, ship, shepherd, validate-and-fix, cleanup, implement-plan, research, refactor-claude-md), the six agents (architect, explorer, implementer, reviewer, ledger-guardian, trust-reviewer), the standing and path-scoped rules, the hooks that keep the derived artifacts fresh and block an ungated PR, the Makefile that is the one source of truth for what CI validates, and the CI workflow that re-runs the same gate. The harness is what makes the corpus buildable by claude-observatory: the orchestrator reads AGENTS.md's backlog section into every build prompt, drives the repo's own /ship, watches the CI this spec wires, and runs each spec's Verification block after merge.\n",
+    "summary": "The governed-development loop every human and every driven session runs inside: the cross-agent New Sessions protocol and the Working the backlog protocol in AGENTS.md, the Claude Code skills (prime, setup, next, build, verify, ship, shepherd, spec, and the two the loop calls, commit and code-review), the six agents (architect, explorer, implementer, reviewer, ledger-guardian, trust-reviewer), the standing and path-scoped rules, the read-only hooks that report derived-artifact freshness and block an ungated PR, the opt-in merge driver over the committed shard globs, the Makefile that is the one source of truth for what CI validates, and the CI workflow that re-runs the same gate. The harness is what makes the corpus buildable by claude-observatory: the orchestrator reads AGENTS.md's backlog section into every build prompt, drives the repo's own /ship, watches the CI this spec wires, and runs each spec's Verification block after merge.\n",
     "title": "Agentic engineering harness: session protocol, skills, agents, hooks, gate"
   },
-  "shardHash": "74d00f53d6971192a3a47980e68549dffeb732106d063524fa97fda0c343b10c",
-  "specVersion": "1.1.0"
+  "shardHash": "d2750cf8c91c391a81d67be7e50ee7c5421faa25712dcf942938bc52792215f4",
+  "specVersion": "1.2.0"
 }

@@ -108,5 +108,5 @@
     "title": "Sandbox executor: the Go worker with namespace and microVM tiers"
   },
   "shardHash": "106954994b077ae924588342dbf23661dcb6ea60bd5b055b554c9af79e065a6a",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

@@ -56,5 +56,5 @@
     "title": "Deterministic total order over the DAG and hybrid logical clock generation"
   },
   "shardHash": "1e1bb96a09a5e12ec25e2cb813f85d4892844719d90b64518a393a54776ab223",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

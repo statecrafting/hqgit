@@ -88,5 +88,5 @@
     "title": "Policy SDK: typed Rust policies compiled to WASM, testable natively"
   },
   "shardHash": "778da60d8b8fff138d4afd679a158024be48c0e65b1e1a797b5e3237d319f2a0",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

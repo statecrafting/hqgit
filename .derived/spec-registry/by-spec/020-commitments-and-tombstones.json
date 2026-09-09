@@ -109,5 +109,5 @@
     "title": "Commitments and tombstones: content indirection, per-namespace encryption, and erasure that keeps the chain verifiable"
   },
   "shardHash": "6c17c8a4192342a92b007b2bc9b4117de9ed7fe8aee63be6ab14485313583916",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

@@ -78,5 +78,5 @@
     "title": "QUIC transport: identity-bound endpoints, the sync session, and the remote object source"
   },
   "shardHash": "d0bc25bf4e4ceb506fe5cc8c872968b245bf9802399d851c3e5a50b2af4e88cf",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

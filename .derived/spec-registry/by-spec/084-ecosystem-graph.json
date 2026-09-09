@@ -82,5 +82,5 @@
     "title": "Ecosystem graph: package dependencies joined to the code graph for downstream impact"
   },
   "shardHash": "fdafa48027651555b7e0767a49d043650bf841f7b9e58178a268adb0bfffde7e",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

@@ -122,5 +122,5 @@
     "title": "Federation: peer registries as facts, the server sync driver, holds for unpromoted peers, and hq sync"
   },
   "shardHash": "b0945c1732038dd0955b1035578891971c2a518035249f24fdfe30032e0d0ba9",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

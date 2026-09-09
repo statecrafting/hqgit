@@ -85,5 +85,5 @@
     "title": "Quarantine and promotion: untrusted writes land quarantined, capabilities are attestations, promotion is a fact"
   },
   "shardHash": "1384ac3dc487002e5edf7099f3175b38a60107b2eb82a0e26c6a7727ae85d348",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

@@ -78,5 +78,5 @@
     "title": "Policy engine: deterministic WASM merge predicates, hash-pinned"
   },
   "shardHash": "761c63fcd8334322b9f2165efc39a682d7380c2ae834fe1499f166ea16cafb16",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

@@ -21,8 +21,10 @@ constitution are authoritative; where this summary is terser, they govern.
   code-as-source shards.
 - `.derived/**/build-meta.json`: wall-clock metadata, gitignored.
 
-Both shard trees are committed. `spec-spine compile --check` and
-`spec-spine index check` compare the working tree against them.
+Both shard trees are committed. `spec-spine check` compares the working tree
+against both of them in one read, without writing, and reports each tree on
+its own line; `compile --check` and `index check` remain as the per-tree
+primitives it composes.
 
 ## Required frontmatter
 

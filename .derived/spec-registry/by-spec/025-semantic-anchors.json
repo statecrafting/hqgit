@@ -89,5 +89,5 @@
     "title": "Semantic anchors: comments that survive rebase by resolving against content"
   },
   "shardHash": "9b1c529823301dbc04c35b732a369872b0bbd687d8c90fc59719dd6966d7e360",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

@@ -97,5 +97,5 @@
     "title": "Verified streaming: BAO outboard trees, range proofs, and lazy fetch that never trusts a byte"
   },
   "shardHash": "b42dc7e5310ce6189ef2464f73cec3475a6cf341bb560ca276c5c83c8a606a16",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

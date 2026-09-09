@@ -73,5 +73,5 @@
     "title": "Action cache as a trust boundary: attested entries, gating versus advisory lookups"
   },
   "shardHash": "57d321e20648030f757bf02e339073e9e7d89106030c1dbf6e0e91eaec6cb2cd",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

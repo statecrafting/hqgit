@@ -64,5 +64,5 @@
     "title": "GitHub mirror export and reconciliation: local facts back to GitHub, loop-safe and idempotent"
   },
   "shardHash": "ded46c9db78b741e0a8c8fc9f850e3fb784782b7efc94973071623371d06b15d",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

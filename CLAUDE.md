@@ -24,8 +24,10 @@ and code lands one spec per session. Before spec 010 lands there is no
 ## Commands
 
 ```sh
-make spine      # spec-spine compile, index, lint --fail-on-warn, index check, couple, spec-dag
-make ci         # make spine + index coverage --fail-on-untraced + the cargo gates (when Cargo.toml exists)
+make gate       # read-only: check --fail-on-warn, lint --fail-on-warn, coverage, couple, spec-dag
+make refresh    # writing: spec-spine compile, spec-spine index
+make spine      # make refresh + make gate (the name specs 000 and 003 use)
+make ci         # make spine + the cargo gates (when Cargo.toml exists)
 make build      # cargo build --workspace --locked
 make test       # cargo test  --workspace --locked
 make lint       # cargo clippy --workspace --all-targets --locked -- -D warnings
@@ -34,8 +36,9 @@ make deny       # cargo deny check (when deny.toml exists)
 make fuzz       # short cargo-fuzz smoke of every target under fuzz/ (spec 012)
 make coverage   # spec-spine index coverage
 make attest     # spec-spine attest --with-coupling -> .derived/attestation/
-scripts/verify-spec.sh <id>   # run a spec's verify:cli blocks (what the verify stage runs after merge)
+make verify SPEC=<id>         # spec-spine verify: the spec's declared acceptance
 scripts/spec-dag.sh           # depends_on is acyclic and only points to lower-numbered specs
+./.githooks/enable-merge-driver.sh   # opt-in, per clone: auto-regenerate a conflicted shard
 
 # One crate, one test:
 cargo test -p hqgit-ledger --locked --test entry
@@ -43,8 +46,13 @@ cargo test -p hqgit-types --locked codec::
 ```
 
 Exit codes of `spec-spine`: `0` ok, `1` validation failure or drift, `2`
-stale, `3` I/O, parse, schema, or config. The `hq` binary (spec 032) adopts
-the same four.
+stale, `3` I/O, parse, schema, or config (which includes a verb the binary
+is too old to have). The `hq` binary (spec 032) adopts the same four.
+`spec-spine check` composes the two freshness reads and returns the more
+severe verdict, in the order `3`, `1`, `2`, `0`; read its report lines to
+learn which committed tree moved. The pinned binary is **0.18.0**, and
+`spec-spine.toml [meta] required_version` makes the CLI check that floor on
+every run.
 
 ## Architecture in one screen
 
@@ -87,13 +95,20 @@ same ledger implementation and never depend on each other.
 - Every source file inside a crate must be specifically claimed by a spec
   (`require_ownership` is on). Add new files to the implementing spec's
   `establishes` in the same change.
-- `.derived/` shards are committed; regenerate with `spec-spine compile &&
-  spec-spine index` and commit them with the change. `build-meta.json` is
-  gitignored.
+- `.derived/` shards are committed; regenerate with `make refresh` and
+  commit them with the change. `build-meta.json` is gitignored. The shard
+  globs are bound to an opt-in merge driver in `.gitattributes`; it does
+  nothing until `./.githooks/enable-merge-driver.sh` runs in that clone, and
+  it never replaces the staleness gate.
 - Derived artifacts are read only through `spec-spine` subcommands.
-- Hooks in `.claude/settings.json` recompile after spec edits, check
-  staleness after hashed-input edits, block `gh pr create` on a red
-  coupling gate, and block `git push` to `main`.
+- Hooks in `.claude/settings.json` read and never write, with one sanctioned
+  exception: `PostToolUse` recompiles the registry after a `spec.md` edit,
+  because a live session can commit the shards it staled. Otherwise
+  `SessionStart` and `Stop` report freshness through `spec-spine check`, and
+  `PreToolUse` blocks `gh pr create` on a stale tree, uncommitted shards, or
+  a red coupling gate without an inline `Spec-Drift-Waiver:`, and blocks a
+  `git push` that would update the resolved default branch. Every hook acts
+  on the repository the command targets and says so when it skips.
 - The coherence guard: never edit an owning spec to make the gate pass on
   code that contradicts it. Surface the contradiction.
 

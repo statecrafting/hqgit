@@ -89,5 +89,5 @@
     "title": "Remote Execution API types: vendored protos, BLAKE3 digests, actions, the CAS adapter"
   },
   "shardHash": "7505e2b8b40bab96efb49564f5c9cced6974e355d47b7ce21edb83f6b6022b14",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

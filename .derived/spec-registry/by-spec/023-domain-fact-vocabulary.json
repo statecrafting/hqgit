@@ -68,5 +68,5 @@
     "title": "Domain fact vocabulary: the typed facts, their ids, and their validation"
   },
   "shardHash": "2eabf048b41b0ca9d9cad35e177f6bd6db6b3f3046fb5d5a48996cd0b02878d8",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

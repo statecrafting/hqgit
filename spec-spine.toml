@@ -5,6 +5,13 @@
 # (AGENTS.md, "Working the backlog"). Every knob below is deliberate; see the
 # spec-spine adoption guide for the full table.
 
+[meta]
+# The binary floor this repository is governed by (spec-spine 062). The CLI
+# checks it on every run, so a contributor on an older binary is told which
+# version to install instead of reading exit codes a verb never had. Bump it
+# with the pin in AGENTS.md, README.md and .github/workflows/govern.yml.
+required_version = ">=0.18.0"
+
 [manifest]
 # Cargo `[package.metadata.spec-spine].spec` and package.json `"spec-spine".spec`.
 metadata_namespace = "spec-spine"
@@ -63,6 +70,8 @@ extra_hashed_inputs = [
   "CLAUDE.md",
   "Makefile",
   "scripts/**/*",
+  ".githooks/**/*",
+  ".gitattributes",
   ".mcp.json",
   ".github/dependabot.yml",
   "docs/design/**/*",

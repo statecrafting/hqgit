@@ -68,5 +68,5 @@
     "title": "Transparency log: Merkle log, inclusion and consistency proofs, signed checkpoints"
   },
   "shardHash": "3028e97b8ed0ef849215dad8af82de8b578f6d7b4feb075dfa78bfd136c08658",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

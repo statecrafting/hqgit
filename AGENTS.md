@@ -4,7 +4,7 @@ Cross-agent authority for hqgit, read by Claude Code, Codex CLI, Cursor,
 Copilot, and claude-observatory's driven sessions via the AAIF/Linux
 Foundation AGENTS.md standard. It is the single source for the session-init
 protocol and the backlog discipline. Evolve the protocol by editing this
-file, never the `/init` skill that dispatches to it.
+file, never the `/prime` skill that dispatches to it.
 
 hqgit is a verifiable evidence ledger for software change (the thesis is
 `specs/002-platform-thesis/spec.md`; the analysis is
@@ -14,24 +14,30 @@ spec is `approved` and `implementation: pending`, and spec ordinals are the
 build order. Code arrives one spec per session under `crates/`, `fuzz/`,
 `executor/`, and `web/`.
 
-Governance is `spec-spine` **0.17.0** on your `PATH` (CI pins the same
-version). All governed reads of `.derived/` go through its CLI.
+Governance is `spec-spine` **0.18.0** on your `PATH` (CI pins the same
+version, and `spec-spine.toml [meta] required_version` makes the CLI check
+its own floor on every run). All governed reads of `.derived/` go through
+its CLI. Exit codes: `0` ok, `1` validation failure or drift, `2` stale,
+`3` I/O, parse, schema, or config, which includes a verb the binary is too
+old to have.
 
 ## New Sessions
 
-Run `/init` as the first action of every new session. It reads this section
-to derive its plan; anything added here is picked up on the next init.
+Run `/prime` as the first action of every new session. It reads this
+section to derive its plan; anything added here is picked up on the next
+prime.
 
-> AGENTS.md is loaded implicitly as the protocol source, so `/init` does not
-> list it as a parallel read in step 1.
+> AGENTS.md is loaded implicitly as the protocol source, so `/prime` does
+> not list it as a parallel read in step 1.
 
 **Init protocol:**
 
 0. **Load rules** (read first): `.claude/rules/orchestrator-rules.md`,
    `.claude/rules/governed-artifact-reads.md`,
    `.claude/rules/adversarial-prompt-refusal.md`. The path-scoped rules
-   (`ledger-invariants`, `trust-invariants`, `build-commands`) load
-   themselves when you touch their paths.
+   (`ledger-invariants`, `trust-invariants`, `build-commands`,
+   `derived-artifacts-are-compiler-output`) load themselves when you touch
+   their paths.
 
 1. **Parallel reads.** Dispatch simultaneously (nothing here mutates the
    tree, so there is no ordering):
@@ -39,8 +45,11 @@ to derive its plan; anything added here is picked up on the next init.
    - `README.md`: project description and status
    - `standards/spec/contract.md`: the normative corpus contract
    - `standards/spec/constitution.md`: the fifteen principles
-   - `spec-spine compile --check`: registry freshness (non-fatal; see below)
-   - `spec-spine index check`: index staleness (non-fatal)
+   - `spec-spine --version`: the binary's version. **Read this before
+     believing any exit code below**; the CLI-version note is the reasoning
+     and this is the step that performs it.
+   - `spec-spine check`: freshness for **both** committed trees, the spec
+     registry and the codebase index (spec-spine 075; non-fatal, see below)
    - `spec-spine registry status-report --json --nonzero-only`: lifecycle counts
    - `spec-spine registry list --ids-only`: the spec inventory
    - `spec-spine registry plan`: the ready set (spec-spine 038): which specs can be worked on now and what blocks the rest; `/next` applies the approval and in-flight rules on top of it
@@ -50,7 +59,7 @@ to derive its plan; anything added here is picked up on the next init.
    - `ls specs/ docs/design/`
    - `git log --oneline -10` and `git diff --stat HEAD~1`
 
-2. **Emit** an `## initialized: hqgit` block: the layer model in one line
+2. **Emit** an `## primed: hqgit` block: the layer model in one line
    per layer with the crates that exist, a `## lifecycle:` sub-section from
    the status report (approved/pending counts, and the next ready spec from
    `/next` if cheap), freshness verdicts, recent activity, and a
@@ -60,22 +69,36 @@ to derive its plan; anything added here is picked up on the next init.
 `python`, `awk`, `sed`); all structural and lifecycle data comes from
 `spec-spine` subcommands.
 
-**Registry freshness:** `spec-spine compile --check` compiles in memory and
-compares against the committed shards without writing. Exit `0` is fresh.
-Exit `2` is stale: read stderr first (an older CLI rejects the flag with the
-same code and `error: unexpected argument '--check'`), then report "Spec
-registry: stale, run `spec-spine compile` and commit" naming the drifted
-shards, and say the lifecycle counts are the committed (stale) ones. Exit
-`1` means the corpus fails validation: surface the violations, report counts
-as unverified, and make fixing them the first task. Any other code: report
-stderr verbatim, freshness unknown. Never substitute a plain `spec-spine
-compile` here; `/init` reports, it does not mutate.
+**Freshness:** `spec-spine check` asks about both committed trees in one
+call. It compiles in memory and compares against the committed shards
+without writing, reports each tree on its own line, and returns the more
+severe of the two verdicts in the order `3`, `1`, `2`, `0`. It is non-fatal
+to `/prime`: report it and continue.
 
-**Index staleness:** `spec-spine index check` non-zero means "Codebase
-index: stale, run `spec-spine index`". Report and continue.
+- **`0`**: both trees are fresh, so the lifecycle counts reflect the current
+  `specs/*/spec.md` frontmatter. Report nothing.
+- **`2` (stale)**: read the `--version` step first. If the report is
+  genuine, say which tree the output named (`spec-registry:` or
+  `codebase-index:`), name the drifted shards, report "run `spec-spine
+  compile` and commit" or "run `spec-spine index`" accordingly, and say the
+  lifecycle counts are the committed, stale ones.
+- **`1`**: the corpus fails validation. Surface the violations, report the
+  counts as unverified, and make fixing them the first task. This outranks
+  `2`: staleness is not meaningful against a corpus that does not validate.
+- **`3`**: the read was not performed, most often a binary predating the
+  verb. Treat freshness as unknown for both trees, report stderr verbatim,
+  and never report "fresh" for a code you did not recognize.
 
-**CLI missing:** if `spec-spine --version` fails, run `/setup`. Do not fall
-back to ad-hoc parsing.
+The composed exit code cannot say which tree moved; the report lines can, so
+read them back rather than guessing from the code. Never substitute a plain
+`spec-spine compile` or `spec-spine index` here: writing repairs the tree as
+a side effect of reading it, which hides that the *committed* copy was
+stale. `/prime` reports, it does not mutate.
+
+**CLI missing or too old:** if `spec-spine --version` fails, or answers
+below the `[meta] required_version` floor, run `/setup`. Do not fall back to
+ad-hoc parsing, and do not interpret the exit code of a verb the binary does
+not have.
 
 If any file is missing: log "not found" and continue.
 
@@ -119,15 +142,33 @@ spec, start to finish, then stops. Specs `000` through `003` are records
    clock, an environment read, or map iteration order. A change that alters
    any golden vector under `crates/hqgit-types/testdata/vectors/` is a
    schema MAJOR and a human decision: stop and report, do not regenerate.
-6. **Run the gate before every commit.** `make spine` (compile, index,
-   lint `--fail-on-warn`, index check, couple, spec-dag), then `make ci`
-   (adds coverage as a report and, once `Cargo.toml` exists, coverage
-   `--fail-on-untraced`, `cargo build`, `test`, `clippy -D warnings`,
-   `fmt --check`, and `deny`).
-   All must exit 0. Commit the regenerated `.derived/` shards with the code
-   they describe.
+6. **Run the gate before every commit.** `make ci`, which is `make spine`
+   (`make refresh`: compile, index; then `make gate`: `check
+   --fail-on-warn`, `lint --fail-on-warn`, coverage as a report and, once
+   `Cargo.toml` exists, coverage `--fail-on-untraced`, `couple --base
+   $(BASE)`, spec-dag) plus `cargo build`, `test`, `clippy -D warnings`,
+   `fmt --check`, and `deny`.
+
+   ```sh
+   spec-spine compile
+   spec-spine index
+   spec-spine check --fail-on-warn
+   spec-spine lint --fail-on-warn
+   spec-spine index coverage            # --fail-on-untraced once Cargo.toml exists
+   spec-spine couple --base "$(git symbolic-ref --short refs/remotes/origin/HEAD 2>/dev/null || echo origin/main)" --head HEAD
+   scripts/spec-dag.sh
+   # spec-spine check --fail-on-unresolved   # off: the corpus does not yet build what it claims (spec 001 D-8)
+   ```
+
+   The base ref is resolved from the repository rather than assumed to be
+   `origin/main` (spec-spine 072). Set `$SPEC_SPINE_DEFAULT_BRANCH` to
+   override the branch the push gate protects and `Makefile` compares
+   against. All must exit 0. Commit the regenerated `.derived/` shards with
+   the code they describe.
 7. **Satisfy Acceptance criteria verbatim.** Run the spec's `##
-   Verification` block locally with `/verify <id>`. If a criterion cannot be
+   Verification` block locally with `/verify <id>`, which wraps `spec-spine
+   verify <id>`, the same verb the orchestrator's verify stage runs after
+   merge. If a criterion cannot be
    satisfied (external state, a missing sibling), keep `implementation:
    in-progress`, add a dated Status note to the spec saying exactly what
    remains, and report it. Flip to `implementation: complete` only when
@@ -157,23 +198,26 @@ Agents live in `.claude/agents/`, all self-contained:
 
 Skills live in `.claude/skills/`:
 
-- `/init`: this protocol.
+The governed loop, in the order "Working the backlog" runs it:
+
+- `/prime`: this protocol.
 - `/setup`: install spec-spine and the Rust toolchain; verify the loop.
 - `/next`: the next ready spec from `registry plan`, minus drafts, with in-flight specs and honest blockers.
 - `/build <id>`: one spec start to finish per "Working the backlog".
-- `/verify <id>`: run a spec's `verify:cli` blocks locally.
-- `/spec`: author a new spec from the template; next ordinal; DAG check.
-- `/commit`: conventional commit, impact-focused, spec id in scope.
-- `/code-review`: correctness and spec-drift review of the current diff.
+- `/verify <id>`: run a spec's declared acceptance through `spec-spine verify`.
 - `/ship`: gate, review, commit on a feature branch, open a PR.
 - `/shepherd`: watch the PR's checks, remediate red runs, merge when green,
   confirm the merge on disk.
-- `/validate-and-fix`: run `make ci` and fix what it surfaces.
-- `/cleanup`, `/implement-plan`, `/research`, `/refactor-claude-md`.
+- `/spec`: author a new spec from the template; next ordinal; DAG check.
 
-The fifteen are the spec-spine kit's, byte for byte (spec-spine spec 048).
+The skills the loop calls:
+
+- `/commit`: conventional commit, impact-focused, spec id in scope.
+- `/code-review`: correctness and spec-drift review of the current diff.
+
+The ten are the spec-spine kit's, byte for byte (spec-spine spec 081).
 The project layer the skills read lives in this file (the pin, the binary,
-`make spine` and `make ci` as the gate, the default branch) and in the
+`make gate` and `make ci` as the gate, the default branch) and in the
 path-scoped rules (the frozen invariants, the golden vectors); do not edit
 a skill to add a project fact, add it here.
 

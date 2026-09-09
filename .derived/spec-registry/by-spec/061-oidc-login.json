@@ -77,5 +77,5 @@
     "title": "OIDC login: authorization code with PKCE, device flow, and subject binding"
   },
   "shardHash": "8a7cdc60aaed5a43972d32b85b39cbfcb0f29398b38998b55d5f98cddb01917a",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

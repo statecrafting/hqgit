@@ -78,5 +78,5 @@
     "title": "Keyless signing: short-lived certificates bound to an OIDC identity, the signature bundle, and bundle verification"
   },
   "shardHash": "4409072d066b416364c2501285bdddc212b11c05980e37b8faf4d10aab3ebf80",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

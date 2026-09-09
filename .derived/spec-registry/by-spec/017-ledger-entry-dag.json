@@ -81,5 +81,5 @@
     "title": "Ledger entry and the hash-linked DAG: shape, signing bytes, append, verify"
   },
   "shardHash": "9e2807f788d0942703eb415aa049090bb0d085a2bb413fa4d218b39f7aec5512",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

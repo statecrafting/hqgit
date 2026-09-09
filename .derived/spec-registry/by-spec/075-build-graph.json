@@ -85,5 +85,5 @@
     "title": "Build graph: the hq-build.toml manifest, pinned toolchains, and affected-target selection"
   },
   "shardHash": "3cd1692dde978a6fb41b97b631139abb1fb313e51fc539d824120b84174493e9",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }
