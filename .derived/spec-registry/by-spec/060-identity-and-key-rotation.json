@@ -62,5 +62,5 @@
     "title": "Identity as a keypair with a rotation chain recorded in the ledger"
   },
   "shardHash": "fb8d13d4bfb741c0acf887ddfed767ab87f2b472e5be017d46c021a83e0b2635",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

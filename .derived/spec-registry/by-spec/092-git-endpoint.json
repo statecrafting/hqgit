@@ -87,5 +87,5 @@
     "title": "Git smart HTTP endpoint: refs as a projection of changes, push as revision submission, gated main"
   },
   "shardHash": "22646381818c52405ceddd787c87ddb5601cebc24640119980142479b55354c3",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

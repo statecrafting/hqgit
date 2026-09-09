@@ -86,5 +86,5 @@
     "title": "Cargo workspace and the core types: Hash, Cid, Principal, keys, Hlc, Error"
   },
   "shardHash": "9d0057c953dd7f43cce03161d474640b8a0f555cf76422af4048eb447ff2ec05",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

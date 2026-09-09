@@ -65,5 +65,5 @@
     "title": "Execution provenance: every completed action emits a signed SLSA attestation"
   },
   "shardHash": "d606bf6becc19e253b8b8c2a8ada4cb2f92f42e4ae832ca80ed0bb0879445df8",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

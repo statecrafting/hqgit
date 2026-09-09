@@ -81,5 +81,5 @@
     "title": "Git object bridge: gix import and export, the bidirectional oid map, worktree snapshots"
   },
   "shardHash": "98b5c0a68948bf529ca5692ad28c1b3bd1271734437c0b4ae3ee23020754ceb0",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

@@ -73,5 +73,5 @@
     "title": "Object store: content-addressed blob and tree objects, the ObjectStore trait, memory and local backends"
   },
   "shardHash": "55a8be283e0331280d1659481c690804fd43063698650269368ff773badf9477",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

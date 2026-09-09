@@ -81,5 +81,5 @@
     "title": "hq mirror: the sync loop with cursors, backoff, and reports"
   },
   "shardHash": "2c5a9ac0fc5b840a8f7d79726811806c4651895fd73d0e5a75dfd3d9c31f7828",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

@@ -98,5 +98,5 @@
     "title": "Agent sandbox and provenance: declared sandboxes, the agent-action attestation, and the server seam"
   },
   "shardHash": "baabd1ee264488b09e9c24d670fc762cb21e98a9dfa36c3dd3401f95fb4cf671",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

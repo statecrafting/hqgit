@@ -95,5 +95,5 @@
     "title": "Semantic deltas: API surface, dependency, and capability changes as attestations"
   },
   "shardHash": "da6a6d4b527d125bc395c9ee8887565ba1cdace170b5c53ce57aa11efb9114ff",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

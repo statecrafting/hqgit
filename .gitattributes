@@ -20,3 +20,16 @@ Makefile text eol=lf
 *.cbor binary
 *.bin binary
 *.png binary
+
+# The committed shard globs are bound to the `spec-spine-derived-regen` merge
+# driver (spec 001). The driver is opt-in per clone: nothing happens until
+# `./.githooks/enable-merge-driver.sh` registers it in that clone's git config.
+#
+# Sharding already removes the common conflict, since two PRs touching different
+# specs write disjoint shard files. This covers the residual same-shard case:
+# two PRs editing the same authority unit. It never replaces the staleness gate,
+# which is what proves the regenerated result is what the corpus compiles to.
+.derived/spec-registry/by-spec/*.json merge=spec-spine-derived-regen
+.derived/codebase-index/by-spec/*.json merge=spec-spine-derived-regen
+.derived/codebase-index/by-package/*.json merge=spec-spine-derived-regen
+.derived/codebase-index/slices.json merge=spec-spine-derived-regen

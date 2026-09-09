@@ -186,5 +186,5 @@
     "title": "The typed API: gRPC and Connect JSON services for changes, reviews, attestations, policy, repos; the CLI remote client"
   },
   "shardHash": "c155e17de0a9c4ab5280992ab171a837041f778595e2306dc5d49a8a494d249f",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

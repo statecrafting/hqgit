@@ -81,5 +81,5 @@
     "title": "Policy in the repository: pinned by fact, resolved by clock, no settings table"
   },
   "shardHash": "cad3b03eac971560e9e08eabd1ce4a98ced4757102cfa22dfab86a9f45e7f09c",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

@@ -72,5 +72,5 @@
     "title": "Range-based set reconciliation over entry hashes: fingerprints, the split protocol, and ingest"
   },
   "shardHash": "b4fcf1cad67ce2d526ed300931870c25fc856e6074c512ee4dee0641d6540aed",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

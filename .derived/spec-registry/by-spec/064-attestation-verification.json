@@ -74,5 +74,5 @@
     "title": "Attestation verification: the fixed pipeline from signature to verified set"
   },
   "shardHash": "eee71d6a4bbebbbd032a06d80411f0cb2c9bcd6bfd9aea654f86848d4e4850c2",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

@@ -64,5 +64,5 @@
     "title": "hq attest and hq verify: issue any attestation, verify the chain and its evidence offline"
   },
   "shardHash": "871570a07f95a2ef10011a8b1a131ae36d3723e001e5303bfe367961985128b8",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

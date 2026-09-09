@@ -83,5 +83,5 @@
     "title": "Change and review views: the SQL read models for changes, threads, attestations, stacks"
   },
   "shardHash": "e868a45ea0e16004371eae9feb882e08f96ff7c30cf32dfb799c0de4df78edd7",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

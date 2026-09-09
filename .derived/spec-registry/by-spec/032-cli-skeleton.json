@@ -81,5 +81,5 @@
     "title": "The hq binary: clap frame, exit codes, JSON output, init, status, log"
   },
   "shardHash": "a71e01397dfb71e604592716a4d26884e39f9c305b90848b6a24a8db35f6a244",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

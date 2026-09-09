@@ -72,5 +72,5 @@
     "title": "Attention feeds: a per-principal ranked feed where every item carries its reason"
   },
   "shardHash": "dfd322bc5070f7b89d01ba0cdad6a5f90b973ef2d011a18d610a2462fd3897af",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

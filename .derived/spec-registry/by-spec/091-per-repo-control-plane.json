@@ -81,5 +81,5 @@
     "title": "Per-repo control plane: one Raft group per repository over hiqlite, proposal, apply, placement"
   },
   "shardHash": "5f16a91a4cba0ba4b565970c4810ef6feb56832f0af28ccf7c63b1748b662e53",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

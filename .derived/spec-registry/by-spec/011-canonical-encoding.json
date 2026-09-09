@@ -85,5 +85,5 @@
     "title": "Canonical encoding: deterministic DAG-CBOR, the Value model, envelopes, unknown-field preservation"
   },
   "shardHash": "91181516e6ee0cadbc58ec98e2d9bab35bf36c93c2dbe6149d787385bbabab15",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

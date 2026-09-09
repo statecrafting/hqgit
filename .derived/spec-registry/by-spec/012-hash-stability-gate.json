@@ -62,5 +62,5 @@
     "title": "Hash stability gate: fuzz targets, the golden-vector walk, and the cross-platform CI matrix"
   },
   "shardHash": "763e22eb7475f5b76e8ac96def85a121051e4ec77c9dc6ef2b92355ac892794d",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

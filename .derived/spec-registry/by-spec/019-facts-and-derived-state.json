@@ -76,5 +76,5 @@
     "title": "Facts and derived state: the immutable fact envelope, the registry seam, LWW registers, and the reserved sequence CRDT"
   },
   "shardHash": "880859432ca555cf0c53073356eabee3a4b43ed4f96df0f8a67330b2819d4c50",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

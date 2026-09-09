@@ -73,5 +73,5 @@
     "title": "Semantic conflicts: pairwise conflict detection over deltas and anchors, with text kept separate"
   },
   "shardHash": "1d9cfb80ba37f342e409032f45a1a0e0df1192f374926fd0896f0eeafebcaeeb",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

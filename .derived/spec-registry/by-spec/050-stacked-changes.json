@@ -72,5 +72,5 @@
     "title": "Stacked changes: dependency facts, a deterministic stack order, restack plans, and interdiff"
   },
   "shardHash": "804873832f8b6214c2005572e31ee2af57d92c7698f5f78b2ba47a269e58ebe7",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

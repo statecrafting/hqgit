@@ -85,5 +85,5 @@
     "title": "The hqgit-server binary: one listener for HTTP and gRPC, config, the repo registry, health, shutdown"
   },
   "shardHash": "30c242f4995dd4c98377efccf5c43a26f571853f477c4d2ccd9421b1d6b01e35",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

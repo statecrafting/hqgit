@@ -109,5 +109,5 @@
     "title": "Execution service: REAPI Capabilities, CAS, ByteStream, ActionCache, Execution, and the scheduler"
   },
   "shardHash": "719ad28c429fd35e5fbde2d55fb7a21f0d40eaaf7d3de4c07d166972591af657",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

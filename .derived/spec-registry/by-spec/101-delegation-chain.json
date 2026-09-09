@@ -68,5 +68,5 @@
     "title": "Delegation chain: delegation facts, chain resolution to a human root, and authorize"
   },
   "shardHash": "fe5ecac8ab7d8d44bd7af88e1a250d31183107426b29b4672d87828f15ebb093",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

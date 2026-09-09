@@ -85,5 +85,5 @@
     "title": "Content-defined chunking: FastCDC with frozen parameters and the chunked blob manifest"
   },
   "shardHash": "317070ed9ee4aa3edbd8bac6c7c90b754704b4245e09325122fe6329ca206622",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

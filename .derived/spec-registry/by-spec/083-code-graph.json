@@ -98,5 +98,5 @@
     "title": "Code graph: a cross-repository SCIP symbol projection keyed by tree"
   },
   "shardHash": "de68e7c1a418973a1fde90f62edfdd0c852f6e5ba88c1e309ed41a5ac08b650a",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

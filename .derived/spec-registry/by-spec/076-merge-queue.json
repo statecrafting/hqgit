@@ -66,5 +66,5 @@
     "title": "Merge queue: speculative evaluation over candidate merge states, batching, and bisection"
   },
   "shardHash": "a6d2105a8b5ea8701db4a84b9cd08cfe181fa776079644b2fe2265580b919116",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }

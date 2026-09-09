@@ -66,5 +66,5 @@
     "title": "Ownership with delegation, expiry, and SLA: facts that replace CODEOWNERS"
   },
   "shardHash": "ee0720788bc65706571c63cc4578c3c32d1a849fe24d49c7a9e94f4e2e4a645e",
-  "specVersion": "1.1.0"
+  "specVersion": "1.2.0"
 }
