@@ -77,16 +77,21 @@ substance without an amendment.
   compile`, `spec-spine index`, `spec-spine lint --fail-on-warn`,
   `spec-spine index check`, `spec-spine couple --base origin/main --head
   HEAD`, and `scripts/spec-dag.sh` (cycle and lower-numbered-dependency
-  check). `make ci` runs `make spine`, `spec-spine index coverage
-  --fail-on-untraced`, and, whenever `Cargo.toml` exists, `cargo build
-  --workspace --locked`, `cargo test --workspace --locked`, `cargo clippy
-  --workspace --all-targets --locked -- -D warnings`, `cargo fmt --all
-  --check`, and `cargo deny check` when `deny.toml` exists. Every target is
-  guarded so the composite is green on the specify-only tree.
+  check). `make ci` runs `make spine`, `spec-spine index coverage`, and,
+  whenever `Cargo.toml` exists, `spec-spine index coverage
+  --fail-on-untraced`, `cargo build --workspace --locked`, `cargo test
+  --workspace --locked`, `cargo clippy --workspace --all-targets --locked
+  -- -D warnings`, `cargo fmt --all --check`, and `cargo deny check` when
+  `deny.toml` exists. Every target is guarded so the composite is green on
+  the specify-only tree; coverage in particular is a report until the
+  first package carries source files and a refusal from then on, because
+  spec-spine 059 refuses an empty coverage universe rather than passing it
+  vacuously (amended 2026-09-09, D-7).
 - **B-3 (CI is the same gate).** `.github/workflows/govern.yml` runs on
   pull requests: `spec-spine compile --check`, `index check`, `lint
   --fail-on-warn`, `couple` with the PR body as waiver source, `index
-  coverage --fail-on-untraced`, the cargo gates when a workspace exists,
+  coverage` as a report, and, when a workspace exists, `index coverage
+  --fail-on-untraced` and the cargo gates (amended 2026-09-09, D-7),
   and `spec-spine attest --with-coupling` uploaded as a build artifact (the
   corpus attestation, the repo's own ledger seal). It pins `spec-spine` to
   the version named in `AGENTS.md`.
@@ -243,6 +248,36 @@ hashed-input patterns, so this is a choice the corpus was silent on and a
 dated decision entry is the right instrument for it. The pin bump is a
 separate change, and the coverage step it stumbles on needs an amendment to
 B-2 and B-3 rather than an entry like this one.
+
+D-7 (2026-09-09, pin bump and the coverage amendment). The `spec-spine`
+pin moves from 0.14.0 to 0.17.0 in every site that states it
+(`govern.yml`, `AGENTS.md`, `README.md`, the architect agent). As in D-4
+the corpus was verified byte-compatible first: 0.17.0's `compile --check`
+and `index check` both report fresh against the shards on `main`, and no
+registry shard other than this spec's own changes here. The `L-008`
+warnings 0.17.0 reported were the dead globs D-6 already fixed, so `lint
+--fail-on-warn` is clean under the new pin without further change.
+
+One gate step could not be: `index coverage --fail-on-untraced` refuses an
+empty coverage universe (spec-spine 059) rather than passing it vacuously,
+and this corpus has no packages, so under 0.17.0 the step could only
+refuse. B-2 and B-3 named the flag unconditionally, so removing it was not
+a choice the spec was silent on and a decision entry could not do it. The
+maintainer amended B-2 and B-3 directly on 2026-09-09: coverage runs as a
+report until the first package carries source files, and as a refusal
+from then on, under the same `Cargo.toml` guard the cargo gates already
+use. `Makefile` and `govern.yml` apply that guard; the bare `index
+coverage` line stays in both so the empty universe is reported on every
+run rather than skipped. The flag comes back on its own the day spec 010
+lands a workspace, with no further edit to either file.
+
+What the bump buys: `verify` running a spec's declared acceptance (049),
+`index diagnostics` for unresolved units (050), `couple` naming the
+`extends` crossing that cleared a change (052), the `L-008` lint that
+found D-6's dead globs (057), `registry plan` answering blocked as well as
+ready (060), `[meta] required_version` so the CLI can check its own floor
+(062), and a malformed spec id refused rather than panicking (070). Setting
+`required_version` is the obvious follow-on and is its own change.
 
 ## Verification
 
