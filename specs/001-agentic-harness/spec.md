@@ -215,6 +215,35 @@ are unchanged: the kit's hooks now read and never write (spec-spine spec
 and `Stop` hooks, which is an amendment for a human to file, not a
 mid-build edit.
 
+D-6 (2026-09-09, hashed inputs). Six of the ten `[index]
+extra_hashed_inputs` patterns ended in `**`, which enumerates directories
+and contributes no bytes to any content hash. `standards/`,
+`.github/workflows/`, `.claude/agents/`, `.claude/rules/`,
+`.claude/skills/` and `docs/design/` were therefore folded into the global
+scalar by nothing at all: an edit to `standards/spec/contract.md`, or to a
+standing rule under `.claude/rules/`, staled no shard and passed `index
+check` clean. The bare filenames in the same list (`AGENTS.md`,
+`CLAUDE.md`, `Makefile`, `.claude/settings.json`) were never affected and
+are unchanged. Every glob is rewritten as `**/*`, and `scripts/**/*`,
+`.mcp.json` and `.github/dependabot.yml` are added for the four claimed
+paths that no pattern covered at all.
+
+Measured with the pinned 0.14.0 binary, which is what CI recomputes
+against. Before the change, appending a line to `standards/spec/contract.md`
+left `index check` at exit 0; after it, the same edit exits 2. The config
+edit on its own moves the global scalar, and regenerating rewrites all 68
+index shards and no registry shard. That restale is the one-time cost of
+the change, but it is not by itself evidence of anything: `spec-spine.toml`
+is folded whole into the global scalar, so any edit to it restales every
+index shard, a comment included. The probe above is the evidence that the
+patterns now cover bytes.
+
+The `spec-spine` pin is untouched here. No spec text names the
+hashed-input patterns, so this is a choice the corpus was silent on and a
+dated decision entry is the right instrument for it. The pin bump is a
+separate change, and the coverage step it stumbles on needs an amendment to
+B-2 and B-3 rather than an entry like this one.
+
 ## Verification
 
 ```verify:cli
