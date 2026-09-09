@@ -232,9 +232,11 @@ Measured with the pinned 0.14.0 binary, which is what CI recomputes
 against. Before the change, appending a line to `standards/spec/contract.md`
 left `index check` at exit 0; after it, the same edit exits 2. The config
 edit on its own moves the global scalar, and regenerating rewrites all 68
-index shards and no registry shard. That full restale is the one-time cost
-of the patterns finally covering bytes, and it is the evidence the hole was
-real rather than cosmetic.
+index shards and no registry shard. That restale is the one-time cost of
+the change, but it is not by itself evidence of anything: `spec-spine.toml`
+is folded whole into the global scalar, so any edit to it restales every
+index shard, a comment included. The probe above is the evidence that the
+patterns now cover bytes.
 
 The `spec-spine` pin is untouched here. No spec text names the
 hashed-input patterns, so this is a choice the corpus was silent on and a
