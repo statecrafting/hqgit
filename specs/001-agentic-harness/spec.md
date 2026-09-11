@@ -420,6 +420,48 @@ and the two hashed-input globs to `spec-spine.toml` restales the index
 again on its own, because the config file is folded whole into the global
 scalar (D-6). Both restalings are regenerated and committed here.
 
+D-9 (2026-09-11, kit revision: severity triage in `/shepherd`). The harness
+moves from the kit bytes the v18 release carried to the kit as it ships
+after spec-spine spec 082. One file changes:
+`.claude/skills/shepherd/SKILL.md`. The other nine skills, the four rules
+the kit ships, `.mcp.json`, the two merge-driver scripts and the
+`.gitattributes` stanza were compared file by file against the kit at that
+revision first and are already byte-identical, so this is the copy D-8 said
+a kit update would be.
+
+What 082 adds is a classification step ahead of the fix. `/shepherd`
+previously treated every red required check as remediable until it was
+inside the edit, and stated its one escalation, the coupling gate, at step
+2 of the remediation procedure, which is to say after the session had
+already committed to fixing. The skill now triages the run log in one pass
+before touching the branch and records the class in its report. Four
+classes are CRITICAL and consume no remediation round at all: a coupling
+refusal whose only remedy is editing a spec the session is not
+implementing, or a waiver; a hand-edit to an artefact the path-scoped rule
+names, the derived tree included; a dependency cycle, because which edge to
+drop is a question about authority; and an ambient input reaching a hashed
+path, a determinism job that passes on some platforms included. Each of
+those goes to a human with its evidence and a proposed remedy, and the
+report's thread line reads `not read` rather than `none`, because the
+threads were never fetched and reporting that as an absence of threads is a
+claim the run did not make. HIGH, MEDIUM and LOW are fixed worst first
+inside the existing two-round bound, with the gate re-run to completion
+locally before the push, since the chain hides every finding behind the
+link that failed.
+
+This is a decision entry and not an amendment. B-5 requires the ten skills
+byte for byte and does not enumerate the steps of any one of them, so
+adopting a newer kit revision satisfies what B-5 already says rather than
+changing it; D-6 set the precedent for a choice the spec was silent on.
+B-5's parenthetical gloss for `/shepherd` stays accurate, and naming the
+classification step there would be an amendment to a behavior clause, which
+is the maintainer's to file (D-7 and D-8 both say so).
+
+The `spec-spine` pin does not move. Spec 082 is kit text with no CLI
+surface, and the spec-spine revision that carries it still reports 0.18.0,
+so `[meta] required_version = ">=0.18.0"`, `govern.yml`, `AGENTS.md` and
+`README.md` are untouched here.
+
 ## Verification
 
 ```verify:cli
