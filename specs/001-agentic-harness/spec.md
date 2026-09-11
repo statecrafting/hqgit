@@ -141,10 +141,13 @@ substance without an amendment.
   through `spec-spine registry`), `/build <id>` (one spec start to finish:
   branch, flip in-progress, implement, gate, flip complete), `/verify <id>`
   (the spec's declared acceptance through `spec-spine verify`), `/ship`,
-  `/shepherd` (watch the PR's checks, remediate, merge when green, confirm
-  on disk), `/spec` (author a new spec from the template with the next
-  ordinal and a DAG check). The two the loop calls: `/commit` and
-  `/code-review`.
+  `/shepherd` (watch the PR's checks; classify a red required check by
+  severity before editing anything, remediate what a session may
+  legitimately fix in at most two rounds, worst first, and hand a CRITICAL
+  finding to a human with its evidence, spending no round on it; merge when
+  green, confirm on disk; amended 2026-09-11, D-9), `/spec` (author a new
+  spec from the template with the next ordinal and a DAG check). The two
+  the loop calls: `/commit` and `/code-review`.
 - **B-6 (agents).** Four pipeline agents (`architect`, `explorer`,
   `implementer`, `reviewer`) and two domain specialists, both read-only:
   `ledger-guardian` (L0/L1 hash stability, canonical encoding, tombstones)
@@ -449,13 +452,17 @@ inside the existing two-round bound, with the gate re-run to completion
 locally before the push, since the chain hides every finding behind the
 link that failed.
 
-This is a decision entry and not an amendment. B-5 requires the ten skills
-byte for byte and does not enumerate the steps of any one of them, so
-adopting a newer kit revision satisfies what B-5 already says rather than
-changing it; D-6 set the precedent for a choice the spec was silent on.
-B-5's parenthetical gloss for `/shepherd` stays accurate, and naming the
-classification step there would be an amendment to a behavior clause, which
-is the maintainer's to file (D-7 and D-8 both say so).
+Adopting the kit revision needs no amendment of its own. B-5 requires the
+ten skills byte for byte and does not enumerate the steps of any one of
+them, so a newer kit revision satisfies what B-5 already says rather than
+changing it, and D-6 set the precedent for recording a choice the spec was
+silent on. B-5's parenthetical gloss for `/shepherd` was a separate
+question: it stayed accurate, because the skill still watches, remediates,
+merges and confirms, but it had stopped being complete, because it named
+the remediation and not the triage that now precedes it and bounds it. That
+is a behavior clause, so the maintainer amended it directly on 2026-09-11,
+which is what D-7 and D-8 both record the maintainer doing for the same
+reason. The clause and the skill it points at now describe one procedure.
 
 The `spec-spine` pin does not move. Spec 082 is kit text with no CLI
 surface, and the spec-spine revision that carries it still reports 0.18.0,
