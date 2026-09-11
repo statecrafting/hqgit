@@ -462,6 +462,40 @@ surface, and the spec-spine revision that carries it still reports 0.18.0,
 so `[meta] required_version = ">=0.18.0"`, `govern.yml`, `AGENTS.md` and
 `README.md` are untouched here.
 
+D-10 (2026-09-11, the attestation artifact was the summary, not the
+attestation). B-3 says `spec-spine attest --with-coupling` is uploaded as a
+build artifact so a later steward can run `verify-attestation --recompute`.
+It was not. The verb writes the attestation document to
+`.derived/attestation/attestation.json`, which is the path
+`verify-attestation --attestation` defaults to, and prints a two-line human
+summary on stdout; both `make attest` and the workflow step redirected
+stdout into the file they then published. Measured on this corpus: the
+published artifact was 171 bytes reading `attested specs+code -> ...` plus
+a hash line, the attestation itself stayed behind in the runner's working
+tree, and nothing a steward could download was recomputable.
+
+Both callers now run the verb and name the file it wrote.
+`make attest` reports the path instead of a redirect, and the workflow
+uploads `.derived/attestation/attestation.json` with `if-no-files-found:
+error`, so a verb that writes nothing is a red job rather than an empty
+artifact. Verified locally: `make attest` then `spec-spine
+verify-attestation --recompute` reports `recompute: MATCH`. B-3 is
+unchanged, because it already required the corpus attestation to be the
+artifact; this is the code catching up to it, and the entry records which
+file carries the document, which the corpus was silent on.
+
+What is not fixed here. `spec-spine attest --spec 001-agentic-harness`
+exits 3 under the pin: the per-spec verb opens each resolved location with a
+string read, and this spec's `establishes` names five directories
+(`standards/spec/templates/`, `.claude/agents/`, `.claude/rules/`,
+`.claude/skills/`, `.githooks/`). Measured across all sixty-eight ids, this
+is the only spec that fails. spec-spine 083 walks a directory-resolved
+location instead of opening it and is complete upstream but carried by no
+release, so there is no pin to move to. Nothing in `make` or in CI calls
+`attest --spec`, and the corpus-scoped `attest` the workflow runs is a
+different code path that exits 0, so nothing is red today. The day a
+release carries 083, the pin bump is the whole fix.
+
 ## Verification
 
 ```verify:cli

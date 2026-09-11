@@ -93,6 +93,6 @@
     "summary": "The governed-development loop every human and every driven session runs inside: the cross-agent New Sessions protocol and the Working the backlog protocol in AGENTS.md, the Claude Code skills (prime, setup, next, build, verify, ship, shepherd, spec, and the two the loop calls, commit and code-review), the six agents (architect, explorer, implementer, reviewer, ledger-guardian, trust-reviewer), the standing and path-scoped rules, the read-only hooks that report derived-artifact freshness and block an ungated PR, the opt-in merge driver over the committed shard globs, the Makefile that is the one source of truth for what CI validates, and the CI workflow that re-runs the same gate. The harness is what makes the corpus buildable by claude-observatory: the orchestrator reads AGENTS.md's backlog section into every build prompt, drives the repo's own /ship, watches the CI this spec wires, and runs each spec's Verification block after merge.\n",
     "title": "Agentic engineering harness: session protocol, skills, agents, hooks, gate"
   },
-  "shardHash": "693672e34f5c4b373535725c3d24fa09dc88d60994f8c0770ca2772d5ffb24d4",
+  "shardHash": "d8e167ac264c4b7270ab513c0f2c7489198f26db033e19d65695ac468c3ea022",
   "specVersion": "1.2.0"
 }
