@@ -120,10 +120,14 @@ coverage:
 	$(SPEC_SPINE) index coverage
 
 ## attest: the corpus attestation (spec-spine's ledger seal), never committed
+# The verb writes the attestation itself to
+# `.derived/attestation/attestation.json`, which is the path
+# `verify-attestation` reads by default; stdout carries a human summary, not
+# the document. Redirecting stdout captures the summary and leaves the
+# attestation behind, so this target runs the verb and names the file it wrote.
 attest:
-	@mkdir -p .derived/attestation
-	$(SPEC_SPINE) attest --with-coupling > .derived/attestation/corpus.json
-	@echo "attestation written to .derived/attestation/corpus.json"
+	$(SPEC_SPINE) attest --with-coupling
+	@echo "attestation at .derived/attestation/attestation.json (verify with: spec-spine verify-attestation --recompute)"
 
 ## verify: one spec's declared acceptance, e.g. make verify SPEC=017-ledger-entry-dag
 # The verb runs what the corpus declares (spec-spine 049), which is why it is
